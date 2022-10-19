@@ -30,10 +30,10 @@ public class Registrar extends javax.swing.JFrame {
     private void initComponents() {
 
         campoEmail = new javax.swing.JTextField();
-        campoSenha = new javax.swing.JTextField();
+        campoSenha = new javax.swing.JPasswordField();
         campoNome = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -51,16 +51,8 @@ public class Registrar extends javax.swing.JFrame {
         getContentPane().add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 263, 280, 25));
 
         campoSenha.setBackground(new java.awt.Color(217, 217, 217));
-        campoSenha.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        campoSenha.setActionCommand("<Not Set>");
-        campoSenha.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        campoSenha.setName(""); // NOI18N
-        campoSenha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoSenhaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 328, 280, 25));
+        campoSenha.setBorder(null);
+        getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 280, 20));
 
         campoNome.setBackground(new java.awt.Color(217, 217, 217));
         campoNome.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
@@ -74,16 +66,20 @@ public class Registrar extends javax.swing.JFrame {
         });
         getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 196, 280, 25));
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Registrar Usuário.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 500));
-
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 194216.png"))); // NOI18N
+        jButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton1.setBorderPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 190, 50));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 408, 180, 50));
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Registrar Usuário.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -129,10 +125,6 @@ public class Registrar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoNomeActionPerformed
 
-    private void campoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSenhaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoSenhaActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -141,7 +133,7 @@ public class Registrar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField campoEmail;
     private javax.swing.JTextField campoNome;
-    private javax.swing.JTextField campoSenha;
+    private javax.swing.JPasswordField campoSenha;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
