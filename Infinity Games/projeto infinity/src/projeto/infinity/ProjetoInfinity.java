@@ -1,12 +1,12 @@
 
 package projeto.infinity;
-import view.Login;
+import view.Registrar;
 
 public class ProjetoInfinity {
 
  
     public static void main(String[] args) {
-   Login obj = new Login();
+   Registrar obj = new Registrar();
         
      obj.setVisible(true);   
         

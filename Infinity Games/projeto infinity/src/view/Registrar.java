@@ -4,14 +4,15 @@
  */
 package view;
 
-import java.awt.Color;
+import java.sql.*;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author aluno
  */
 public class Registrar extends javax.swing.JFrame {
-
+  private String nome,senha,email;
     /**
      * Creates new form Login
      */
@@ -28,34 +29,109 @@ public class Registrar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        CampoNome = new javax.swing.JTextField();
+        campoEmail = new javax.swing.JTextField();
+        campoSenha = new javax.swing.JTextField();
+        campoNome = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        CampoNome.setBackground(new java.awt.Color(217, 217, 217));
-        CampoNome.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        CampoNome.setActionCommand("<Not Set>");
-        CampoNome.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        CampoNome.setName(""); // NOI18N
-        CampoNome.addActionListener(new java.awt.event.ActionListener() {
+        campoEmail.setBackground(new java.awt.Color(217, 217, 217));
+        campoEmail.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        campoEmail.setActionCommand("<Not Set>");
+        campoEmail.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        campoEmail.setName(""); // NOI18N
+        campoEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CampoNomeActionPerformed(evt);
+                campoEmailActionPerformed(evt);
             }
         });
-        getContentPane().add(CampoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 196, 280, 25));
+        getContentPane().add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 263, 280, 25));
+
+        campoSenha.setBackground(new java.awt.Color(217, 217, 217));
+        campoSenha.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        campoSenha.setActionCommand("<Not Set>");
+        campoSenha.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        campoSenha.setName(""); // NOI18N
+        campoSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoSenhaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 328, 280, 25));
+
+        campoNome.setBackground(new java.awt.Color(217, 217, 217));
+        campoNome.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        campoNome.setActionCommand("<Not Set>");
+        campoNome.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        campoNome.setName(""); // NOI18N
+        campoNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoNomeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 196, 280, 25));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Registrar Usuário.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 500));
 
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 190, 50));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CampoNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CampoNomeActionPerformed
+    private void campoEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoEmailActionPerformed
   
-    }//GEN-LAST:event_CampoNomeActionPerformed
+    }//GEN-LAST:event_campoEmailActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+          nome = campoNome.getText();
+	  email = campoEmail.getText();
+          senha = campoSenha.getText();
+				
+	try
+        {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost/infinitygames","root","");
+		Statement stm = con.createStatement();
+		if(stm.executeUpdate("INSERT into registro values('"+nome+"','"+email+"','"+senha+"')")!=0)
+		{
+			JOptionPane.showMessageDialog(null,"Cadastro realizado com sucesso!!!","Sucesso",JOptionPane.INFORMATION_MESSAGE);
+			campoNome.setText("");
+			campoEmail.setText("");
+                        campoSenha.setText("");
+		}
+		else
+		{
+			JOptionPane.showMessageDialog(null,"Erro para realizar o cadastro!!!","Erro",JOptionPane.ERROR_MESSAGE);
+		}
+	}
+	catch(ClassNotFoundException ex)
+	{
+		JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+	}
+	catch(SQLException ex)
+	{
+		JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+	}
+    
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void campoNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNomeActionPerformed
+
+    private void campoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoSenhaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -63,7 +139,10 @@ public class Registrar extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField CampoNome;
+    private javax.swing.JTextField campoEmail;
+    private javax.swing.JTextField campoNome;
+    private javax.swing.JTextField campoSenha;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
