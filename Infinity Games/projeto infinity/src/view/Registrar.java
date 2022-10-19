@@ -10,12 +10,12 @@ import java.awt.Color;
  *
  * @author aluno
  */
-public class Login extends javax.swing.JFrame {
+public class Registrar extends javax.swing.JFrame {
 
     /**
      * Creates new form Login
      */
-    public Login() {
+    public Registrar() {
         initComponents();
     }
 
