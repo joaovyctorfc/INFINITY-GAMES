@@ -113,7 +113,9 @@ private Splash splash;
           nome = campoNome.getText();
 	  email = campoEmail.getText();
           senha = campoSenha.getText();
-				
+		if(nome.equals("")||email.equals("")||senha.equals("")){
+                    JOptionPane.showMessageDialog(null,"Erro para realizar o cadastro!!!","Erro",JOptionPane.ERROR_MESSAGE);
+                } else{	
 	try
         {
 		Class.forName("com.mysql.cj.jdbc.Driver");
@@ -141,7 +143,7 @@ private Splash splash;
 	}
     
     }//GEN-LAST:event_BotaoRegistrarActionPerformed
-
+    }
     private void campoNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoNomeActionPerformed
