@@ -25,7 +25,6 @@ private Splash splash;
         campoNome = new javax.swing.JTextField();
         BotaoRegistrar = new javax.swing.JButton();
         BotaoJaPossuo = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         LabelTotal = new javax.swing.JLabel();
 
@@ -80,14 +79,6 @@ private Splash splash;
             }
         });
         getContentPane().add(BotaoJaPossuo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, -1, -1));
-
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 200, -1, -1));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
         jButton3.setBorderPainted(false);
@@ -158,10 +149,6 @@ private Splash splash;
        System.exit(0); // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      splash.setVisible(true);  // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
 
 
 
@@ -172,7 +159,6 @@ private Splash splash;
     private javax.swing.JTextField campoEmail;
     private javax.swing.JTextField campoNome;
     private javax.swing.JPasswordField campoSenha;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     // End of variables declaration//GEN-END:variables
 }
