@@ -19,10 +19,9 @@ public class Login extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         campoEmail = new javax.swing.JTextField();
         campoSenha = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        BotaoEntrar = new javax.swing.JButton();
+        BotaoFechar = new javax.swing.JButton();
+        LabelTotal = new javax.swing.JLabel();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -51,25 +50,22 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 280, 20));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botao entrar.png"))); // NOI18N
-        jButton1.setBorder(null);
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, -1, 70));
+        BotaoEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botao entrar.png"))); // NOI18N
+        BotaoEntrar.setBorder(null);
+        getContentPane().add(BotaoEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, -1, 70));
 
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
-        jButton2.setBorderPainted(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        BotaoFechar.setForeground(new java.awt.Color(255, 255, 255));
+        BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
+        BotaoFechar.setBorderPainted(false);
+        BotaoFechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BotaoFecharActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 8, 30, 30));
+        getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 8, 30, 30));
 
-        jButton3.setText("jButton2");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(665, 10, 20, 20));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/LOGIN USUÁRIO (1).png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, -1));
+        LabelTotal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/LOGIN USUÁRIO (1).png"))); // NOI18N
+        getContentPane().add(LabelTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -82,9 +78,9 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoSenhaActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
      System.exit(0);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_BotaoFecharActionPerformed
 
     /**
      * @param args the command line arguments
@@ -92,12 +88,11 @@ public class Login extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotaoEntrar;
+    private javax.swing.JButton BotaoFechar;
+    private javax.swing.JLabel LabelTotal;
     private javax.swing.JTextField campoEmail;
     private javax.swing.JPasswordField campoSenha;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
