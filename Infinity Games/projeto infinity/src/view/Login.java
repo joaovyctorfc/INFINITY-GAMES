@@ -1,9 +1,18 @@
 
 package view;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 
 public class Login extends javax.swing.JFrame {
-
+private String senha,email;
 
     public Login() {
         initComponents();
@@ -52,6 +61,11 @@ public class Login extends javax.swing.JFrame {
 
         BotaoEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botao entrar.png"))); // NOI18N
         BotaoEntrar.setBorder(null);
+        BotaoEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoEntrarActionPerformed(evt);
+            }
+        });
         getContentPane().add(BotaoEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, -1, 70));
 
         BotaoFechar.setForeground(new java.awt.Color(255, 255, 255));
@@ -82,6 +96,46 @@ public class Login extends javax.swing.JFrame {
      System.exit(0);
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
+    private void BotaoEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoEntrarActionPerformed
+     email = campoEmail.getText();
+     senha = campoSenha.getText();
+     String em = "";
+     String passw = "";
+     if(email.equals("")||senha.equals("")){
+                 JOptionPane.showMessageDialog(null,"Erro para realizar o login!!!","Erro",JOptionPane.ERROR_MESSAGE);
+                } 
+     
+     else{
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/infinitygames","root","");
+            Statement stm = con.createStatement();
+            ResultSet res = stm.executeQuery("SELECT * from registro");
+            
+            em = res.getString("email");
+            passw = res.getString("senha");
+            if(em.equals(email) && passw.equals(senha)){
+            TelaPrincipal principal = new TelaPrincipal();
+         principal.setVisible(true);
+         this.dispose();
+            }
+	}
+	catch(ClassNotFoundException ex)
+	{
+		JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+	}
+	catch(SQLException ex)
+	{
+		JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+	}
+      
+         TelaPrincipal principal = new TelaPrincipal();
+         principal.setVisible(true);
+         this.dispose();
+        
+    }//GEN-LAST:event_BotaoEntrarActionPerformed
+    }
+    
     /**
      * @param args the command line arguments
      */

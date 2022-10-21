@@ -7,12 +7,12 @@ import javax.swing.JOptionPane;
 
 public class Registrar extends javax.swing.JFrame {
   private String nome,senha,email;
-private Splash splash;
+//private Splash splash;
   
     public Registrar() {
         initComponents();
         setLocationRelativeTo(null); //CENTRALIZAR TELA
-        splash = new Splash();
+       // splash = new Splash();
     }
 
 
