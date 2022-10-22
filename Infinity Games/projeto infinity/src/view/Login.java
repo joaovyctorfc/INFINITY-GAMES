@@ -1,6 +1,7 @@
-
 package view;
 
+import DAO.UsuarioDAO;
+import DTO.UsuarioDTO;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -10,16 +11,15 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-
 public class Login extends javax.swing.JFrame {
-private String senha,email;
+
+    private String senha, email;
 
     public Login() {
         initComponents();
         setLocationRelativeTo(null); //CENTRALIZAR TELA
     }
 
- 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -93,53 +93,51 @@ private String senha,email;
     }//GEN-LAST:event_campoSenhaActionPerformed
 
     private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
-     System.exit(0);
+        System.exit(0);
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
     private void BotaoEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoEntrarActionPerformed
-     email = campoEmail.getText();
-     senha = campoSenha.getText();
-     String em = "";
-     String passw = "";
-     if(email.equals("")||senha.equals("")){
+        email = campoEmail.getText();
+        senha = campoSenha.getText();
+        
+        if(email.equals("")||senha.equals("")){
                  JOptionPane.showMessageDialog(null,"Erro para realizar o login!!!","Erro",JOptionPane.ERROR_MESSAGE);
                 } 
      
      else{
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/infinitygames","root","");
-            Statement stm = con.createStatement();
-            ResultSet res = stm.executeQuery("SELECT * from registro");
-            
-            em = res.getString("email");
-            passw = res.getString("senha");
-            if(em.equals(email) && passw.equals(senha)){
-            TelaPrincipal principal = new TelaPrincipal();
-         principal.setVisible(true);
-         this.dispose();
-            }
-	}
-	catch(ClassNotFoundException ex)
-	{
-		JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
-	}
-	catch(SQLException ex)
-	{
-		JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
-	}
-      
-         TelaPrincipal principal = new TelaPrincipal();
-         principal.setVisible(true);
-         this.dispose();
         
+        try {
+            String email, senha;
+
+            email = campoEmail.getText();
+            senha = campoSenha.getText();
+
+            UsuarioDTO obj = new UsuarioDTO();
+            obj.setEmail(email);
+            obj.setSenha(senha);
+            
+            UsuarioDAO objDAO = new UsuarioDAO();
+            ResultSet rsusuariodao = objDAO.AutenticacaoUsuario(obj);
+            if(rsusuariodao.next())
+            {
+            TelaPrincipal principal = new TelaPrincipal();
+            principal.setVisible(true);
+            this.dispose();
+            }
+            else
+            {
+            JOptionPane.showMessageDialog(null,"Usuário ou senha inválida");
+            }
+            
+        } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null,senha +"btnlogin");
+        }
+        }
     }//GEN-LAST:event_BotaoEntrarActionPerformed
-    }
-    
+
     /**
      * @param args the command line arguments
      */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoEntrar;
