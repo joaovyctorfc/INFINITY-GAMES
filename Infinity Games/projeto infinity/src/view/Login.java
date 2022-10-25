@@ -126,7 +126,7 @@ public class Login extends javax.swing.JFrame {
             }
             else
             {
-            JOptionPane.showMessageDialog(null,"Usuário ou senha inválida");
+            JOptionPane.showMessageDialog(null,"Usuário ou senha inválida!!!","Erro",JOptionPane.ERROR_MESSAGE);
             }
             
         } catch (SQLException erro) {

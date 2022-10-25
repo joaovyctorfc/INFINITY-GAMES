@@ -14,7 +14,7 @@ public class UsuarioDAO {
     public ResultSet AutenticacaoUsuario(UsuarioDTO obj){
         conn = new ConexaoDAO().conectaBD();
         try {
-            String sql = "Select * from registro where email = ? and senha = ?";
+            String sql = "Select * from user where email = ? and senha = ?";
             
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1, obj.getEmail());

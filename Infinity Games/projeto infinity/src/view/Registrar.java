@@ -119,10 +119,16 @@ public class Registrar extends javax.swing.JFrame {
 			campoEmail.setText("");
                         campoSenha.setText("");
 		}
-		else
+		if(stm.executeUpdate("INSERT into user values('"+email+"','"+senha+"')")!=0)
+		{
+			campoEmail.setText("");
+                        campoSenha.setText("");
+		}
+                else
 		{
 			JOptionPane.showMessageDialog(null,"Erro para realizar o cadastro!!!","Erro",JOptionPane.ERROR_MESSAGE);
 		}
+                
 	}
 	catch(ClassNotFoundException ex)
 	{
