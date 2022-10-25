@@ -30,6 +30,8 @@ public class Login extends javax.swing.JFrame {
         campoSenha = new javax.swing.JPasswordField();
         BotaoEntrar = new javax.swing.JButton();
         BotaoFechar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         LabelTotal = new javax.swing.JLabel();
 
         jTextArea1.setColumns(20);
@@ -77,6 +79,14 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 8, 30, 30));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Esqueceu a senha.png"))); // NOI18N
+        jButton1.setBorder(null);
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 150, 20));
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Registrar-se.png"))); // NOI18N
+        jButton2.setBorder(null);
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 469, -1, 20));
 
         LabelTotal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/LOGIN USUÁRIO (1).png"))); // NOI18N
         getContentPane().add(LabelTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, -1));
@@ -145,6 +155,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel LabelTotal;
     private javax.swing.JTextField campoEmail;
     private javax.swing.JPasswordField campoSenha;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables

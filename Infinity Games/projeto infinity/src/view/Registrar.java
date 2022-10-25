@@ -112,14 +112,14 @@ public class Registrar extends javax.swing.JFrame {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost/infinitygames","root","");
 		Statement stm = con.createStatement();
-		if(stm.executeUpdate("INSERT into registro values('"+nome+"','"+email+"','"+senha+"')")!=0)
+		if(stm.executeUpdate("INSERT into registro (nome,email,senha) values('"+nome+"','"+email+"','"+senha+"')")!=0)
 		{
 			JOptionPane.showMessageDialog(null,"Cadastro realizado com sucesso!!!","Sucesso",JOptionPane.INFORMATION_MESSAGE);
 			campoNome.setText("");
 			campoEmail.setText("");
                         campoSenha.setText("");
 		}
-		if(stm.executeUpdate("INSERT into user values('"+email+"','"+senha+"')")!=0)
+		if(stm.executeUpdate("INSERT into user (email,senha) values('"+email+"','"+senha+"')")!=0)
 		{
 			campoEmail.setText("");
                         campoSenha.setText("");
