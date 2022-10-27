@@ -60,6 +60,12 @@ public class Registrar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 196, 280, 25));
+
+        campoSeg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoSegActionPerformed(evt);
+            }
+        });
         getContentPane().add(campoSeg, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 140, 280, -1));
 
         BotaoRegistrar.setForeground(new java.awt.Color(255, 255, 255));
@@ -159,6 +165,10 @@ public class Registrar extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
        System.exit(0); // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void campoSegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSegActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoSegActionPerformed
 
 
 
