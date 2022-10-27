@@ -28,4 +28,38 @@ public class UsuarioDAO {
             }
             return null;
      }
+    public ResultSet VerificacaoSeguranca(UsuarioDTO obj){
+        conn = new ConexaoDAO().conectaBD();
+        try {
+            String sql = "Select * from user where email = ? and seg = ?";
+            
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setString(1, obj.getEmail());
+            pstm.setString(2, obj.getSeg());
+            
+            ResultSet rs = pstm.executeQuery();
+            return rs;
+            
+        } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null,erro + "ConexaoDAO");
+            }
+            return null;
+     }
+    public void alterarSenha(UsuarioDTO obj){
+     String sql = "update user set senha = ?";
+     
+     conn = new ConexaoDAO().conectaBD();
+        try {
+            
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setString(1, obj.getSenha());
+            pstm.execute();
+            pstm.close();
+            
+            
+            
+        } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null,erro + "AlterarSenha");
+            }
+    }
    }

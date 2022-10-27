@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 
 public class Registrar extends javax.swing.JFrame {
-  private String nome,senha,email;
+  private String nome,senha,email,seg;
 //private Splash splash;
   
     public Registrar() {
@@ -23,6 +23,7 @@ public class Registrar extends javax.swing.JFrame {
         campoEmail = new javax.swing.JTextField();
         campoSenha = new javax.swing.JPasswordField();
         campoNome = new javax.swing.JTextField();
+        campoSeg = new javax.swing.JTextField();
         BotaoRegistrar = new javax.swing.JButton();
         BotaoJaPossuo = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -59,6 +60,7 @@ public class Registrar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 196, 280, 25));
+        getContentPane().add(campoSeg, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 140, 280, -1));
 
         BotaoRegistrar.setForeground(new java.awt.Color(255, 255, 255));
         BotaoRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 194216.png"))); // NOI18N
@@ -103,8 +105,9 @@ public class Registrar extends javax.swing.JFrame {
     private void BotaoRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoRegistrarActionPerformed
           nome = campoNome.getText();
 	  email = campoEmail.getText();
+          seg = campoSeg.getText();
           senha = campoSenha.getText();
-		if(nome.equals("")||email.equals("")||senha.equals("")){
+		if(nome.equals("")||email.equals("")||senha.equals("")||seg.equals("")){
                     JOptionPane.showMessageDialog(null,"Erro para realizar o cadastro!!!","Erro",JOptionPane.ERROR_MESSAGE);
                 } else{	
 	try
@@ -112,17 +115,19 @@ public class Registrar extends javax.swing.JFrame {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost/infinitygames","root","");
 		Statement stm = con.createStatement();
-		if(stm.executeUpdate("INSERT into registro (nome,email,senha) values('"+nome+"','"+email+"','"+senha+"')")!=0)
+		if(stm.executeUpdate("INSERT into registro (nome,email,senha,seg) values('"+nome+"','"+email+"','"+senha+"','"+seg+"')")!=0)
 		{
 			JOptionPane.showMessageDialog(null,"Cadastro realizado com sucesso!!!","Sucesso",JOptionPane.INFORMATION_MESSAGE);
 			campoNome.setText("");
 			campoEmail.setText("");
                         campoSenha.setText("");
+                        campoSeg.setText("");
 		}
-		if(stm.executeUpdate("INSERT into user (email,senha) values('"+email+"','"+senha+"')")!=0)
+		if(stm.executeUpdate("INSERT into user (email,senha,seg) values('"+email+"','"+senha+"','"+seg+"')")!=0)
 		{
 			campoEmail.setText("");
                         campoSenha.setText("");
+                        campoSeg.setText("");
 		}
                 else
 		{
@@ -164,6 +169,7 @@ public class Registrar extends javax.swing.JFrame {
     private javax.swing.JLabel LabelTotal;
     private javax.swing.JTextField campoEmail;
     private javax.swing.JTextField campoNome;
+    private javax.swing.JTextField campoSeg;
     private javax.swing.JPasswordField campoSenha;
     private javax.swing.JButton jButton3;
     // End of variables declaration//GEN-END:variables
