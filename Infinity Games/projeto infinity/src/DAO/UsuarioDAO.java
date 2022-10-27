@@ -47,14 +47,18 @@ public class UsuarioDAO {
      }
     public void alterarSenha(UsuarioDTO obj){
      String sql = "update user set senha = ?";
-     
+     String sql1 = "update registro set senha = ?";
      conn = new ConexaoDAO().conectaBD();
         try {
             
             PreparedStatement pstm = conn.prepareStatement(sql);
+            PreparedStatement pstm1 = conn.prepareStatement(sql1);
             pstm.setString(1, obj.getSenha());
+            pstm1.setString(1, obj.getSenha());
             pstm.execute();
             pstm.close();
+            pstm1.execute();
+            pstm1.close();
             
             
             
@@ -62,4 +66,5 @@ public class UsuarioDAO {
             JOptionPane.showMessageDialog(null,erro + "AlterarSenha");
             }
     }
+    
    }
