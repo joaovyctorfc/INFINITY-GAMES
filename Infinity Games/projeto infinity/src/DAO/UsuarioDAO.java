@@ -46,22 +46,24 @@ public class UsuarioDAO {
             return null;
      }
     public void alterarSenha(UsuarioDTO obj){
-     String sql = "update user set senha = ?";
-     String sql1 = "update registro set senha = ?";
+     String sql = "update user set senha = ? where email = ? and seg = ?";
+     String sql1 = "update registro set senha = ? where email = ? and seg = ?";
      conn = new ConexaoDAO().conectaBD();
         try {
             
             PreparedStatement pstm = conn.prepareStatement(sql);
-            PreparedStatement pstm1 = conn.prepareStatement(sql1);
             pstm.setString(1, obj.getSenha());
-            pstm1.setString(1, obj.getSenha());
+            pstm.setString(2, obj.getEmail());
+            pstm.setString(3, obj.getSeg());
             pstm.execute();
             pstm.close();
+            
+            PreparedStatement pstm1 = conn.prepareStatement(sql1);
+            pstm1.setString(1, obj.getSenha());
+            pstm1.setString(2, obj.getEmail());
+            pstm1.setString(3, obj.getSeg());
             pstm1.execute();
             pstm1.close();
-            
-            
-            
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null,erro + "AlterarSenha");
             }

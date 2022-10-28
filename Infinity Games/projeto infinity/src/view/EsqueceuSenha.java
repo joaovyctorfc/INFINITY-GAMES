@@ -132,6 +132,7 @@ public class EsqueceuSenha extends javax.swing.JFrame {
             email = emailVeri.getText();
             seg = segCampo.getText();
             
+            
             UsuarioDTO objseg = new UsuarioDTO();
             objseg.setEmail(email);
             objseg.setSeg(seg);
@@ -140,11 +141,12 @@ public class EsqueceuSenha extends javax.swing.JFrame {
             ResultSet rsusuariodao = objDAO.VerificacaoSeguranca(objseg);
             if(rsusuariodao.next())
             {
-              senha = novaSenha.getText();
               UsuarioDTO objsenha = new UsuarioDTO();
+              objsenha.setEmail(email);
+              objsenha.setSeg(seg);
               objsenha.setSenha(senha);
-              UsuarioDAO objSenha2 = new UsuarioDAO();
-              objSenha2.alterarSenha(objsenha);
+              UsuarioDAO obj2Senha = new UsuarioDAO();
+              obj2Senha.alterarSenha(objsenha);
             }
             else
             {
