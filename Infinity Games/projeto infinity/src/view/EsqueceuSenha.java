@@ -20,6 +20,7 @@ public class EsqueceuSenha extends javax.swing.JFrame {
   private String email,seg,senha;
     public EsqueceuSenha() {
         initComponents();
+         setLocationRelativeTo(null); //CENTRALIZAR TELA
     }
 
     /**
