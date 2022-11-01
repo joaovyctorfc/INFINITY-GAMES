@@ -32,6 +32,9 @@ public class EsqueceuSenha extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        BotaoEsqueceuSen = new javax.swing.JButton();
+        BotaoRegis = new javax.swing.JButton();
+        BotaoSair = new javax.swing.JButton();
         emailVeri = new javax.swing.JTextField();
         btnCon = new javax.swing.JButton();
         segCampo = new javax.swing.JTextField();
@@ -40,6 +43,23 @@ public class EsqueceuSenha extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        BotaoEsqueceuSen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Esqueceu senha.png"))); // NOI18N
+        BotaoEsqueceuSen.setBorder(null);
+        getContentPane().add(BotaoEsqueceuSen, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 470, 120, 20));
+
+        BotaoRegis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botao link Registrar-se.png"))); // NOI18N
+        BotaoRegis.setBorder(null);
+        getContentPane().add(BotaoRegis, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 470, 90, 20));
+
+        BotaoSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
+        BotaoSair.setBorder(null);
+        BotaoSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoSairActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotaoSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 8, 30, 30));
 
         emailVeri.setBackground(new java.awt.Color(217, 217, 217));
         emailVeri.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
@@ -51,13 +71,14 @@ public class EsqueceuSenha extends javax.swing.JFrame {
         });
         getContentPane().add(emailVeri, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 184, 280, 20));
 
-        btnCon.setText("Confirmar");
+        btnCon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Redefinir.png"))); // NOI18N
+        btnCon.setBorder(null);
         btnCon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, -1, -1));
+        getContentPane().add(btnCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 385, 170, 50));
 
         segCampo.setBackground(new java.awt.Color(217, 217, 217));
         segCampo.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
@@ -130,12 +151,19 @@ public class EsqueceuSenha extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_segCampoActionPerformed
 
+    private void BotaoSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSairActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotaoSairActionPerformed
+
     /**
      * @param args the command line arguments
      */
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotaoEsqueceuSen;
+    private javax.swing.JButton BotaoRegis;
+    private javax.swing.JButton BotaoSair;
     private javax.swing.JButton btnCon;
     private javax.swing.JTextField emailVeri;
     private javax.swing.JLabel jLabel4;
