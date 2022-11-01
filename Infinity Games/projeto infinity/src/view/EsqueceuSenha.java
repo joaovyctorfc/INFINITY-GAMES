@@ -121,7 +121,7 @@ public class EsqueceuSenha extends javax.swing.JFrame {
         seg = segCampo.getText();
         senha = novaSenha.getText();
         if(email.equals("")){
-                 JOptionPane.showMessageDialog(null,"Erro para realizar o login!!!","Erro",JOptionPane.ERROR_MESSAGE);
+                 JOptionPane.showMessageDialog(null,"Email em branco!!!","Erro",JOptionPane.ERROR_MESSAGE);
                 } 
      
      else{
@@ -145,10 +145,11 @@ public class EsqueceuSenha extends javax.swing.JFrame {
               objsenha.setSenha(senha);
               UsuarioDAO objSenha2 = new UsuarioDAO();
               objSenha2.alterarSenha(objsenha);
+              JOptionPane.showMessageDialog(null,"Senha trocada com sucesso!!!","Sucesso",JOptionPane.INFORMATION_MESSAGE);
             }
             else
             {
-            JOptionPane.showMessageDialog(null,"Email inválido!!!","Erro",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Senha inválida!!!","Erro",JOptionPane.ERROR_MESSAGE);
             }
             
         } catch (SQLException erro) {
