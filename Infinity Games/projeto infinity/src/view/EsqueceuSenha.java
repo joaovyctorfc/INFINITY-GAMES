@@ -20,7 +20,6 @@ public class EsqueceuSenha extends javax.swing.JFrame {
   private String email,seg,senha;
     public EsqueceuSenha() {
         initComponents();
-        setLocationRelativeTo(null); //CENTRALIZAR TELA
     }
 
     /**
@@ -32,9 +31,6 @@ public class EsqueceuSenha extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        BotaoRegistrar = new javax.swing.JButton();
-        BotaoLogin = new javax.swing.JButton();
         emailVeri = new javax.swing.JTextField();
         btnCon = new javax.swing.JButton();
         segCampo = new javax.swing.JTextField();
@@ -43,15 +39,6 @@ public class EsqueceuSenha extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 8, 30, 30));
-
-        BotaoRegistrar.setText("Registrar-se");
-        getContentPane().add(BotaoRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 470, -1, -1));
-
-        BotaoLogin.setText("Login");
-        getContentPane().add(BotaoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, -1, -1));
 
         emailVeri.setBackground(new java.awt.Color(217, 217, 217));
         emailVeri.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
@@ -148,11 +135,8 @@ public class EsqueceuSenha extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotaoLogin;
-    private javax.swing.JButton BotaoRegistrar;
     private javax.swing.JButton btnCon;
     private javax.swing.JTextField emailVeri;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPasswordField novaSenha;
     private javax.swing.JTextField segCampo;

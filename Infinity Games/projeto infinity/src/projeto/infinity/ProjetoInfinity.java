@@ -8,7 +8,7 @@ public class ProjetoInfinity {
 
  
     public static void main(String[] args) {
-     TelaPrincipal obj = new TelaPrincipal();
+     Login obj = new Login();
         
      obj.setVisible(true);   
         

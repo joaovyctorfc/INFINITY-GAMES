@@ -3,6 +3,7 @@ package view;
 
 import java.sql.*;
 import javax.swing.JOptionPane;
+import view.Login;
 
 
 public class Registrar extends javax.swing.JFrame {
@@ -25,8 +26,8 @@ public class Registrar extends javax.swing.JFrame {
         campoNome = new javax.swing.JTextField();
         campoSeg = new javax.swing.JTextField();
         BotaoRegistrar = new javax.swing.JButton();
-        BotaoJaPossuo = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         LabelTotal = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -82,15 +83,6 @@ public class Registrar extends javax.swing.JFrame {
         });
         getContentPane().add(BotaoRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 180, 50));
 
-        BotaoJaPossuo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 195315.png"))); // NOI18N
-        BotaoJaPossuo.setBorder(null);
-        BotaoJaPossuo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoJaPossuoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotaoJaPossuo, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 472, 100, 20));
-
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
         jButton3.setBorderPainted(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +91,14 @@ public class Registrar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 8, 30, 30));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Já possuo conta!.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 470, 110, 20));
 
         LabelTotal.setBackground(new java.awt.Color(255, 255, 255));
         LabelTotal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Registrar Usuário (2).png"))); // NOI18N
@@ -159,12 +159,6 @@ public class Registrar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoNomeActionPerformed
 
-    private void BotaoJaPossuoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoJaPossuoActionPerformed
-      Login login = new Login(); 
-      login.setVisible(true);
-      this.dispose();
-    }//GEN-LAST:event_BotaoJaPossuoActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
        System.exit(0); // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -173,17 +167,23 @@ public class Registrar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoSegActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Login obj = new Login(); 
+      obj.setVisible(true);
+      this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotaoJaPossuo;
     private javax.swing.JButton BotaoRegistrar;
     private javax.swing.JLabel LabelTotal;
     private javax.swing.JTextField campoEmail;
     private javax.swing.JTextField campoNome;
     private javax.swing.JTextField campoSeg;
     private javax.swing.JPasswordField campoSenha;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     // End of variables declaration//GEN-END:variables
 }

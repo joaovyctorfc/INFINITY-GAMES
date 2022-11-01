@@ -7,7 +7,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     public TelaPrincipal() {
         initComponents();
-        setLocationRelativeTo(null); //CENTRALIZAR TELA
     }
 
 
@@ -36,15 +35,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 0, 30, 30));
 
         BotaoLogar.setText("Logar");
-        BotaoLogar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoLogarActionPerformed(evt);
-            }
-        });
         getContentPane().add(BotaoLogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1063, 63, 80, 30));
 
         BotaoRegistrar.setText("Registrar");
-        BotaoRegistrar.setBorder(null);
         getContentPane().add(BotaoRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 63, -1, 30));
 
         ImageFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Princ sem log.png"))); // NOI18N
@@ -52,13 +45,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void BotaoLogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoLogarActionPerformed
-     Login obj = new Login();
-     obj.setVisible(true);
-        
-        
-    }//GEN-LAST:event_BotaoLogarActionPerformed
 
  
 
