@@ -26,44 +26,60 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(BotaoPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 60, 40, 30));
 
+        BotaoPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BotaoPesquisar.png"))); // NOI18N
+        BotaoPesquisar.setToolTipText("");
+        BotaoPesquisar.setBorder(null);
+        BotaoPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoPesquisarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotaoPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(745, 54, 60, -1));
+
+        BotaoPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icone tela princ sem log.png"))); // NOI18N
+        BotaoPerfil.setBorder(null);
         BotaoPerfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotaoPerfilActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 40, 30));
+        getContentPane().add(BotaoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 57, 70));
 
         BotaoMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 214036.png"))); // NOI18N
-        getContentPane().add(BotaoMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 0, 30, 30));
+        BotaoMinimizar.setBorder(null);
+        getContentPane().add(BotaoMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 6, 22, 24));
 
         BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
+        BotaoFechar.setBorder(null);
         BotaoFechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotaoFecharActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 0, 30, 30));
+        getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, 30, 30));
 
+        BotaoLogar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Logar.png"))); // NOI18N
         BotaoLogar.setText("Logar");
+        BotaoLogar.setBorder(null);
         BotaoLogar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotaoLogarActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoLogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1063, 63, 80, 30));
+        getContentPane().add(BotaoLogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 60, 90, 30));
 
-        BotaoRegistrar.setText("Registrar");
+        BotaoRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Registrar.png"))); // NOI18N
+        BotaoRegistrar.setBorder(null);
         BotaoRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotaoRegistrarActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 63, -1, 30));
+        getContentPane().add(BotaoRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(905, 60, 90, 30));
 
-        ImageFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Princ sem log.png"))); // NOI18N
-        getContentPane().add(ImageFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        ImageFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Telas princ.png"))); // NOI18N
+        getContentPane().add(ImageFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -10, 1200, 720));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -89,6 +105,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
   obj.setVisible(true);
   this.dispose();
     }//GEN-LAST:event_BotaoPerfilActionPerformed
+
+    private void BotaoPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoPesquisarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotaoPesquisarActionPerformed
 
  
 
