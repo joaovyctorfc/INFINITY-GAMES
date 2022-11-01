@@ -43,11 +43,11 @@ public class Registrar extends javax.swing.JFrame {
                 campoEmailActionPerformed(evt);
             }
         });
-        getContentPane().add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 263, 280, 25));
+        getContentPane().add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 245, 280, 20));
 
         campoSenha.setBackground(new java.awt.Color(217, 217, 217));
         campoSenha.setBorder(null);
-        getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 280, 20));
+        getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 280, 20));
 
         campoNome.setBackground(new java.awt.Color(217, 217, 217));
         campoNome.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
@@ -59,14 +59,17 @@ public class Registrar extends javax.swing.JFrame {
                 campoNomeActionPerformed(evt);
             }
         });
-        getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 196, 280, 25));
+        getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 280, 20));
 
+        campoSeg.setBackground(new java.awt.Color(217, 217, 217));
+        campoSeg.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        campoSeg.setBorder(null);
         campoSeg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoSegActionPerformed(evt);
             }
         });
-        getContentPane().add(campoSeg, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 140, 280, -1));
+        getContentPane().add(campoSeg, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 374, 280, 20));
 
         BotaoRegistrar.setForeground(new java.awt.Color(255, 255, 255));
         BotaoRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 194216.png"))); // NOI18N
@@ -77,7 +80,7 @@ public class Registrar extends javax.swing.JFrame {
                 BotaoRegistrarActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 408, 180, 50));
+        getContentPane().add(BotaoRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 180, 50));
 
         BotaoJaPossuo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 195315.png"))); // NOI18N
         BotaoJaPossuo.setBorder(null);
@@ -86,7 +89,7 @@ public class Registrar extends javax.swing.JFrame {
                 BotaoJaPossuoActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoJaPossuo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, -1, -1));
+        getContentPane().add(BotaoJaPossuo, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 472, 100, 20));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
         jButton3.setBorderPainted(false);
@@ -98,7 +101,7 @@ public class Registrar extends javax.swing.JFrame {
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 8, 30, 30));
 
         LabelTotal.setBackground(new java.awt.Color(255, 255, 255));
-        LabelTotal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Registrar Usuário (1).png"))); // NOI18N
+        LabelTotal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Registrar Usuário (2).png"))); // NOI18N
         getContentPane().add(LabelTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
