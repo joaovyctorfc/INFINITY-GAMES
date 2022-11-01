@@ -46,10 +46,20 @@ public class EsqueceuSenha extends javax.swing.JFrame {
 
         BotaoEsqueceuSen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Esqueceu senha.png"))); // NOI18N
         BotaoEsqueceuSen.setBorder(null);
+        BotaoEsqueceuSen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoEsqueceuSenActionPerformed(evt);
+            }
+        });
         getContentPane().add(BotaoEsqueceuSen, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 470, 120, 20));
 
         BotaoRegis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botao link Registrar-se.png"))); // NOI18N
         BotaoRegis.setBorder(null);
+        BotaoRegis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoRegisActionPerformed(evt);
+            }
+        });
         getContentPane().add(BotaoRegis, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 470, 90, 20));
 
         BotaoSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
@@ -152,8 +162,20 @@ public class EsqueceuSenha extends javax.swing.JFrame {
     }//GEN-LAST:event_segCampoActionPerformed
 
     private void BotaoSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSairActionPerformed
-        // TODO add your handling code here:
+      System.exit(0);
     }//GEN-LAST:event_BotaoSairActionPerformed
+
+    private void BotaoEsqueceuSenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoEsqueceuSenActionPerformed
+     EsqueceuSenha obj = new EsqueceuSenha();
+     obj.setVisible(true);
+     this.dispose();
+    }//GEN-LAST:event_BotaoEsqueceuSenActionPerformed
+
+    private void BotaoRegisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoRegisActionPerformed
+      Registrar obj = new Registrar();
+      obj.setVisible(true);
+      this.dispose();
+    }//GEN-LAST:event_BotaoRegisActionPerformed
 
     /**
      * @param args the command line arguments
