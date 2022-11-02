@@ -42,6 +42,7 @@ public class EsqueceuSenha extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         BotaoEsqueceuSen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Esqueceu senha.png"))); // NOI18N
@@ -51,7 +52,7 @@ public class EsqueceuSenha extends javax.swing.JFrame {
                 BotaoEsqueceuSenActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoEsqueceuSen, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 470, 120, 20));
+        getContentPane().add(BotaoEsqueceuSen, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 471, 120, -1));
 
         BotaoRegis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botao link Registrar-se.png"))); // NOI18N
         BotaoRegis.setBorder(null);
@@ -60,7 +61,7 @@ public class EsqueceuSenha extends javax.swing.JFrame {
                 BotaoRegisActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoRegis, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 470, 90, 20));
+        getContentPane().add(BotaoRegis, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 470, 80, 20));
 
         BotaoSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
         BotaoSair.setBorder(null);

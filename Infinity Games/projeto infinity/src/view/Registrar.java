@@ -21,18 +21,38 @@ public class Registrar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
+        BotaoRegistrar = new javax.swing.JButton();
         campoEmail = new javax.swing.JTextField();
         campoSenha = new javax.swing.JPasswordField();
         campoNome = new javax.swing.JTextField();
         campoSeg = new javax.swing.JTextField();
-        BotaoRegistrar = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         LabelTotal = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Já possuo conta!.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 475, 110, 20));
+
+        BotaoRegistrar.setForeground(new java.awt.Color(255, 255, 255));
+        BotaoRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 194216.png"))); // NOI18N
+        BotaoRegistrar.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        BotaoRegistrar.setBorderPainted(false);
+        BotaoRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoRegistrarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotaoRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 180, 50));
 
         campoEmail.setBackground(new java.awt.Color(217, 217, 217));
         campoEmail.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
@@ -72,16 +92,9 @@ public class Registrar extends javax.swing.JFrame {
         });
         getContentPane().add(campoSeg, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 374, 280, 20));
 
-        BotaoRegistrar.setForeground(new java.awt.Color(255, 255, 255));
-        BotaoRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 194216.png"))); // NOI18N
-        BotaoRegistrar.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        BotaoRegistrar.setBorderPainted(false);
-        BotaoRegistrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoRegistrarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotaoRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 180, 50));
+        LabelTotal.setBackground(new java.awt.Color(255, 255, 255));
+        LabelTotal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Registrar Usuário (2).png"))); // NOI18N
+        getContentPane().add(LabelTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
         jButton3.setBorderPainted(false);
@@ -91,18 +104,6 @@ public class Registrar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 8, 30, 30));
-
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Já possuo conta!.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 470, 110, 20));
-
-        LabelTotal.setBackground(new java.awt.Color(255, 255, 255));
-        LabelTotal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Registrar Usuário (2).png"))); // NOI18N
-        getContentPane().add(LabelTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
