@@ -7,76 +7,118 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     public TelaPrincipal() {
         initComponents();
-        setLocationRelativeTo(null); 
+         setLocationRelativeTo(null); //CENTRALIZAR TELA
     }
+
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        BotaoPesquisar = new javax.swing.JButton();
+        BotaoPerfil = new javax.swing.JButton();
+        BotaoMinimizar = new javax.swing.JButton();
+        BotaoFechar = new javax.swing.JButton();
+        BotaoLogar = new javax.swing.JButton();
+        BotaoRegistrar = new javax.swing.JButton();
+        ImageFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBounds(new java.awt.Rectangle(1920, 1080, 1920, 1080));
         setUndecorated(true);
-        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botaologarprincipal.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        BotaoPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BotaoPesquisar.png"))); // NOI18N
+        BotaoPesquisar.setToolTipText("");
+        BotaoPesquisar.setBorder(null);
+        BotaoPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BotaoPesquisarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1697, 111, 170, 70));
+        getContentPane().add(BotaoPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(735, 54, 60, 45));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BotaoPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icone tela princ sem log.png"))); // NOI18N
+        BotaoPerfil.setBorder(null);
+        BotaoPerfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BotaoPerfilActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1850, 20, 30, 30));
+        getContentPane().add(BotaoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 57, 70));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botaoregprincipal.png"))); // NOI18N
-        jButton3.setBorder(null);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        BotaoMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 214036.png"))); // NOI18N
+        BotaoMinimizar.setBorder(null);
+        getContentPane().add(BotaoMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 5, 22, 24));
+
+        BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
+        BotaoFechar.setBorder(null);
+        BotaoFechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                BotaoFecharActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1470, 120, 150, -1));
+        getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 0, 30, 30));
+
+        BotaoLogar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Logar.png"))); // NOI18N
+        BotaoLogar.setText("Logar");
+        BotaoLogar.setBorder(null);
+        BotaoLogar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoLogarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotaoLogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 60, 80, 30));
+
+        BotaoRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Registrar.png"))); // NOI18N
+        BotaoRegistrar.setBorder(null);
+        BotaoRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoRegistrarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotaoRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(895, 60, 90, 30));
+
+        ImageFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Telas princ.png"))); // NOI18N
+        getContentPane().add(ImageFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 1200, 760));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     System.exit(0);         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void BotaoRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoRegistrarActionPerformed
+  Registrar obj = new Registrar();
+  obj.setVisible(true);
+  this.dispose();
+    }//GEN-LAST:event_BotaoRegistrarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      Login login = new Login(); 
-      login.setVisible(true);
-      this.dispose();        
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void BotaoLogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoLogarActionPerformed
+   Login obj = new Login();
+  obj.setVisible(true);
+  this.dispose();
+    }//GEN-LAST:event_BotaoLogarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       Registrar registrar = new Registrar(); 
-       registrar.setVisible(true);
-       this.dispose();        
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_BotaoFecharActionPerformed
 
+    private void BotaoPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoPerfilActionPerformed
+  Login obj = new Login();
+  obj.setVisible(true);
+  this.dispose();
+    }//GEN-LAST:event_BotaoPerfilActionPerformed
 
+    private void BotaoPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoPesquisarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotaoPesquisarActionPerformed
 
+ 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton BotaoFechar;
+    private javax.swing.JButton BotaoLogar;
+    private javax.swing.JButton BotaoMinimizar;
+    private javax.swing.JButton BotaoPerfil;
+    private javax.swing.JButton BotaoPesquisar;
+    private javax.swing.JButton BotaoRegistrar;
+    private javax.swing.JLabel ImageFundo;
     // End of variables declaration//GEN-END:variables
-
 }
