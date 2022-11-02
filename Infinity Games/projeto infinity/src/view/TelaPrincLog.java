@@ -7,6 +7,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
 
     public TelaPrincLog() {
         initComponents();
+        setLocationRelativeTo(null); //CENTRALIZAR TELA
     }
 
 
@@ -14,38 +15,86 @@ public class TelaPrincLog extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        BotaoPerfil = new javax.swing.JButton();
+        BotaoFechar = new javax.swing.JButton();
+        BotaoMinimizar = new javax.swing.JButton();
+        BotaoPesquisar = new javax.swing.JButton();
+        BotaoBiblioteca = new javax.swing.JButton();
+        BotaoCarrinho = new javax.swing.JButton();
+        ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1590, 920));
+        setMinimumSize(new java.awt.Dimension(1200, 700));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1590, 920));
+        setPreferredSize(new java.awt.Dimension(1200, 700));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/1.png"))); // NOI18N
+        BotaoPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Icone Perfil tela Princ.png"))); // NOI18N
+        BotaoPerfil.setBorder(null);
+        BotaoPerfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoPerfilActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotaoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 60, 50));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(911, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(146, 146, 146)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(450, Short.MAX_VALUE))
-        );
+        BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
+        BotaoFechar.setBorder(null);
+        BotaoFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoFecharActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 0, 30, 30));
+
+        BotaoMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 214036.png"))); // NOI18N
+        BotaoMinimizar.setBorder(null);
+        getContentPane().add(BotaoMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 0, 30, 30));
+
+        BotaoPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BotaoPesquisar.png"))); // NOI18N
+        BotaoPesquisar.setBorder(null);
+        getContentPane().add(BotaoPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(735, 54, 60, 45));
+
+        BotaoBiblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Icone Biblioteca.png"))); // NOI18N
+        BotaoBiblioteca.setBorder(null);
+        getContentPane().add(BotaoBiblioteca, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 50, 50, 50));
+
+        BotaoCarrinho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Icone Carrinho.png"))); // NOI18N
+        BotaoCarrinho.setBorder(null);
+        BotaoCarrinho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoCarrinhoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotaoCarrinho, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 53, 50, 40));
+
+        ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/TelaPrinc Depois Login.png"))); // NOI18N
+        getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
+      System.exit(0);
+    }//GEN-LAST:event_BotaoFecharActionPerformed
+
+    private void BotaoPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoPerfilActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotaoPerfilActionPerformed
+
+    private void BotaoCarrinhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoCarrinhoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotaoCarrinhoActionPerformed
+
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton BotaoBiblioteca;
+    private javax.swing.JButton BotaoCarrinho;
+    private javax.swing.JButton BotaoFechar;
+    private javax.swing.JButton BotaoMinimizar;
+    private javax.swing.JButton BotaoPerfil;
+    private javax.swing.JButton BotaoPesquisar;
+    private javax.swing.JLabel ImagemFundo;
     // End of variables declaration//GEN-END:variables
 }

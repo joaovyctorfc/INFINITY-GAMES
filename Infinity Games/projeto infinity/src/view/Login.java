@@ -120,8 +120,8 @@ public class Login extends javax.swing.JFrame {
             ResultSet rsusuariodao = objDAO.AutenticacaoUsuario(obj);
             if(rsusuariodao.next())
             {
-            TelaPrincipal principal = new TelaPrincipal();
-            principal.setVisible(true);
+            TelaPrincLog telaprin = new TelaPrincLog();
+            telaprin.setVisible(true);
             this.dispose();
             }
             else
