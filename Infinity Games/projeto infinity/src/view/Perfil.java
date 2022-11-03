@@ -15,6 +15,7 @@ public class Perfil extends javax.swing.JFrame {
      */
     public Perfil() {
         initComponents();
+      setLocationRelativeTo(null); //CENTRALIZAR TELA
     }
 
     /**
@@ -26,21 +27,64 @@ public class Perfil extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        BotaoInicio = new javax.swing.JButton();
+        CampoNome = new javax.swing.JTextField();
+        CampoEmail = new javax.swing.JTextField();
+        CampoPalavra = new javax.swing.JTextField();
+        CampoSenha = new javax.swing.JTextField();
+        BotaoFechar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        BotaoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Inicio tela perfil.png"))); // NOI18N
+        BotaoInicio.setBorder(null);
+        BotaoInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoInicioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotaoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 620, -1, -1));
+
+        CampoNome.setBorder(null);
+        getContentPane().add(CampoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 241, 430, 20));
+
+        CampoEmail.setBorder(null);
+        getContentPane().add(CampoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 350, 430, 20));
+
+        CampoPalavra.setBorder(null);
+        getContentPane().add(CampoPalavra, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 568, 430, 20));
+
+        CampoSenha.setBorder(null);
+        getContentPane().add(CampoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 459, 430, 20));
+
+        BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
+        BotaoFechar.setBorder(null);
+        BotaoFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoFecharActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, 30, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Perfil.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_BotaoFecharActionPerformed
+
+    private void BotaoInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoInicioActionPerformed
+        TelaPrincipal obj = new TelaPrincipal();
+        obj.setVisible(true);
+        this.dispose();
+                
+    }//GEN-LAST:event_BotaoInicioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -48,5 +92,12 @@ public class Perfil extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotaoFechar;
+    private javax.swing.JButton BotaoInicio;
+    private javax.swing.JTextField CampoEmail;
+    private javax.swing.JTextField CampoNome;
+    private javax.swing.JTextField CampoPalavra;
+    private javax.swing.JTextField CampoSenha;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
