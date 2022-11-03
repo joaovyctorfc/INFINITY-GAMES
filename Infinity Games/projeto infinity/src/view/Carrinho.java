@@ -38,14 +38,29 @@ public class Carrinho extends javax.swing.JFrame {
 
         BotaoFinalizarCompra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Finalizar Compra Fundo Branco.png"))); // NOI18N
         BotaoFinalizarCompra.setBorder(null);
+        BotaoFinalizarCompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoFinalizarCompraActionPerformed(evt);
+            }
+        });
         getContentPane().add(BotaoFinalizarCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 50, -1, -1));
 
         BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
         BotaoFechar.setBorder(null);
+        BotaoFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoFecharActionPerformed(evt);
+            }
+        });
         getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 0, 30, 30));
 
         BotaoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Inicio AZUL.png"))); // NOI18N
         BotaoInicio.setBorder(null);
+        BotaoInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoInicioActionPerformed(evt);
+            }
+        });
         getContentPane().add(BotaoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
 
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Carrinho.png"))); // NOI18N
@@ -53,6 +68,22 @@ public class Carrinho extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BotaoFinalizarCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFinalizarCompraActionPerformed
+      Pagamento obj = new Pagamento();
+      obj.setVisible(true);
+      this.dispose();
+    }//GEN-LAST:event_BotaoFinalizarCompraActionPerformed
+
+    private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_BotaoFecharActionPerformed
+
+    private void BotaoInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoInicioActionPerformed
+       TelaPrincipal obj = new TelaPrincipal();
+       obj.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_BotaoInicioActionPerformed
 
     /**
      * @param args the command line arguments
