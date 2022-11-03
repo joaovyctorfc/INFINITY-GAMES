@@ -46,6 +46,11 @@ public class PagamentoRealizado extends javax.swing.JFrame {
 
         BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
         BotaoFechar.setBorder(null);
+        BotaoFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoFecharActionPerformed(evt);
+            }
+        });
         getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 0, 30, 30));
 
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Pagamento Concluido.png"))); // NOI18N
@@ -55,8 +60,14 @@ public class PagamentoRealizado extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotaoInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoInicioActionPerformed
-        // TODO add your handling code here:
+     TelaPrincipal obj = new TelaPrincipal();
+     obj.setVisible(true);
+     this.dispose();
     }//GEN-LAST:event_BotaoInicioActionPerformed
+
+    private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
+      System.exit(0);
+    }//GEN-LAST:event_BotaoFecharActionPerformed
 
     /**
      * @param args the command line arguments

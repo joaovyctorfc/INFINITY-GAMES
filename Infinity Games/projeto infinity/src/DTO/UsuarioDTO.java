@@ -3,9 +3,16 @@ package DTO;
 
 
 public class UsuarioDTO {
-    private String email,senha,seg; 
+    private String nome,email,senha,seg; 
 
     
+   public String getNome() {
+   return nome;
+    }
+   
+   public String setNome() {
+   return nome;
+    }
     public String getEmail() {
         return email;
     }
