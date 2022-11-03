@@ -128,13 +128,17 @@ public class Login extends javax.swing.JFrame {
             }
             else
             {
-            JOptionPane.showMessageDialog(null,"Usuário ou senha inválida!!!","Erro",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Usuário ou senha inválida!!!, tente novamente!!!","Erro",JOptionPane.ERROR_MESSAGE);
+            campoEmail.setText("");
+            campoSenha.setText("");
             }
+            
             
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null,senha +"btnlogin");
         }
         }
+        
     }//GEN-LAST:event_BotaoEntrarActionPerformed
 
     private void BotaoSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSairActionPerformed
@@ -168,6 +172,10 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField campoSenha;
     // End of variables declaration//GEN-END:variables
 
+     
+            
+        
+     
     private static class ListarUsuario {
 
         public ListarUsuario() {
