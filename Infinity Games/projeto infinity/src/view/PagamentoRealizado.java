@@ -8,12 +8,12 @@ package view;
  *
  * @author Cliente
  */
-public class Biblioteca extends javax.swing.JFrame {
+public class PagamentoRealizado extends javax.swing.JFrame {
 
     /**
-     * Creates new form Biblioteca
+     * Creates new form PagamentoRealizado
      */
-    public Biblioteca() {
+    public PagamentoRealizado() {
         initComponents();
     }
 
@@ -26,51 +26,40 @@ public class Biblioteca extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BotaoFechar = new javax.swing.JButton();
         BotaoInicio = new javax.swing.JButton();
+        BotaoFechar = new javax.swing.JButton();
         ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
-        BotaoFechar.setBorder(null);
-        BotaoFechar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoFecharActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 0, 30, 30));
-
-        BotaoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Inicio AZUL.png"))); // NOI18N
+        BotaoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Inicio Branco.png"))); // NOI18N
         BotaoInicio.setBorder(null);
         BotaoInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotaoInicioActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
+        getContentPane().add(BotaoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 610, -1, -1));
 
-        ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Carrinho .png"))); // NOI18N
+        BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
+        BotaoFechar.setBorder(null);
+        getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 0, 30, 30));
+
+        ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Pagamento Concluido.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
-      System.exit(0);
-    }//GEN-LAST:event_BotaoFecharActionPerformed
-
     private void BotaoInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoInicioActionPerformed
-       TelaPrincipal obj = new TelaPrincipal();
-       obj.setVisible(true);
-       this.dispose();
+        // TODO add your handling code here:
     }//GEN-LAST:event_BotaoInicioActionPerformed
 
     /**
      * @param args the command line arguments
      */
-  
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoFechar;
