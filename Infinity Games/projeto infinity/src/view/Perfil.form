@@ -28,6 +28,7 @@
   <SubComponents>
     <Component class="javax.swing.JTextField" name="CampoNome">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="71" red="52" type="rgb"/>
         </Property>
@@ -43,7 +44,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="40" y="240" width="430" height="20"/>
+          <AbsoluteConstraints x="50" y="240" width="420" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -61,12 +62,13 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="51" y="350" width="430" height="20"/>
+          <AbsoluteConstraints x="50" y="350" width="430" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="CampoSenha">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="71" red="52" type="rgb"/>
         </Property>
@@ -79,12 +81,13 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="51" y="459" width="430" height="20"/>
+          <AbsoluteConstraints x="51" y="459" width="430" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="CampoPalavra">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="71" red="52" type="rgb"/>
         </Property>
@@ -97,7 +100,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="51" y="568" width="430" height="20"/>
+          <AbsoluteConstraints x="51" y="568" width="430" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -146,7 +149,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="200" y="650" width="-1" height="-1"/>
+          <AbsoluteConstraints x="190" y="630" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

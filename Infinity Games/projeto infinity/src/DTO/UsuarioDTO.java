@@ -10,7 +10,7 @@ public class UsuarioDTO {
    return nome;
     }
    
-   public String setNome() {
+   public String setNome(String nome) {
    return nome;
     }
     public String getEmail() {
@@ -41,4 +41,6 @@ public class UsuarioDTO {
     public void setSeg(String seg) {
         this.seg = seg;
     }
+
+    
 }

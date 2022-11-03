@@ -32,7 +32,6 @@ public class UsuarioDAO {
         conn = new ConexaoDAO().conectaBD();
         try {
             String sql = "Select * from user where email = ? and seg = ?";
-            
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1, obj.getEmail());
             pstm.setString(2, obj.getSeg());
@@ -64,9 +63,55 @@ public class UsuarioDAO {
             pstm1.setString(3, obj.getSeg());
             pstm1.execute();
             pstm1.close();
+        
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null,erro + "AlterarSenha");
             }
     }
+    
+    public ResultSet ListarUsuario(UsuarioDTO obj){
+             
+               String nome = null,senha = null,seg = null,email = null;
+        try
+	   {
+		   Class.forName("com.mysql.cj.jdbc.Driver");
+		   Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/infinitygames?user=root&password=");
+		   java.sql.Statement stm = con.createStatement();
+		   ResultSet res = stm.executeQuery("Select * from registro");
+		   while(res.next())
+		   {
+			   nome = res.getString("nome");
+			   senha = res.getString("senha");
+			   seg = res.getString("seg");
+			   email = res.getString("email");
+		   }
+                   return res;
+	   }
+	   catch(ClassNotFoundException ex)
+	   {
+		   JOptionPane.showMessageDialog(null, ex.getMessage(),"Erro", JOptionPane.ERROR_MESSAGE);
+	   }
+	   catch(SQLException ex)
+	   {
+		   JOptionPane.showMessageDialog(null, ex.getMessage(),"Erro", JOptionPane.ERROR_MESSAGE);
+           }
+         return null;
+ }
+       public ResultSet VerificacaoEmail(UsuarioDTO obj){
+        conn = new ConexaoDAO().conectaBD();
+        try {
+            String sql = "Select * from user where email = ?";
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setString(1, obj.getEmail());
+            
+            ResultSet rs = pstm.executeQuery();
+            return rs;
+            
+        } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null,erro + "ConexaoDAO");
+            }
+            return null;
+     }
+    
     
    }

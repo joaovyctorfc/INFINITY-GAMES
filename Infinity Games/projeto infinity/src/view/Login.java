@@ -14,6 +14,7 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import view.Perfil;
 
 public class Login extends javax.swing.JFrame {
 
@@ -166,4 +167,10 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField campoEmail;
     private javax.swing.JPasswordField campoSenha;
     // End of variables declaration//GEN-END:variables
+
+    private static class ListarUsuario {
+
+        public ListarUsuario() {
+        }
+    }
 }

@@ -60,7 +60,7 @@ public class PagamentoRealizado extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotaoInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoInicioActionPerformed
-     TelaPrincipal obj = new TelaPrincipal();
+     TelaPrincLog obj = new TelaPrincLog();
      obj.setVisible(true);
      this.dispose();
     }//GEN-LAST:event_BotaoInicioActionPerformed
