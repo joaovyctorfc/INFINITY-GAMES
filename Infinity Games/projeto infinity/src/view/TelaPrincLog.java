@@ -17,7 +17,6 @@ public class TelaPrincLog extends javax.swing.JFrame {
 
         BotaoPerfil = new javax.swing.JButton();
         BotaoFechar = new javax.swing.JButton();
-        BotaoMinimizar = new javax.swing.JButton();
         BotaoPesquisar = new javax.swing.JButton();
         BotaoBiblioteca = new javax.swing.JButton();
         BotaoCarrinho = new javax.swing.JButton();
@@ -26,7 +25,6 @@ public class TelaPrincLog extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1200, 700));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1200, 700));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         BotaoPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Icone Perfil tela Princ.png"))); // NOI18N
@@ -47,16 +45,17 @@ public class TelaPrincLog extends javax.swing.JFrame {
         });
         getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 0, 30, 30));
 
-        BotaoMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 214036.png"))); // NOI18N
-        BotaoMinimizar.setBorder(null);
-        getContentPane().add(BotaoMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 0, 30, 30));
-
         BotaoPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BotaoPesquisar.png"))); // NOI18N
         BotaoPesquisar.setBorder(null);
         getContentPane().add(BotaoPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(735, 54, 60, 45));
 
         BotaoBiblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Icone Biblioteca.png"))); // NOI18N
         BotaoBiblioteca.setBorder(null);
+        BotaoBiblioteca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoBibliotecaActionPerformed(evt);
+            }
+        });
         getContentPane().add(BotaoBiblioteca, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 50, 50, 50));
 
         BotaoCarrinho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Icone Carrinho.png"))); // NOI18N
@@ -79,12 +78,24 @@ public class TelaPrincLog extends javax.swing.JFrame {
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
     private void BotaoPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoPerfilActionPerformed
-        // TODO add your handling code here:
+      Perfil obj = new Perfil();
+      obj.setVisible(true);
+      this.dispose();
+  
+       
     }//GEN-LAST:event_BotaoPerfilActionPerformed
 
     private void BotaoCarrinhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoCarrinhoActionPerformed
-        // TODO add your handling code here:
+       Carrinho obj = new Carrinho();
+       obj.setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_BotaoCarrinhoActionPerformed
+
+    private void BotaoBibliotecaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoBibliotecaActionPerformed
+        Biblioteca obj = new Biblioteca();
+        obj.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BotaoBibliotecaActionPerformed
 
    
 
@@ -92,7 +103,6 @@ public class TelaPrincLog extends javax.swing.JFrame {
     private javax.swing.JButton BotaoBiblioteca;
     private javax.swing.JButton BotaoCarrinho;
     private javax.swing.JButton BotaoFechar;
-    private javax.swing.JButton BotaoMinimizar;
     private javax.swing.JButton BotaoPerfil;
     private javax.swing.JButton BotaoPesquisar;
     private javax.swing.JLabel ImagemFundo;

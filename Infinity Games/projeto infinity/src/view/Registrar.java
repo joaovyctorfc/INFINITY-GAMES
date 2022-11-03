@@ -21,27 +21,27 @@ public class Registrar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        BotaoJaPossuoConta = new javax.swing.JButton();
         BotaoRegistrar = new javax.swing.JButton();
         campoEmail = new javax.swing.JTextField();
         campoSenha = new javax.swing.JPasswordField();
         campoNome = new javax.swing.JTextField();
-        campoSeg = new javax.swing.JTextField();
-        LabelTotal = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        campoPalavraSegurança = new javax.swing.JTextField();
+        BotaoFechar = new javax.swing.JButton();
+        ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Já possuo conta!.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BotaoJaPossuoConta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Já possuo conta!.png"))); // NOI18N
+        BotaoJaPossuoConta.setBorder(null);
+        BotaoJaPossuoConta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BotaoJaPossuoContaActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 475, 110, 20));
+        getContentPane().add(BotaoJaPossuoConta, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 475, 110, 20));
 
         BotaoRegistrar.setForeground(new java.awt.Color(255, 255, 255));
         BotaoRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 194216.png"))); // NOI18N
@@ -64,10 +64,15 @@ public class Registrar extends javax.swing.JFrame {
                 campoEmailActionPerformed(evt);
             }
         });
-        getContentPane().add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 245, 280, 20));
+        getContentPane().add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 280, 20));
 
         campoSenha.setBackground(new java.awt.Color(217, 217, 217));
         campoSenha.setBorder(null);
+        campoSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoSenhaActionPerformed(evt);
+            }
+        });
         getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 280, 20));
 
         campoNome.setBackground(new java.awt.Color(217, 217, 217));
@@ -82,28 +87,28 @@ public class Registrar extends javax.swing.JFrame {
         });
         getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 280, 20));
 
-        campoSeg.setBackground(new java.awt.Color(217, 217, 217));
-        campoSeg.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        campoSeg.setBorder(null);
-        campoSeg.addActionListener(new java.awt.event.ActionListener() {
+        campoPalavraSegurança.setBackground(new java.awt.Color(217, 217, 217));
+        campoPalavraSegurança.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        campoPalavraSegurança.setBorder(null);
+        campoPalavraSegurança.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoSegActionPerformed(evt);
+                campoPalavraSegurançaActionPerformed(evt);
             }
         });
-        getContentPane().add(campoSeg, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 374, 280, 20));
+        getContentPane().add(campoPalavraSegurança, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 374, 280, 20));
 
-        LabelTotal.setBackground(new java.awt.Color(255, 255, 255));
-        LabelTotal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Registrar Usuário (2).png"))); // NOI18N
-        getContentPane().add(LabelTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
-        jButton3.setBorderPainted(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
+        BotaoFechar.setBorderPainted(false);
+        BotaoFechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                BotaoFecharActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 8, 30, 30));
+        getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 8, 30, 30));
+
+        ImagemFundo.setBackground(new java.awt.Color(255, 255, 255));
+        ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Registrar Usuário (2).png"))); // NOI18N
+        getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -115,7 +120,7 @@ public class Registrar extends javax.swing.JFrame {
     private void BotaoRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoRegistrarActionPerformed
           nome = campoNome.getText();
 	  email = campoEmail.getText();
-          seg = campoSeg.getText();
+          seg = campoPalavraSegurança.getText();
           senha = campoSenha.getText();
 		if(nome.equals("")||email.equals("")||senha.equals("")||seg.equals("")){
                     JOptionPane.showMessageDialog(null,"Erro para realizar o cadastro!!!","Erro",JOptionPane.ERROR_MESSAGE);
@@ -131,13 +136,13 @@ public class Registrar extends javax.swing.JFrame {
 			campoNome.setText("");
 			campoEmail.setText("");
                         campoSenha.setText("");
-                        campoSeg.setText("");
+                        campoPalavraSegurança.setText("");
 		}
 		if(stm.executeUpdate("INSERT into user (email,senha,seg) values('"+email+"','"+senha+"','"+seg+"')")!=0)
 		{
 			campoEmail.setText("");
                         campoSenha.setText("");
-                        campoSeg.setText("");
+                        campoPalavraSegurança.setText("");
 		}
                 else
 		{
@@ -160,31 +165,35 @@ public class Registrar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoNomeActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
        System.exit(0); // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_BotaoFecharActionPerformed
 
-    private void campoSegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSegActionPerformed
+    private void campoPalavraSegurançaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPalavraSegurançaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoSegActionPerformed
+    }//GEN-LAST:event_campoPalavraSegurançaActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BotaoJaPossuoContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoJaPossuoContaActionPerformed
         Login obj = new Login(); 
       obj.setVisible(true);
       this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BotaoJaPossuoContaActionPerformed
+
+    private void campoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoSenhaActionPerformed
 
 
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotaoFechar;
+    private javax.swing.JButton BotaoJaPossuoConta;
     private javax.swing.JButton BotaoRegistrar;
-    private javax.swing.JLabel LabelTotal;
+    private javax.swing.JLabel ImagemFundo;
     private javax.swing.JTextField campoEmail;
     private javax.swing.JTextField campoNome;
-    private javax.swing.JTextField campoSeg;
+    private javax.swing.JTextField campoPalavraSegurança;
     private javax.swing.JPasswordField campoSenha;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
     // End of variables declaration//GEN-END:variables
 }

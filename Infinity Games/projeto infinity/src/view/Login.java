@@ -33,35 +33,35 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BotaoRegistrar = new javax.swing.JButton();
-        BotaoEsquceuSen = new javax.swing.JButton();
+        BotaoRegistrarse = new javax.swing.JButton();
+        BotaoEsquceuSenha = new javax.swing.JButton();
         BotaoEntrar = new javax.swing.JButton();
         campoEmail = new javax.swing.JTextField();
         campoSenha = new javax.swing.JPasswordField();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        BotaoSair = new javax.swing.JButton();
+        ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BotaoRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botao link Registrar-se.png"))); // NOI18N
-        BotaoRegistrar.setBorder(null);
-        BotaoRegistrar.addActionListener(new java.awt.event.ActionListener() {
+        BotaoRegistrarse.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botao link Registrar-se.png"))); // NOI18N
+        BotaoRegistrarse.setBorder(null);
+        BotaoRegistrarse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoRegistrarActionPerformed(evt);
+                BotaoRegistrarseActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 468, -1, -1));
+        getContentPane().add(BotaoRegistrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 468, -1, -1));
 
-        BotaoEsquceuSen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Esqueceu senha.png"))); // NOI18N
-        BotaoEsquceuSen.setBorder(null);
-        BotaoEsquceuSen.addActionListener(new java.awt.event.ActionListener() {
+        BotaoEsquceuSenha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Esqueceu senha.png"))); // NOI18N
+        BotaoEsquceuSenha.setBorder(null);
+        BotaoEsquceuSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoEsquceuSenActionPerformed(evt);
+                BotaoEsquceuSenhaActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoEsquceuSen, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 120, -1));
+        getContentPane().add(BotaoEsquceuSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 120, -1));
 
         BotaoEntrar.setBackground(new java.awt.Color(217, 217, 217));
         BotaoEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botao entrar.png"))); // NOI18N
@@ -81,17 +81,17 @@ public class Login extends javax.swing.JFrame {
         campoSenha.setBorder(null);
         getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 280, 20));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
-        jButton2.setBorderPainted(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        BotaoSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
+        BotaoSair.setBorderPainted(false);
+        BotaoSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BotaoSairActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 8, 30, 30));
+        getContentPane().add(BotaoSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 8, 30, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/LOGIN USUÁRIO (1).png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, 520));
+        ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/LOGIN USUÁRIO (1).png"))); // NOI18N
+        getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -135,21 +135,21 @@ public class Login extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_BotaoEntrarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void BotaoSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSairActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_BotaoSairActionPerformed
 
-    private void BotaoRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoRegistrarActionPerformed
+    private void BotaoRegistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoRegistrarseActionPerformed
    Registrar obj = new Registrar();
    obj.setVisible(true);
    this.dispose();
-    }//GEN-LAST:event_BotaoRegistrarActionPerformed
+    }//GEN-LAST:event_BotaoRegistrarseActionPerformed
 
-    private void BotaoEsquceuSenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoEsquceuSenActionPerformed
+    private void BotaoEsquceuSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoEsquceuSenhaActionPerformed
       EsqueceuSenha obj = new EsqueceuSenha();
       obj.setVisible(true);
       this.dispose();
-    }//GEN-LAST:event_BotaoEsquceuSenActionPerformed
+    }//GEN-LAST:event_BotaoEsquceuSenhaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,11 +158,11 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoEntrar;
-    private javax.swing.JButton BotaoEsquceuSen;
-    private javax.swing.JButton BotaoRegistrar;
+    private javax.swing.JButton BotaoEsquceuSenha;
+    private javax.swing.JButton BotaoRegistrarse;
+    private javax.swing.JButton BotaoSair;
+    private javax.swing.JLabel ImagemFundo;
     private javax.swing.JTextField campoEmail;
     private javax.swing.JPasswordField campoSenha;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

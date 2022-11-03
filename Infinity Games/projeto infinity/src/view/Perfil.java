@@ -27,38 +27,42 @@ public class Perfil extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BotaoInicio = new javax.swing.JButton();
         CampoNome = new javax.swing.JTextField();
         CampoEmail = new javax.swing.JTextField();
         CampoPalavra = new javax.swing.JTextField();
         CampoSenha = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         BotaoFechar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BotaoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Inicio tela perfil.png"))); // NOI18N
-        BotaoInicio.setBorder(null);
-        BotaoInicio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoInicioActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotaoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 620, -1, -1));
-
+        CampoNome.setBackground(new java.awt.Color(82, 113, 255));
         CampoNome.setBorder(null);
         getContentPane().add(CampoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 241, 430, 20));
 
+        CampoEmail.setBackground(new java.awt.Color(82, 113, 255));
         CampoEmail.setBorder(null);
         getContentPane().add(CampoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 350, 430, 20));
 
+        CampoPalavra.setBackground(new java.awt.Color(82, 113, 255));
         CampoPalavra.setBorder(null);
         getContentPane().add(CampoPalavra, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 568, 430, 20));
 
+        CampoSenha.setBackground(new java.awt.Color(82, 113, 255));
         CampoSenha.setBorder(null);
         getContentPane().add(CampoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 459, 430, 20));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Inicio tela perfil.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
         BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
         BotaoFechar.setBorder(null);
@@ -69,8 +73,8 @@ public class Perfil extends javax.swing.JFrame {
         });
         getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, 30, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Perfil.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
+        ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Perfil.png"))); // NOI18N
+        getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,12 +83,11 @@ public class Perfil extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
-    private void BotaoInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoInicioActionPerformed
-        TelaPrincipal obj = new TelaPrincipal();
-        obj.setVisible(true);
-        this.dispose();
-                
-    }//GEN-LAST:event_BotaoInicioActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       TelaPrincipal obj = new TelaPrincipal();
+       obj.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -93,11 +96,11 @@ public class Perfil extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoFechar;
-    private javax.swing.JButton BotaoInicio;
     private javax.swing.JTextField CampoEmail;
     private javax.swing.JTextField CampoNome;
     private javax.swing.JTextField CampoPalavra;
     private javax.swing.JTextField CampoSenha;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel ImagemFundo;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
