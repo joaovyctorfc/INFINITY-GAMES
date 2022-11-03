@@ -4,6 +4,16 @@
  */
 package view;
 
+import DAO.ConexaoDAO;
+import DTO.UsuarioDTO;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Cliente
@@ -31,7 +41,7 @@ public class Perfil extends javax.swing.JFrame {
         CampoEmail = new javax.swing.JTextField();
         CampoPalavra = new javax.swing.JTextField();
         CampoSenha = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        BotaoInicio = new javax.swing.JButton();
         BotaoFechar = new javax.swing.JButton();
         ImagemFundo = new javax.swing.JLabel();
 
@@ -40,29 +50,38 @@ public class Perfil extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         CampoNome.setBackground(new java.awt.Color(82, 113, 255));
+        CampoNome.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         CampoNome.setBorder(null);
-        getContentPane().add(CampoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 241, 430, 20));
+        CampoNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CampoNomeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(CampoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 430, 20));
 
         CampoEmail.setBackground(new java.awt.Color(82, 113, 255));
+        CampoEmail.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         CampoEmail.setBorder(null);
         getContentPane().add(CampoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 350, 430, 20));
 
         CampoPalavra.setBackground(new java.awt.Color(82, 113, 255));
+        CampoPalavra.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         CampoPalavra.setBorder(null);
         getContentPane().add(CampoPalavra, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 568, 430, 20));
 
         CampoSenha.setBackground(new java.awt.Color(82, 113, 255));
+        CampoSenha.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         CampoSenha.setBorder(null);
         getContentPane().add(CampoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 459, 430, 20));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Inicio tela perfil.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BotaoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Inicio tela perfil.png"))); // NOI18N
+        BotaoInicio.setBorder(null);
+        BotaoInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BotaoInicioActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+        getContentPane().add(BotaoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
         BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
         BotaoFechar.setBorder(null);
@@ -83,24 +102,48 @@ public class Perfil extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BotaoInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoInicioActionPerformed
        TelaPrincipal obj = new TelaPrincipal();
        obj.setVisible(true);
        this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BotaoInicioActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void CampoNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CampoNomeActionPerformed
+    
+       String dados = "";
+	try
+	{
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost/infinitygames","root","");
+		Statement stm = con.createStatement();
+		ResultSet res = stm.executeQuery("SELECT * from registro");
+		while(res.next())
+		{
+		   dados = res.getString("nome");
+	
+		}
+		CampoNome.setText(dados);
+	}
+	catch(ClassNotFoundException ex)
+	{
+		JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+	}
+	catch(SQLException ex)
+	{
+		JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+	}
+           
+    }//GEN-LAST:event_CampoNomeActionPerformed
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoFechar;
+    private javax.swing.JButton BotaoInicio;
     private javax.swing.JTextField CampoEmail;
     private javax.swing.JTextField CampoNome;
     private javax.swing.JTextField CampoPalavra;
     private javax.swing.JTextField CampoSenha;
     private javax.swing.JLabel ImagemFundo;
-    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
