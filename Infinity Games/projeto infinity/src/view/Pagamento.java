@@ -15,6 +15,7 @@ public class Pagamento extends javax.swing.JFrame {
      */
     public Pagamento() {
         initComponents();
+        setLocationRelativeTo(null); //CENTRALIZAR TELA
     }
 
     /**
@@ -34,6 +35,7 @@ public class Pagamento extends javax.swing.JFrame {
         ImageFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         BotaoVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BotaoVoltar.png"))); // NOI18N

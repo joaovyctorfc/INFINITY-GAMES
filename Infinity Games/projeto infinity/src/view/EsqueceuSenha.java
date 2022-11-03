@@ -32,36 +32,36 @@ public class EsqueceuSenha extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BotaoEsqueceuSen = new javax.swing.JButton();
-        BotaoRegis = new javax.swing.JButton();
+        BotaoEsqueceuSenha = new javax.swing.JButton();
+        BotaoRegistrarse = new javax.swing.JButton();
         BotaoSair = new javax.swing.JButton();
-        emailVeri = new javax.swing.JTextField();
-        btnCon = new javax.swing.JButton();
-        segCampo = new javax.swing.JTextField();
-        novaSenha = new javax.swing.JPasswordField();
-        jLabel4 = new javax.swing.JLabel();
+        CampoEmail = new javax.swing.JTextField();
+        BotaoRedefinir = new javax.swing.JButton();
+        CampoPalavraSegurança = new javax.swing.JTextField();
+        CampoNovaSenha = new javax.swing.JPasswordField();
+        ImageFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BotaoEsqueceuSen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Esqueceu senha.png"))); // NOI18N
-        BotaoEsqueceuSen.setBorder(null);
-        BotaoEsqueceuSen.addActionListener(new java.awt.event.ActionListener() {
+        BotaoEsqueceuSenha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Esqueceu senha.png"))); // NOI18N
+        BotaoEsqueceuSenha.setBorder(null);
+        BotaoEsqueceuSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoEsqueceuSenActionPerformed(evt);
+                BotaoEsqueceuSenhaActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoEsqueceuSen, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 471, 120, -1));
+        getContentPane().add(BotaoEsqueceuSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 471, 120, -1));
 
-        BotaoRegis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botao link Registrar-se.png"))); // NOI18N
-        BotaoRegis.setBorder(null);
-        BotaoRegis.addActionListener(new java.awt.event.ActionListener() {
+        BotaoRegistrarse.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botao link Registrar-se.png"))); // NOI18N
+        BotaoRegistrarse.setBorder(null);
+        BotaoRegistrarse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoRegisActionPerformed(evt);
+                BotaoRegistrarseActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoRegis, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 470, 80, 20));
+        getContentPane().add(BotaoRegistrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 470, 80, 20));
 
         BotaoSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
         BotaoSair.setBorder(null);
@@ -72,54 +72,54 @@ public class EsqueceuSenha extends javax.swing.JFrame {
         });
         getContentPane().add(BotaoSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 8, 30, 30));
 
-        emailVeri.setBackground(new java.awt.Color(217, 217, 217));
-        emailVeri.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        emailVeri.setBorder(null);
-        emailVeri.addActionListener(new java.awt.event.ActionListener() {
+        CampoEmail.setBackground(new java.awt.Color(217, 217, 217));
+        CampoEmail.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        CampoEmail.setBorder(null);
+        CampoEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailVeriActionPerformed(evt);
+                CampoEmailActionPerformed(evt);
             }
         });
-        getContentPane().add(emailVeri, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 184, 280, 20));
+        getContentPane().add(CampoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 184, 280, 20));
 
-        btnCon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Redefinir.png"))); // NOI18N
-        btnCon.setBorder(null);
-        btnCon.addActionListener(new java.awt.event.ActionListener() {
+        BotaoRedefinir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Redefinir.png"))); // NOI18N
+        BotaoRedefinir.setBorder(null);
+        BotaoRedefinir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConActionPerformed(evt);
+                BotaoRedefinirActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 385, 170, 50));
+        getContentPane().add(BotaoRedefinir, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 385, 170, 50));
 
-        segCampo.setBackground(new java.awt.Color(217, 217, 217));
-        segCampo.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        segCampo.setBorder(null);
-        segCampo.addActionListener(new java.awt.event.ActionListener() {
+        CampoPalavraSegurança.setBackground(new java.awt.Color(217, 217, 217));
+        CampoPalavraSegurança.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        CampoPalavraSegurança.setBorder(null);
+        CampoPalavraSegurança.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                segCampoActionPerformed(evt);
+                CampoPalavraSegurançaActionPerformed(evt);
             }
         });
-        getContentPane().add(segCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 248, 280, 20));
+        getContentPane().add(CampoPalavraSegurança, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 248, 280, 20));
 
-        novaSenha.setBackground(new java.awt.Color(217, 217, 217));
-        novaSenha.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        novaSenha.setBorder(null);
-        getContentPane().add(novaSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 317, 280, 20));
+        CampoNovaSenha.setBackground(new java.awt.Color(217, 217, 217));
+        CampoNovaSenha.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        CampoNovaSenha.setBorder(null);
+        getContentPane().add(CampoNovaSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 317, 280, 20));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/RedefinirSenha Tela.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        ImageFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/RedefinirSenha Tela.png"))); // NOI18N
+        getContentPane().add(ImageFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void emailVeriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailVeriActionPerformed
+    private void CampoEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CampoEmailActionPerformed
         
-    }//GEN-LAST:event_emailVeriActionPerformed
+    }//GEN-LAST:event_CampoEmailActionPerformed
 
-    private void btnConActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConActionPerformed
-        email = emailVeri.getText();
-        seg = segCampo.getText();
-        senha = novaSenha.getText();
+    private void BotaoRedefinirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoRedefinirActionPerformed
+        email = CampoEmail.getText();
+        seg = CampoPalavraSegurança.getText();
+        senha = CampoNovaSenha.getText();
         if(email.equals("")){
                  JOptionPane.showMessageDialog(null,"Email em branco!!!","Erro",JOptionPane.ERROR_MESSAGE);
                 } 
@@ -129,8 +129,8 @@ public class EsqueceuSenha extends javax.swing.JFrame {
         try {
             String email,seg;
 
-            email = emailVeri.getText();
-            seg = segCampo.getText();
+            email = CampoEmail.getText();
+            seg = CampoPalavraSegurança.getText();
             
             
             UsuarioDTO objseg = new UsuarioDTO();
@@ -163,27 +163,27 @@ public class EsqueceuSenha extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "btnlogin");
         }
         }
-    }//GEN-LAST:event_btnConActionPerformed
+    }//GEN-LAST:event_BotaoRedefinirActionPerformed
 
-    private void segCampoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_segCampoActionPerformed
+    private void CampoPalavraSegurançaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CampoPalavraSegurançaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_segCampoActionPerformed
+    }//GEN-LAST:event_CampoPalavraSegurançaActionPerformed
 
     private void BotaoSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSairActionPerformed
       System.exit(0);
     }//GEN-LAST:event_BotaoSairActionPerformed
 
-    private void BotaoEsqueceuSenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoEsqueceuSenActionPerformed
+    private void BotaoEsqueceuSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoEsqueceuSenhaActionPerformed
      EsqueceuSenha obj = new EsqueceuSenha();
      obj.setVisible(true);
      this.dispose();
-    }//GEN-LAST:event_BotaoEsqueceuSenActionPerformed
+    }//GEN-LAST:event_BotaoEsqueceuSenhaActionPerformed
 
-    private void BotaoRegisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoRegisActionPerformed
+    private void BotaoRegistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoRegistrarseActionPerformed
       Registrar obj = new Registrar();
       obj.setVisible(true);
       this.dispose();
-    }//GEN-LAST:event_BotaoRegisActionPerformed
+    }//GEN-LAST:event_BotaoRegistrarseActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,13 +191,13 @@ public class EsqueceuSenha extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotaoEsqueceuSen;
-    private javax.swing.JButton BotaoRegis;
+    private javax.swing.JButton BotaoEsqueceuSenha;
+    private javax.swing.JButton BotaoRedefinir;
+    private javax.swing.JButton BotaoRegistrarse;
     private javax.swing.JButton BotaoSair;
-    private javax.swing.JButton btnCon;
-    private javax.swing.JTextField emailVeri;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JPasswordField novaSenha;
-    private javax.swing.JTextField segCampo;
+    private javax.swing.JTextField CampoEmail;
+    private javax.swing.JPasswordField CampoNovaSenha;
+    private javax.swing.JTextField CampoPalavraSegurança;
+    private javax.swing.JLabel ImageFundo;
     // End of variables declaration//GEN-END:variables
 }

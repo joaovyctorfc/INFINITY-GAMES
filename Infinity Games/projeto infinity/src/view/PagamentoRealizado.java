@@ -15,6 +15,7 @@ public class PagamentoRealizado extends javax.swing.JFrame {
      */
     public PagamentoRealizado() {
         initComponents();
+        setLocationRelativeTo(null); //CENTRALIZAR TELA
     }
 
     /**
@@ -31,6 +32,7 @@ public class PagamentoRealizado extends javax.swing.JFrame {
         ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         BotaoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Inicio Branco.png"))); // NOI18N

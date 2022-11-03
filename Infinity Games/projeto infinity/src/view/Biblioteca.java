@@ -15,6 +15,7 @@ public class Biblioteca extends javax.swing.JFrame {
      */
     public Biblioteca() {
         initComponents();
+        setLocationRelativeTo(null); //CENTRALIZAR TELA
     }
 
     /**
@@ -31,6 +32,7 @@ public class Biblioteca extends javax.swing.JFrame {
         ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N

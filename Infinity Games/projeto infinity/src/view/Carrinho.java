@@ -15,6 +15,7 @@ public class Carrinho extends javax.swing.JFrame {
      */
     public Carrinho() {
         initComponents();
+        setLocationRelativeTo(null); //CENTRALIZAR TELA
     }
 
     /**
@@ -26,13 +27,29 @@ public class Carrinho extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        BotaoFinalizarCompra = new javax.swing.JButton();
+        BotaoFechar = new javax.swing.JButton();
+        BotaoInicio = new javax.swing.JButton();
+        ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Carrinho.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, -1));
+        BotaoFinalizarCompra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Finalizar Compra Fundo Branco.png"))); // NOI18N
+        BotaoFinalizarCompra.setBorder(null);
+        getContentPane().add(BotaoFinalizarCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 50, -1, -1));
+
+        BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
+        BotaoFechar.setBorder(null);
+        getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 0, 30, 30));
+
+        BotaoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Inicio AZUL.png"))); // NOI18N
+        BotaoInicio.setBorder(null);
+        getContentPane().add(BotaoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
+
+        ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Carrinho.png"))); // NOI18N
+        getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -43,6 +60,9 @@ public class Carrinho extends javax.swing.JFrame {
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton BotaoFechar;
+    private javax.swing.JButton BotaoFinalizarCompra;
+    private javax.swing.JButton BotaoInicio;
+    private javax.swing.JLabel ImagemFundo;
     // End of variables declaration//GEN-END:variables
 }
