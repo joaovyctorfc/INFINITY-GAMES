@@ -135,7 +135,7 @@ public class Login extends javax.swing.JFrame {
             
             
         } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null,senha +"btnlogin");
+            JOptionPane.showMessageDialog(null,senha +"Entrar");
         }
         }
         

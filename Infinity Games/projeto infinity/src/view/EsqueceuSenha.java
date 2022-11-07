@@ -153,7 +153,7 @@ public class EsqueceuSenha extends javax.swing.JFrame {
             }
             
         } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null, "btnlogin");
+            JOptionPane.showMessageDialog(null, "EsqueceuSenha");
         }
         }
     }//GEN-LAST:event_BotaoRedefinirActionPerformed

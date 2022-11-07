@@ -153,11 +153,11 @@ public class Registrar extends javax.swing.JFrame {
 	}
 	catch(ClassNotFoundException ex)
 	{
-		JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(null,ex.getMessage(),"Registrar",JOptionPane.ERROR_MESSAGE);
 	}
 	catch(SQLException ex)
 	{
-		JOptionPane.showMessageDialog(null,ex.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(null,ex.getMessage(),"Registrar",JOptionPane.ERROR_MESSAGE);
 	}
     
     }//GEN-LAST:event_BotaoRegistrarActionPerformed

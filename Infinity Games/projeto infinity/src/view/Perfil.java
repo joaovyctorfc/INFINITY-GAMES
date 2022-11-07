@@ -139,7 +139,7 @@ public class Perfil extends javax.swing.JFrame {
                     CampoSenha.setText(senha);
             }
              } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null,erro +"btnlogin");
+            JOptionPane.showMessageDialog(null,erro +"Revelar");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
