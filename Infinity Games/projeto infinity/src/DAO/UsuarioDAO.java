@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class UsuarioDAO {
 
@@ -46,7 +48,7 @@ public class UsuarioDAO {
             return rs;
             
         } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null,erro + "ConexaoDAO");
+            JOptionPane.showMessageDialog(null,erro + "VerificaçãoSegurança");
             }
             return null;
      }
@@ -75,35 +77,7 @@ public class UsuarioDAO {
             }
     }
     
-    public ResultSet ListarUsuario(UsuarioDTO obj){
-             
-               String nome = null,senha = null,seg = null,email = null;
-        try
-	   {
-		   Class.forName("com.mysql.cj.jdbc.Driver");
-		   Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/infinitygames?user=root&password=");
-		   java.sql.Statement stm = con.createStatement();
-		   ResultSet res = stm.executeQuery("Select * from registro");
-		   while(res.next())
-		   {
-			   nome = res.getString("nome");
-			   senha = res.getString("senha");
-			   seg = res.getString("seg");
-			   email = res.getString("email");
-		   }
-                   return res;
-	   }
-	   catch(ClassNotFoundException ex)
-	   {
-		   JOptionPane.showMessageDialog(null, ex.getMessage(),"Erro", JOptionPane.ERROR_MESSAGE);
-	   }
-	   catch(SQLException ex)
-	   {
-		   JOptionPane.showMessageDialog(null, ex.getMessage(),"Erro", JOptionPane.ERROR_MESSAGE);
-           }
-         return null;
- }
-       public ResultSet VerificacaoEmail(UsuarioDTO obj){
+       public ResultSet RevelacaoPerfil(UsuarioDTO obj){
         conn = new ConexaoDAO().conectaBD();
         try {
             String sql = "Select * from user where status = 1";
@@ -113,10 +87,27 @@ public class UsuarioDAO {
             return rs;
             
         } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null,erro + "VerificaçãoEmail");
+            JOptionPane.showMessageDialog(null,erro + "RevelacaoPerfil");
             }
             return null;
      }
+       public ResultSet Deconnect(UsuarioDTO obj){
+       conn = new ConexaoDAO().conectaBD();
+        try {
+            String sql = "Update user set status = ?";
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setInt(1, 0);
+            pstm.execute();
+            pstm.close();
+        } 
+        catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null,erro + "Deconnect");
+        }
+       
+        return null;
+       
+       
+       }
     
     
    }
