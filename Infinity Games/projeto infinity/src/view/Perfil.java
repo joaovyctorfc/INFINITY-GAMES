@@ -121,19 +121,20 @@ public class Perfil extends javax.swing.JFrame {
                     try {
               String email,nome = null,senha = null,seg = null;
 
-             email = CampoEmail.getText();
              UsuarioDTO objseg = new UsuarioDTO();
-             objseg.setEmail(email);
+            
              DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
              ResultSet rsusuariodao = objDAO.VerificacaoEmail(objseg);
              while(rsusuariodao.next())
             {
 		   {
 			   nome = rsusuariodao.getString("nome");
-			   senha = rsusuariodao.getString("senha");
+			   email = rsusuariodao.getString("email");
+                           senha = rsusuariodao.getString("senha");
 			   seg = rsusuariodao.getString("seg");
 		   }
                     CampoNome.setText(nome);
+                    CampoEmail.setText(email);
                     CampoPalavra.setText(seg);
                     CampoSenha.setText(senha);
             }

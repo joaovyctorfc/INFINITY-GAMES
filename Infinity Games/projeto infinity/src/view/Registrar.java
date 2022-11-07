@@ -138,7 +138,7 @@ public class Registrar extends javax.swing.JFrame {
                         campoSenha.setText("");
                         campoPalavraSegurança.setText("");
 		}
-		if(stm.executeUpdate("INSERT into user (email,senha,seg,nome) values('"+email+"','"+senha+"','"+seg+"','"+nome+"')")!=0)
+		if(stm.executeUpdate("INSERT into user (email,senha,seg,nome,status) values('"+email+"','"+senha+"','"+seg+"','"+nome+"',0)")!=0)
 		{
 			campoEmail.setText("");
                         campoSenha.setText("");
