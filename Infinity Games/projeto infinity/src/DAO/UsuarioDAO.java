@@ -17,7 +17,7 @@ public class UsuarioDAO {
         conn = new ConexaoDAO().conectaBD();
         try {
             String sql = "Select * from user where email = ? and senha = ?";
-            String sql1 = "Update user set status = ?";
+            String sql1 = "Update user set status = ? where email = ? and senha = ?";
             
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1, obj.getEmail());
@@ -25,6 +25,8 @@ public class UsuarioDAO {
             
             PreparedStatement pstm1 = conn.prepareStatement(sql1);
             pstm1.setInt(1, 1);
+            pstm1.setString(2, obj.getEmail());
+            pstm1.setString(3, obj.getSenha());
             
             ResultSet rs = pstm.executeQuery();
             pstm1.execute();
