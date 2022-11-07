@@ -124,7 +124,7 @@ public class Perfil extends javax.swing.JFrame {
              UsuarioDTO objseg = new UsuarioDTO();
             
              DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
-             ResultSet rsusuariodao = objDAO.VerificacaoEmail(objseg);
+             ResultSet rsusuariodao = objDAO.RevelacaoPerfil(objseg);
              while(rsusuariodao.next())
             {
 		   {

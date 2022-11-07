@@ -1,6 +1,9 @@
 
 package view;
 
+import DTO.UsuarioDTO;
+import java.sql.ResultSet;
+
 
 public class TelaPrincLog extends javax.swing.JFrame {
 
@@ -20,6 +23,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
         BotaoPesquisar = new javax.swing.JButton();
         BotaoBiblioteca = new javax.swing.JButton();
         BotaoCarrinho = new javax.swing.JButton();
+        BotaoDesconexao = new javax.swing.JButton();
         ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -67,6 +71,14 @@ public class TelaPrincLog extends javax.swing.JFrame {
         });
         getContentPane().add(BotaoCarrinho, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 53, 50, 40));
 
+        BotaoDesconexao.setText("Desconectar");
+        BotaoDesconexao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoDesconexaoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotaoDesconexao, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, -1, -1));
+
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/TelaPrinc Depois Login.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -97,11 +109,22 @@ public class TelaPrincLog extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_BotaoBibliotecaActionPerformed
 
+    private void BotaoDesconexaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoDesconexaoActionPerformed
+        String email,nome = null,senha = null,seg = null;
+
+             UsuarioDTO objseg = new UsuarioDTO();
+            
+             DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
+             ResultSet rsusuariodao = objDAO.Deconnect(objseg);
+             System.exit(0);
+    }//GEN-LAST:event_BotaoDesconexaoActionPerformed
+
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoBiblioteca;
     private javax.swing.JButton BotaoCarrinho;
+    private javax.swing.JButton BotaoDesconexao;
     private javax.swing.JButton BotaoFechar;
     private javax.swing.JButton BotaoPerfil;
     private javax.swing.JButton BotaoPesquisar;
