@@ -4,10 +4,19 @@ package DTO;
 
 public class UsuarioDTO {
     private String nome,email,senha,seg; 
+    private int id;
 
     
    public String getNome() {
    return nome;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
    
    public String setNome(String nome) {
