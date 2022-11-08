@@ -34,16 +34,16 @@ public class TelaPrincLog extends javax.swing.JFrame {
         BotaoBiblioteca = new javax.swing.JButton();
         BotaoCarrinho = new javax.swing.JButton();
         BotaoDesconexao = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        Hades = new javax.swing.JButton();
+        StardewValley = new javax.swing.JButton();
+        MoonLighter = new javax.swing.JButton();
+        Ori = new javax.swing.JButton();
+        ChildOfLight = new javax.swing.JButton();
+        Terraria = new javax.swing.JButton();
+        HollowKnight = new javax.swing.JButton();
+        OneShot = new javax.swing.JButton();
+        Horizon = new javax.swing.JButton();
+        PunchClub = new javax.swing.JButton();
         ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -99,85 +99,95 @@ public class TelaPrincLog extends javax.swing.JFrame {
         });
         getContentPane().add(BotaoDesconexao, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, -1, -1));
 
-        jButton1.setText("Hades");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Hades.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Hades botao.png"))); // NOI18N
+        Hades.setBorder(null);
+        Hades.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                HadesActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 510, -1, -1));
+        getContentPane().add(Hades, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, -1, -1));
 
-        jButton2.setText("Stardew");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        StardewValley.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Stardew Valey botao.png"))); // NOI18N
+        StardewValley.setBorder(null);
+        StardewValley.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                StardewValleyActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 510, -1, -1));
+        getContentPane().add(StardewValley, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, -1, -1));
 
-        jButton3.setText("MoonLighter");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        MoonLighter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/MoonLigth botao.png"))); // NOI18N
+        MoonLighter.setBorder(null);
+        MoonLighter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                MoonLighterActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, -1, -1));
+        getContentPane().add(MoonLighter, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 410, -1, -1));
 
-        jButton4.setText("Ori");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        Ori.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Ori botao.png"))); // NOI18N
+        Ori.setBorder(null);
+        Ori.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                OriActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 510, -1, -1));
+        getContentPane().add(Ori, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 420, -1, -1));
 
-        jButton5.setText("Child of Light");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        ChildOfLight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Child of Ligth botao.png"))); // NOI18N
+        ChildOfLight.setBorder(null);
+        ChildOfLight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                ChildOfLightActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 510, -1, -1));
+        getContentPane().add(ChildOfLight, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 420, -1, -1));
 
-        jButton6.setText("Terraria");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        Terraria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Terraria botao.png"))); // NOI18N
+        Terraria.setBorder(null);
+        Terraria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                TerrariaActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, -1, -1));
+        getContentPane().add(Terraria, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 182, -1, -1));
 
-        jButton7.setText("Hollow Knight");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        HollowKnight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Hollow Knitght botao.png"))); // NOI18N
+        HollowKnight.setBorder(null);
+        HollowKnight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                HollowKnightActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, -1, -1));
+        getContentPane().add(HollowKnight, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 182, -1, -1));
 
-        jButton8.setText("OneShot");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        OneShot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/One Shot botao.png"))); // NOI18N
+        OneShot.setBorder(null);
+        OneShot.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                OneShotActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 280, -1, -1));
+        getContentPane().add(OneShot, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, -1, -1));
 
-        jButton9.setText("Horizon");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        Horizon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Horizon botao.png"))); // NOI18N
+        Horizon.setBorder(null);
+        Horizon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                HorizonActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 280, -1, -1));
+        getContentPane().add(Horizon, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 180, -1, -1));
 
-        jButton10.setText("PunchClub");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        PunchClub.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Punch club botao.png"))); // NOI18N
+        PunchClub.setBorder(null);
+        PunchClub.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                PunchClubActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 280, -1, -1));
+        getContentPane().add(PunchClub, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 180, -1, -1));
 
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/TelaPrinc Depois Login.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -223,64 +233,64 @@ public class TelaPrincLog extends javax.swing.JFrame {
              this.dispose();
     }//GEN-LAST:event_BotaoDesconexaoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void HadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HadesActionPerformed
         Hades obj = new Hades();
         obj.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_HadesActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void StardewValleyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StardewValleyActionPerformed
         StardewValley obj = new StardewValley();
         obj.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_StardewValleyActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void MoonLighterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoonLighterActionPerformed
         Moonlighter obj = new Moonlighter();
         obj.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_MoonLighterActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void OriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OriActionPerformed
         Ori obj = new Ori();
         obj.setVisible(true);
         this.dispose();                                           
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_OriActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void ChildOfLightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChildOfLightActionPerformed
         ChildOfLight obj = new ChildOfLight();
         obj.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_ChildOfLightActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void TerrariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TerrariaActionPerformed
         Terraria obj = new Terraria();
         obj.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_TerrariaActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void HollowKnightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HollowKnightActionPerformed
         HollowKnigth obj = new HollowKnigth();
         obj.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_HollowKnightActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void OneShotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OneShotActionPerformed
         OneShot obj = new OneShot();
         obj.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_OneShotActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void HorizonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HorizonActionPerformed
         HorizonTurbo obj = new HorizonTurbo();
         obj.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_HorizonActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void PunchClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PunchClubActionPerformed
         PunchClub obj = new PunchClub();
         obj.setVisible(true);
-        this.dispose();    }//GEN-LAST:event_jButton10ActionPerformed
+        this.dispose();    }//GEN-LAST:event_PunchClubActionPerformed
 
    
 
@@ -291,16 +301,16 @@ public class TelaPrincLog extends javax.swing.JFrame {
     private javax.swing.JButton BotaoFechar;
     private javax.swing.JButton BotaoPerfil;
     private javax.swing.JButton BotaoPesquisar;
+    private javax.swing.JButton ChildOfLight;
+    private javax.swing.JButton Hades;
+    private javax.swing.JButton HollowKnight;
+    private javax.swing.JButton Horizon;
     private javax.swing.JLabel ImagemFundo;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton MoonLighter;
+    private javax.swing.JButton OneShot;
+    private javax.swing.JButton Ori;
+    private javax.swing.JButton PunchClub;
+    private javax.swing.JButton StardewValley;
+    private javax.swing.JButton Terraria;
     // End of variables declaration//GEN-END:variables
 }

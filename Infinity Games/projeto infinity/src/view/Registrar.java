@@ -30,7 +30,7 @@ public class Registrar extends javax.swing.JFrame {
         BotaoFechar = new javax.swing.JButton();
         ImagemFundo = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -159,6 +159,8 @@ public class Registrar extends javax.swing.JFrame {
 	{
 		JOptionPane.showMessageDialog(null,ex.getMessage(),"Registrar",JOptionPane.ERROR_MESSAGE);
 	}
+     Login obj = new Login();
+     obj.setVisible(true);
     
     }//GEN-LAST:event_BotaoRegistrarActionPerformed
     }
