@@ -4,6 +4,18 @@
  */
 package view;
 
+import DAO.ConexaoDAO;
+import DTO.UsuarioDTO;
+import com.sun.jdi.connect.spi.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.DecimalFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
+
 /**
  *
  * @author Cliente
@@ -30,6 +42,8 @@ public class Carrinho extends javax.swing.JFrame {
         BotaoFinalizarCompra = new javax.swing.JButton();
         BotaoFechar = new javax.swing.JButton();
         BotaoInicio = new javax.swing.JButton();
+        campoTotal = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -62,6 +76,15 @@ public class Carrinho extends javax.swing.JFrame {
             }
         });
         getContentPane().add(BotaoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
+        getContentPane().add(campoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 70, 100, -1));
+
+        jButton1.setText("Revelar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 70, -1, -1));
 
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Carrinho.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, -1));
@@ -85,6 +108,26 @@ public class Carrinho extends javax.swing.JFrame {
        this.dispose();
     }//GEN-LAST:event_BotaoInicioActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        java.sql.Connection conn = new ConexaoDAO().conectaBD();
+        
+        int x = 0;
+        try {
+            String sql = "Select SUM(valor) from jogos where status = ?";
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setInt(1,1);
+            ResultSet rs = pstm.executeQuery();
+            while(rs.next()){
+            x = rs.getInt(1);
+            }
+            campoTotal.setText("R$"+x);
+            
+            
+        } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null,erro + "RevelacaoPerfil");
+            }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -95,5 +138,7 @@ public class Carrinho extends javax.swing.JFrame {
     private javax.swing.JButton BotaoFinalizarCompra;
     private javax.swing.JButton BotaoInicio;
     private javax.swing.JLabel ImagemFundo;
+    private javax.swing.JTextField campoTotal;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
