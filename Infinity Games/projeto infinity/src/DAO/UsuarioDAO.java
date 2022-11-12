@@ -122,12 +122,19 @@ public class UsuarioDAO {
         conn = new ConexaoDAO().conectaBD();
         try {
             String sql = "update jogos set status = ? where nome = ? and valor = ?";
+            String sql1 = "update jogos set nimagem = ? where nome = ? and valor = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1, 1);
             pstm.setString(2,"Hades");
             pstm.setInt(3, 48);
             pstm.execute();
             pstm.close();
+            PreparedStatement pstm1 = conn.prepareStatement(sql1);
+            pstm1.setInt(1, 6);
+            pstm1.setString(2,"Hades");
+            pstm1.setInt(3, 48);
+            pstm1.execute();
+            pstm1.close();
             
             
         } catch (SQLException erro) {
@@ -146,6 +153,7 @@ public class UsuarioDAO {
             pstm.execute();
             pstm.close();
             
+            
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null,erro + "HollowKnight");
             }
@@ -155,6 +163,7 @@ public class UsuarioDAO {
         conn = new ConexaoDAO().conectaBD();
         try {
             String sql = "update jogos set status = ? where nome = ? and valor = ?";
+            String sql1 = "update jogos set nimagem = ? where nome = ? and valor = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1, 1);
             pstm.setString(2,"Terraria");
@@ -171,6 +180,7 @@ public class UsuarioDAO {
         conn = new ConexaoDAO().conectaBD();
         try {
             String sql = "update jogos set status = ? where nome = ? and valor = ?";
+            String sql1 = "update jogos set nimagem = ? where nome = ? and valor = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1, 1);
             pstm.setString(2,"OneShot");
@@ -187,6 +197,7 @@ public class UsuarioDAO {
         conn = new ConexaoDAO().conectaBD();
         try {
             String sql = "update jogos set status = ? where nome = ? and valor = ?";
+            String sql1 = "update jogos set nimagem = ? where nome = ? and valor = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1, 1);
             pstm.setString(2,"Horizon Chase Turbo");
@@ -203,6 +214,7 @@ public class UsuarioDAO {
         conn = new ConexaoDAO().conectaBD();
         try {
             String sql = "update jogos set status = ? where nome = ? and valor = ?";
+            String sql1 = "update jogos set nimagem = ? where nome = ? and valor = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1, 1);
             pstm.setString(2,"Punch Club");
@@ -219,6 +231,7 @@ public class UsuarioDAO {
         conn = new ConexaoDAO().conectaBD();
         try {
             String sql = "update jogos set status = ? where nome = ? and valor = ?";
+            String sql1 = "update jogos set nimagem = ? where nome = ? and valor = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1, 1);
             pstm.setString(2,"Stardew Valley");
@@ -235,6 +248,7 @@ public class UsuarioDAO {
         conn = new ConexaoDAO().conectaBD();
         try {
             String sql = "update jogos set status = ? where nome = ? and valor = ?";
+            String sql1 = "update jogos set nimagem = ? where nome = ? and valor = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1, 1);
             pstm.setString(2,"Moonlighter");
@@ -251,6 +265,7 @@ public class UsuarioDAO {
         conn = new ConexaoDAO().conectaBD();
         try {
             String sql = "update jogos set status = ? where nome = ? and valor = ?";
+            String sql1 = "update jogos set nimagem = ? where nome = ? and valor = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1, 1);
             pstm.setString(2,"Ori and the Blind Forest");
@@ -267,6 +282,7 @@ public class UsuarioDAO {
         conn = new ConexaoDAO().conectaBD();
         try {
             String sql = "update jogos set status = ? where nome = ? and valor = ?";
+            String sql1 = "update jogos set nimagem = ? where nome = ? and valor = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1, 1);
             pstm.setString(2,"Child of Light");
@@ -279,6 +295,23 @@ public class UsuarioDAO {
             }
             return null;
      }
-    
+       public UsuarioDTO buscar(Integer id){
+         UsuarioDTO retorno = null;
+           String sql = "Select id,imagem from exemplo where id=?";
+           
+           try {
+               PreparedStatement pstm = conn.prepareStatement(sql);
+               pstm.setInt(1,id);
+               ResultSet rs = pstm.executeQuery();
+               if(rs.next()){
+               retorno = new UsuarioDTO();
+               retorno.setId(rs.getInt("id"));
+               retorno.setImagem(rs.getBytes("imagem"));
+               }
+           } catch (SQLException erro) {
+               JOptionPane.showMessageDialog(null,erro + "buscar");
+           }
+          return retorno;
+       }
     
    }

@@ -6,6 +6,7 @@ package view;
 
 import DAO.ConexaoDAO;
 import DTO.UsuarioDTO;
+import UTIL.ManipularImagem;
 import com.sun.jdi.connect.spi.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,6 +14,7 @@ import java.sql.SQLException;
 import java.text.DecimalFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 
@@ -44,6 +46,10 @@ public class Carrinho extends javax.swing.JFrame {
         BotaoInicio = new javax.swing.JButton();
         campoTotal = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        lblImg2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        lblImg = new javax.swing.JLabel();
         ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -76,6 +82,12 @@ public class Carrinho extends javax.swing.JFrame {
             }
         });
         getContentPane().add(BotaoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
+
+        campoTotal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoTotalActionPerformed(evt);
+            }
+        });
         getContentPane().add(campoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 70, 100, -1));
 
         jButton1.setText("Revelar");
@@ -85,6 +97,16 @@ public class Carrinho extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 70, -1, -1));
+
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2.add(lblImg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 5, 310, 170));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 320, 180));
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(lblImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 190));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 290, 190));
 
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Carrinho.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, -1));
@@ -99,6 +121,9 @@ public class Carrinho extends javax.swing.JFrame {
     }//GEN-LAST:event_BotaoFinalizarCompraActionPerformed
 
     private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
+        UsuarioDTO objseg = new UsuarioDTO();
+        DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
+        ResultSet rsusuariodao = objDAO.Deconnect(objseg);
         System.exit(0);
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
@@ -110,23 +135,42 @@ public class Carrinho extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         java.sql.Connection conn = new ConexaoDAO().conectaBD();
-        
+        UsuarioDTO retorno = null;
+        UsuarioDTO retorno2 = null;
+        Integer id = null;
         int x = 0;
         try {
             String sql = "Select SUM(valor) from jogos where status = ?";
+            String sql1 = "Select (imagem) from jogos where status = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1,1);
+            PreparedStatement pstm1 = conn.prepareStatement(sql1);
+            pstm1.setInt(1,1);
+
+
+            ResultSet rs1 = pstm1.executeQuery();
+            if(rs1.next()){
+               retorno = new UsuarioDTO();
+               retorno.setImagem(rs1.getBytes("imagem"));
+               }
+            
             ResultSet rs = pstm.executeQuery();
             while(rs.next()){
             x = rs.getInt(1);
             }
             campoTotal.setText("R$"+x);
-            
-            
+            ManipularImagem.exibiImagemLabel(retorno.getImagem(),lblImg);
+
         } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null,erro + "RevelacaoPerfil");
+            JOptionPane.showMessageDialog(null,erro + "revelar");
             }
+        
+
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void campoTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTotalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoTotalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,5 +184,14 @@ public class Carrinho extends javax.swing.JFrame {
     private javax.swing.JLabel ImagemFundo;
     private javax.swing.JTextField campoTotal;
     private javax.swing.JButton jButton1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lblImg;
+    private javax.swing.JLabel lblImg2;
     // End of variables declaration//GEN-END:variables
+public void preço(){
+
+
+}
+
 }

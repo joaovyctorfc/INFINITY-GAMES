@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import java.sql.*;
 
+
 public class ConexaoDAO {
   public Connection conectaBD(){
        Connection conn = null;
