@@ -7,6 +7,7 @@ package Jogos;
 import DTO.UsuarioDTO;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
+import view.Carrinho;
 import view.TelaPrincLog;
 
 /**
@@ -65,6 +66,9 @@ public class ChildOfLight extends javax.swing.JFrame {
         DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
         ResultSet rsusuariodao = objDAO.Child(objseg);
         JOptionPane.showMessageDialog(null,"Item adicionado ao carrinho");
+        Carrinho obj = new Carrinho();
+        obj.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

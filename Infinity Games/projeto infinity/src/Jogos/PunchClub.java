@@ -7,6 +7,7 @@ package Jogos;
 import DTO.UsuarioDTO;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
+import view.Carrinho;
 import view.TelaPrincLog;
 
 /**
@@ -71,6 +72,9 @@ public class PunchClub extends javax.swing.JFrame {
         DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
         ResultSet rsusuariodao = objDAO.PunchClub(objseg);
         JOptionPane.showMessageDialog(null,"Item adicionado ao carrinho");
+        Carrinho obj = new Carrinho();
+        obj.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
