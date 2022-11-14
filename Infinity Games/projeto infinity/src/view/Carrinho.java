@@ -139,7 +139,10 @@ public class Carrinho extends javax.swing.JFrame {
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
     private void BotaoInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoInicioActionPerformed
-       TelaPrincLog obj = new TelaPrincLog();
+        UsuarioDTO objseg = new UsuarioDTO();
+        DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
+        ResultSet rsusuariodao = objDAO.Cancelamento(objseg);
+        TelaPrincLog obj = new TelaPrincLog();
        obj.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_BotaoInicioActionPerformed

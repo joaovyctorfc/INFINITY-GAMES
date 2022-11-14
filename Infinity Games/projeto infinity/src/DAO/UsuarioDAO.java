@@ -117,7 +117,21 @@ public class UsuarioDAO {
         return null;
        }
        
+       public ResultSet Cancelamento(UsuarioDTO obj){
+       conn = new ConexaoDAO().conectaBD();
+        try {
+            String sql1 = "Update jogos set status = ?";
+            PreparedStatement pstm1 = conn.prepareStatement(sql1);
+            pstm1.setInt(1, 0);
+            pstm1.execute();
+            pstm1.close();
+        } 
+        catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null,erro + "Deconnect");
+        }
        
+        return null;
+       }
 
        public ResultSet Hades(UsuarioDTO obj){
         conn = new ConexaoDAO().conectaBD();
