@@ -58,7 +58,6 @@ public class Perfil extends javax.swing.JFrame {
         CampoPalavra = new javax.swing.JTextField();
         BotaoInicio = new javax.swing.JButton();
         BotaoFechar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -112,14 +111,6 @@ public class Perfil extends javax.swing.JFrame {
         });
         getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, 30, 30));
 
-        jButton1.setText("Revelar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 630, -1, -1));
-
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Perfil.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
 
@@ -143,33 +134,6 @@ public class Perfil extends javax.swing.JFrame {
                     
     }//GEN-LAST:event_CampoNomeActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      
-                    try {
-              String email,nome = null,senha = null,seg = null;
-
-             UsuarioDTO objseg = new UsuarioDTO();
-            
-             DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
-             ResultSet rsusuariodao = objDAO.RevelacaoPerfil(objseg);
-             while(rsusuariodao.next())
-            {
-		   {
-			   nome = rsusuariodao.getString("nome");
-			   email = rsusuariodao.getString("email");
-                           senha = rsusuariodao.getString("senha");
-			   seg = rsusuariodao.getString("seg");
-		   }
-                    CampoNome.setText(nome);
-                    CampoEmail.setText(email);
-                    CampoPalavra.setText(seg);
-                    CampoSenha.setText(senha);
-            }
-             } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null,erro +"Revelar");
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -180,7 +144,6 @@ public class Perfil extends javax.swing.JFrame {
     private javax.swing.JTextField CampoPalavra;
     private javax.swing.JTextField CampoSenha;
     private javax.swing.JLabel ImagemFundo;
-    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 
  

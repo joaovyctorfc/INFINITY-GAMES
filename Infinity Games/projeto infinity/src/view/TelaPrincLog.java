@@ -373,6 +373,16 @@ public class TelaPrincLog extends javax.swing.JFrame {
         obj.setVisible(true);
         this.dispose();
         }
+        if(n.equals("hollow")){
+        HollowKnigth obj = new HollowKnigth();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Hollow")){
+        HollowKnigth obj = new HollowKnigth();
+        obj.setVisible(true);
+        this.dispose();
+        }
         if(n.equals("Hades")){
         Hades obj = new Hades();
         obj.setVisible(true);
@@ -394,6 +404,16 @@ public class TelaPrincLog extends javax.swing.JFrame {
         this.dispose();
         }
         if(n.equals("child of light")){
+        ChildOfLight obj = new ChildOfLight();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("child")){
+        ChildOfLight obj = new ChildOfLight();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Child")){
         ChildOfLight obj = new ChildOfLight();
         obj.setVisible(true);
         this.dispose();
@@ -483,12 +503,32 @@ public class TelaPrincLog extends javax.swing.JFrame {
         obj.setVisible(true);
         this.dispose();
         }
+        if(n.equals("punch")){
+        PunchClub obj = new PunchClub();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Punch")){
+        PunchClub obj = new PunchClub();
+        obj.setVisible(true);
+        this.dispose();
+        }
         if(n.equals("Stardew Valley")){
         StardewValley obj = new StardewValley();
         obj.setVisible(true);
         this.dispose();
         }
         if(n.equals("stardew valley")){
+        StardewValley obj = new StardewValley();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Stardew")){
+        StardewValley obj = new StardewValley();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("stardew")){
         StardewValley obj = new StardewValley();
         obj.setVisible(true);
         this.dispose();
