@@ -14,6 +14,7 @@ import Jogos.HorizonTurbo;
 import Jogos.OneShot;
 import Jogos.PunchClub;
 import Jogos.Terraria;
+import UTIL.ManipularImagem;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -32,6 +33,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
         DefaultListModel MODELO;
         int Enter = 0;
         private String n;
+        UsuarioDTO retorno = null;
         
         public TelaPrincLog() {
         initComponents();
@@ -40,9 +42,21 @@ public class TelaPrincLog extends javax.swing.JFrame {
         MODELO = new DefaultListModel();
         Lista.setModel(MODELO);
         n = campoPesquisa.getText();
-        
-        
-        
+            
+        java.sql.Connection conn = new ConexaoDAO().conectaBD();
+            try {
+                 String sql1 = "Select (imagem) from user where status = ?";
+                 PreparedStatement pstm1 = conn.prepareStatement(sql1);
+                 pstm1.setInt(1,1);
+                 ResultSet rs1 = pstm1.executeQuery();
+                if(rs1.next()){
+               retorno = new UsuarioDTO();
+               retorno.setImagem(rs1.getBytes("imagem"));
+               }
+                 ManipularImagem.exibirImagemLabel(retorno.getImagem(),BotaoPerfil);
+            } catch (SQLException erro) {
+                JOptionPane.showMessageDialog(null,erro + "icone");
+            } 
     }
 
 
@@ -98,12 +112,13 @@ public class TelaPrincLog extends javax.swing.JFrame {
 
         BotaoPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Icone Perfil tela Princ.png"))); // NOI18N
         BotaoPerfil.setBorder(null);
+        BotaoPerfil.setPreferredSize(new java.awt.Dimension(50, 50));
         BotaoPerfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotaoPerfilActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 60, 50));
+        getContentPane().add(BotaoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
 
         BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
         BotaoFechar.setBorder(null);
@@ -256,8 +271,6 @@ public class TelaPrincLog extends javax.swing.JFrame {
       Perfil obj = new Perfil();
       obj.setVisible(true);
       this.dispose();
-  
-       
     }//GEN-LAST:event_BotaoPerfilActionPerformed
 
     private void BotaoCarrinhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoCarrinhoActionPerformed

@@ -18,6 +18,7 @@ import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
@@ -48,7 +49,7 @@ public class NewJFrame extends javax.swing.JFrame {
         lblimagem = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jButton1.setText("selecionar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -74,7 +75,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jButton2.setText("enviar");
+        jButton2.setText("trocar icone");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -117,6 +118,7 @@ public class NewJFrame extends javax.swing.JFrame {
         Jogo jogo = new Jogo();
         jogo.setImagem(getImagem());
         conexao.inserir(jogo);
+        JOptionPane.showMessageDialog(null,"Icone trocado com sucesso!!!");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

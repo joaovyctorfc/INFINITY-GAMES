@@ -93,7 +93,7 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="60" y="180" width="230" height="190"/>
+          <AbsoluteConstraints x="80" y="190" width="210" height="170"/>
         </Constraint>
       </Constraints>
 
@@ -102,9 +102,14 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lblImg">
+          <Properties>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[165, 215]"/>
+            </Property>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="220" height="190"/>
+              <AbsoluteConstraints x="0" y="0" width="210" height="170"/>
             </Constraint>
           </Constraints>
         </Component>

@@ -4,9 +4,11 @@
  */
 package view;
 
+import DTO.UsuarioDTO;
 import java.awt.Frame;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
+import java.sql.ResultSet;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import view.PagamentoRealizado.RandomString;
@@ -92,6 +94,7 @@ public class PagamentoRealizado extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotaoInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoInicioActionPerformed
+     
      TelaPrincLog obj = new TelaPrincLog();
      obj.setVisible(true);
      this.dispose();
@@ -102,10 +105,8 @@ public class PagamentoRealizado extends javax.swing.JFrame {
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      
         RandomString obj = new RandomString();
         btnCopiar.setVisible(true);
-    
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnCopiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCopiarActionPerformed
@@ -116,6 +117,12 @@ public class PagamentoRealizado extends javax.swing.JFrame {
 
     private void btnCopiarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCopiarMousePressed
         JOptionPane.showMessageDialog(null,"Código copiado com sucesso!!!");
+        UsuarioDTO objseg = new UsuarioDTO();
+        DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
+        ResultSet rsusuariodao = objDAO.Cancelamento(objseg);
+        TelaPrincLog obj = new TelaPrincLog();
+        obj.setVisible(true);
+        
     }//GEN-LAST:event_btnCopiarMousePressed
 
     /**
@@ -132,8 +139,6 @@ public class PagamentoRealizado extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
      public class RandomString {
-  
-   
     static String getAlphaNumericString(int n)
     {
         String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "0123456789";
@@ -153,8 +158,4 @@ public class PagamentoRealizado extends javax.swing.JFrame {
         campoCodigo.setText(""+RandomString.getAlphaNumericString(n));
     }
 }
-      public void copy (){
-        
- }
- 
 }

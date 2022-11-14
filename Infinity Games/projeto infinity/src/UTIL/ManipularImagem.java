@@ -17,6 +17,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /**
  *
@@ -104,7 +106,30 @@ public class ManipularImagem {
     }
     //Novo método para exibir imagem na tela
     //Recebe o label que queremos exibir E a imagem como array de bytes do banco
-    public static void exibiImagemLabel(byte[] minhaimagem, javax.swing.JLabel label)
+    public static void exibiImagemLabel(byte[] minhaimagem, JLabel label)
+{
+        //primeiro verifica se tem a imagem
+        //se tem convert para inputstream que é o formato reconhecido pelo ImageIO
+       
+        if(minhaimagem!=null)
+        {
+            InputStream input = new ByteArrayInputStream(minhaimagem);
+            try {
+                BufferedImage imagem = ImageIO.read(input);
+                label.setIcon(new ImageIcon(imagem));
+            } catch (IOException ex) {
+            }
+            
+        
+        }
+        else
+        {
+            label.setIcon(null);
+            
+        }
+
+}
+    public static void exibirImagemLabel(byte[] minhaimagem, JButton label)
 {
         //primeiro verifica se tem a imagem
         //se tem convert para inputstream que é o formato reconhecido pelo ImageIO

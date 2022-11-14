@@ -4,6 +4,7 @@ package view;
 import DAOPerfil.UsuarioDAO;
 import DAOPerfil.ConexaoDAO;
 import DTO.UsuarioDTO;
+import adicionarimagem.NewJFrame;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -58,6 +59,7 @@ public class Perfil extends javax.swing.JFrame {
         CampoPalavra = new javax.swing.JTextField();
         BotaoInicio = new javax.swing.JButton();
         BotaoFechar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -111,6 +113,14 @@ public class Perfil extends javax.swing.JFrame {
         });
         getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, 30, 30));
 
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 420, -1, -1));
+
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Perfil.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
 
@@ -134,6 +144,12 @@ public class Perfil extends javax.swing.JFrame {
                     
     }//GEN-LAST:event_CampoNomeActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+          NewJFrame obj = new NewJFrame();
+          obj.setVisible(true);
+          
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -144,6 +160,7 @@ public class Perfil extends javax.swing.JFrame {
     private javax.swing.JTextField CampoPalavra;
     private javax.swing.JTextField CampoSenha;
     private javax.swing.JLabel ImagemFundo;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 
  

@@ -115,9 +115,11 @@ public class Carrinho extends javax.swing.JFrame {
         getContentPane().add(campoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, 100, -1));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(lblImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 190));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 230, 190));
+        lblImg.setPreferredSize(new java.awt.Dimension(165, 215));
+        jPanel1.add(lblImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 170));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 210, 170));
 
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Carrinho.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, -1));
