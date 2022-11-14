@@ -4,18 +4,23 @@
  */
 package view;
 
+import java.awt.Frame;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
+import view.PagamentoRealizado.RandomString;
+
 /**
  *
  * @author Cliente
  */
 public class PagamentoRealizado extends javax.swing.JFrame {
 
-    /**
-     * Creates new form PagamentoRealizado
-     */
     public PagamentoRealizado() {
         initComponents();
         setLocationRelativeTo(null); //CENTRALIZAR TELA
+        btnCopiar.setVisible(false);
     }
 
     /**
@@ -29,6 +34,9 @@ public class PagamentoRealizado extends javax.swing.JFrame {
 
         BotaoInicio = new javax.swing.JButton();
         BotaoFechar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        campoCodigo = new javax.swing.JTextField();
+        btnCopiar = new javax.swing.JButton();
         ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,6 +61,30 @@ public class PagamentoRealizado extends javax.swing.JFrame {
         });
         getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 0, 30, 30));
 
+        jButton1.setText("Revelar código");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 570, -1, -1));
+
+        campoCodigo.setEditable(false);
+        getContentPane().add(campoCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 570, 180, -1));
+
+        btnCopiar.setText("copiar");
+        btnCopiar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnCopiarMousePressed(evt);
+            }
+        });
+        btnCopiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCopiarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnCopiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 570, -1, -1));
+
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Pagamento Concluido.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -69,6 +101,23 @@ public class PagamentoRealizado extends javax.swing.JFrame {
       System.exit(0);
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      
+        RandomString obj = new RandomString();
+        btnCopiar.setVisible(true);
+    
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnCopiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCopiarActionPerformed
+        Clipboard clipBoard = getToolkit().getSystemClipboard();
+        StringSelection ss = new StringSelection(campoCodigo.getText());
+        clipBoard.setContents(ss,ss);
+    }//GEN-LAST:event_btnCopiarActionPerformed
+
+    private void btnCopiarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCopiarMousePressed
+        JOptionPane.showMessageDialog(null,"Código copiado com sucesso!!!");
+    }//GEN-LAST:event_btnCopiarMousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -78,5 +127,34 @@ public class PagamentoRealizado extends javax.swing.JFrame {
     private javax.swing.JButton BotaoFechar;
     private javax.swing.JButton BotaoInicio;
     private javax.swing.JLabel ImagemFundo;
+    private javax.swing.JButton btnCopiar;
+    private javax.swing.JTextField campoCodigo;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
+     public class RandomString {
+  
+   
+    static String getAlphaNumericString(int n)
+    {
+        String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "0123456789";
+        StringBuilder sb = new StringBuilder(n);
+        for (int i = 0; i < n; i++) {
+            int index
+                = (int)(AlphaNumericString.length()
+                        * Math.random());
+            sb.append(AlphaNumericString
+                          .charAt(index));
+        }
+        return sb.toString();
+    }
+    
+    {
+        int n = 12;
+        campoCodigo.setText(""+RandomString.getAlphaNumericString(n));
+    }
+}
+      public void copy (){
+        
+ }
+ 
 }

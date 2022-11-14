@@ -22,6 +22,29 @@ public class Perfil extends javax.swing.JFrame {
         
         initComponents();
       setLocationRelativeTo(null); //CENTRALIZAR TELA
+      try {
+              String email,nome = null,senha = null,seg = null;
+
+             UsuarioDTO objseg = new UsuarioDTO();
+            
+             DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
+             ResultSet rsusuariodao = objDAO.RevelacaoPerfil(objseg);
+             while(rsusuariodao.next())
+            {
+		   {
+			   nome = rsusuariodao.getString("nome");
+			   email = rsusuariodao.getString("email");
+                           senha = rsusuariodao.getString("senha");
+			   seg = rsusuariodao.getString("seg");
+		   }
+                    CampoNome.setText(nome);
+                    CampoEmail.setText(email);
+                    CampoPalavra.setText(seg);
+                    CampoSenha.setText(senha);
+            }
+             } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null,erro +"Revelar");
+        }
     }
 
 
@@ -53,6 +76,7 @@ public class Perfil extends javax.swing.JFrame {
         });
         getContentPane().add(CampoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 420, 30));
 
+        CampoEmail.setEditable(false);
         CampoEmail.setBackground(new java.awt.Color(82, 113, 255));
         CampoEmail.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         CampoEmail.setBorder(null);
@@ -94,7 +118,7 @@ public class Perfil extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 630, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 630, -1, -1));
 
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Perfil.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));

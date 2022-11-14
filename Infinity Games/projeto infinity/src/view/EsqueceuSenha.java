@@ -115,7 +115,13 @@ public class EsqueceuSenha extends javax.swing.JFrame {
         senha = CampoNovaSenha.getText();
         if(email.equals("")){
                  JOptionPane.showMessageDialog(null,"Email em branco!!!","Erro",JOptionPane.ERROR_MESSAGE);
-                } 
+                }
+        if(seg.equals("")){
+                 JOptionPane.showMessageDialog(null,"Segurança em branco!!!","Erro",JOptionPane.ERROR_MESSAGE);
+                }
+        if(senha.equals("")){
+                 JOptionPane.showMessageDialog(null,"Nova senha em branco!!!","Erro",JOptionPane.ERROR_MESSAGE);
+                }
      
      else{
         
@@ -151,7 +157,9 @@ public class EsqueceuSenha extends javax.swing.JFrame {
             {
             JOptionPane.showMessageDialog(null,"Senha inválida!!!","Erro",JOptionPane.ERROR_MESSAGE);
             }
-            
+            Login obj = new Login();
+            obj.setVisible(true);
+            this.dispose();
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null, "EsqueceuSenha");
         }

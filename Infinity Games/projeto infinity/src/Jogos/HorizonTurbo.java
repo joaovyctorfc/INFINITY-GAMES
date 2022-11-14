@@ -21,6 +21,7 @@ public class HorizonTurbo extends javax.swing.JFrame {
      */
     public HorizonTurbo() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -37,6 +38,7 @@ public class HorizonTurbo extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("jButton1");

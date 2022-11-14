@@ -73,6 +73,11 @@ public class Login extends javax.swing.JFrame {
                 BotaoEntrarActionPerformed(evt);
             }
         });
+        BotaoEntrar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                BotaoEntrarKeyPressed(evt);
+            }
+        });
         getContentPane().add(BotaoEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 385, 160, 50));
 
         campoEmail.setBackground(new java.awt.Color(217, 217, 217));
@@ -156,6 +161,10 @@ public class Login extends javax.swing.JFrame {
       obj.setVisible(true);
       this.dispose();
     }//GEN-LAST:event_BotaoEsquceuSenhaActionPerformed
+
+    private void BotaoEntrarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BotaoEntrarKeyPressed
+        
+    }//GEN-LAST:event_BotaoEntrarKeyPressed
 
     /**
      * @param args the command line arguments

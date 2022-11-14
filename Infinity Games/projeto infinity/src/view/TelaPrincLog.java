@@ -1,6 +1,7 @@
 
 package view;
 
+import DAO.ConexaoDAO;
 import DTO.UsuarioDTO;
 import java.sql.ResultSet;
 import Jogos.Hades;
@@ -13,14 +14,35 @@ import Jogos.HorizonTurbo;
 import Jogos.OneShot;
 import Jogos.PunchClub;
 import Jogos.Terraria;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+import java.sql.*;
+import java.sql.PreparedStatement;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class TelaPrincLog extends javax.swing.JFrame {
-
-
-    public TelaPrincLog() {
+        Connection conn;
+        DefaultListModel MODELO;
+        int Enter = 0;
+        private String n;
+        
+        public TelaPrincLog() {
         initComponents();
         setLocationRelativeTo(null); //CENTRALIZAR TELA
+        Lista.setVisible(false);
+        MODELO = new DefaultListModel();
+        Lista.setModel(MODELO);
+        n = campoPesquisa.getText();
+        
+        
+        
     }
 
 
@@ -28,6 +50,8 @@ public class TelaPrincLog extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        campoPesquisa = new javax.swing.JTextField();
+        Lista = new javax.swing.JList<>();
         BotaoPerfil = new javax.swing.JButton();
         BotaoFechar = new javax.swing.JButton();
         BotaoPesquisar = new javax.swing.JButton();
@@ -51,6 +75,27 @@ public class TelaPrincLog extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        campoPesquisa.setBorder(null);
+        campoPesquisa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoPesquisaActionPerformed(evt);
+            }
+        });
+        campoPesquisa.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                campoPesquisaKeyReleased(evt);
+            }
+        });
+        getContentPane().add(campoPesquisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, 330, 30));
+
+        Lista.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Lista.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                ListaMousePressed(evt);
+            }
+        });
+        getContentPane().add(Lista, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 330, 80));
+
         BotaoPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Icone Perfil tela Princ.png"))); // NOI18N
         BotaoPerfil.setBorder(null);
         BotaoPerfil.addActionListener(new java.awt.event.ActionListener() {
@@ -71,7 +116,12 @@ public class TelaPrincLog extends javax.swing.JFrame {
 
         BotaoPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BotaoPesquisar.png"))); // NOI18N
         BotaoPesquisar.setBorder(null);
-        getContentPane().add(BotaoPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(735, 54, 60, 45));
+        BotaoPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoPesquisarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotaoPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(745, 54, 40, 40));
 
         BotaoBiblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Icone Biblioteca.png"))); // NOI18N
         BotaoBiblioteca.setBorder(null);
@@ -211,7 +261,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
     }//GEN-LAST:event_BotaoPerfilActionPerformed
 
     private void BotaoCarrinhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoCarrinhoActionPerformed
-       Carrinho obj = new Carrinho();
+       CarrinhoVazio obj = new CarrinhoVazio();
        obj.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_BotaoCarrinhoActionPerformed
@@ -292,6 +342,169 @@ public class TelaPrincLog extends javax.swing.JFrame {
         obj.setVisible(true);
         this.dispose();    }//GEN-LAST:event_PunchClubActionPerformed
 
+    private void campoPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPesquisaActionPerformed
+        Lista.setVisible(false);
+        Enter = 1;
+    }//GEN-LAST:event_campoPesquisaActionPerformed
+
+    private void campoPesquisaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoPesquisaKeyReleased
+        if(Enter == 0){
+        ListaDePesquisa();
+        }
+        else{
+        Enter = 0;
+        }
+    }//GEN-LAST:event_campoPesquisaKeyReleased
+
+    private void ListaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ListaMousePressed
+        MostraPesquisa();
+        Lista.setVisible(false);
+    }//GEN-LAST:event_ListaMousePressed
+
+    private void BotaoPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoPesquisarActionPerformed
+        n = campoPesquisa.getText();
+        if(n.equals("Hollow Knight")){
+        HollowKnigth obj = new HollowKnigth();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("hollow knight")){
+        HollowKnigth obj = new HollowKnigth();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Hades")){
+        Hades obj = new Hades();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("hades")){
+        Hades obj = new Hades();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Child of Light")){
+        ChildOfLight obj = new ChildOfLight();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Child Of Light")){
+        ChildOfLight obj = new ChildOfLight();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("child of light")){
+        ChildOfLight obj = new ChildOfLight();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Horizon Turbo")){
+        HorizonTurbo obj = new HorizonTurbo();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("horizon turbo")){
+        HorizonTurbo obj = new HorizonTurbo();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("horizon")){
+        HorizonTurbo obj = new HorizonTurbo();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Horizon")){
+        HorizonTurbo obj = new HorizonTurbo();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Moonlighter")){
+        Moonlighter obj = new Moonlighter();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("moonlighter")){
+        Moonlighter obj = new Moonlighter();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("MoonLighter")){
+        Moonlighter obj = new Moonlighter();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("OneShot")){
+        OneShot obj = new OneShot();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("oneshot")){
+        OneShot obj = new OneShot();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Ori and the Blind Forest")){
+        Ori obj = new Ori();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("ori and the blind forest")){
+        Ori obj = new Ori();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Ori")){
+        Ori obj = new Ori();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("ori")){
+        Ori obj = new Ori();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Punch Club")){
+        PunchClub obj = new PunchClub();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("PunchClub")){
+        PunchClub obj = new PunchClub();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("punchclub")){
+        PunchClub obj = new PunchClub();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("punch club")){
+        PunchClub obj = new PunchClub();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Stardew Valley")){
+        StardewValley obj = new StardewValley();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("stardew valley")){
+        StardewValley obj = new StardewValley();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Terraria")){
+        Terraria obj = new Terraria();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("terraria")){
+        Terraria obj = new Terraria();
+        obj.setVisible(true);
+        this.dispose();
+        }
+    }//GEN-LAST:event_BotaoPesquisarActionPerformed
+
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -306,11 +519,56 @@ public class TelaPrincLog extends javax.swing.JFrame {
     private javax.swing.JButton HollowKnight;
     private javax.swing.JButton Horizon;
     private javax.swing.JLabel ImagemFundo;
+    private javax.swing.JList<String> Lista;
     private javax.swing.JButton MoonLighter;
     private javax.swing.JButton OneShot;
     private javax.swing.JButton Ori;
     private javax.swing.JButton PunchClub;
     private javax.swing.JButton StardewValley;
     private javax.swing.JButton Terraria;
+    private javax.swing.JTextField campoPesquisa;
     // End of variables declaration//GEN-END:variables
+
+    public void ListaDePesquisa(){
+         conn = (Connection) new ConexaoDAO().conectaBD();
+        try {
+            String sql = "select * from jogos where nome like '"+campoPesquisa.getText()+"%' ORDER BY nome";
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            ResultSet rs = pstm.executeQuery();
+            MODELO.removeAllElements();
+            int v = 0;
+            while(rs.next() & v < 4){
+                MODELO.addElement(rs.getString("nome"));
+                v++;
+            }
+            if(v>=1){
+            Lista.setVisible(true);
+            }
+            else{
+            Lista.setVisible(false);
+            }
+            
+            
+        } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null,erro + "Deconnect");
+        }
+    }
+      public void MostraPesquisa(){
+       int Linha = Lista.getSelectedIndex();
+       if(Linha >=0){
+       String sql = "select * from jogos where nome like '"
+               +"" +campoPesquisa.getText()+"%' ORDER BY nome LIMIT" + Linha + ",1";
+           try {
+               PreparedStatement pstm = conn.prepareStatement(sql);
+               ResultSet rs = pstm.executeQuery();
+               if(rs.next()){
+                   
+               }
+               
+           } catch (SQLException ex) {
+               Logger.getLogger(TelaPrincLog.class.getName()).log(Level.SEVERE, null, ex);
+           }
+       }
+      }
+      
 }
