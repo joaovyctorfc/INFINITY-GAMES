@@ -129,7 +129,7 @@ public class ManipularImagem {
         }
 
 }
-    public static void exibirImagemLabel(byte[] minhaimagem, JButton label)
+    public static void exibirImagemLabel(byte[] minhaimagem, JLabel label)
 {
         //primeiro verifica se tem a imagem
         //se tem convert para inputstream que é o formato reconhecido pelo ImageIO

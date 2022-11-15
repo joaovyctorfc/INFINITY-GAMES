@@ -53,7 +53,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
                retorno = new UsuarioDTO();
                retorno.setImagem(rs1.getBytes("imagem"));
                }
-                 ManipularImagem.exibirImagemLabel(retorno.getImagem(),BotaoPerfil);
+                 ManipularImagem.exibirImagemLabel(retorno.getImagem(),lblImg);
             } catch (SQLException erro) {
                 JOptionPane.showMessageDialog(null,erro + "icone");
             } 
@@ -82,6 +82,8 @@ public class TelaPrincLog extends javax.swing.JFrame {
         OneShot = new javax.swing.JButton();
         Horizon = new javax.swing.JButton();
         PunchClub = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        lblImg = new javax.swing.JLabel();
         ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -118,7 +120,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
                 BotaoPerfilActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
+        getContentPane().add(BotaoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, 50));
 
         BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
         BotaoFechar.setBorder(null);
@@ -253,6 +255,11 @@ public class TelaPrincLog extends javax.swing.JFrame {
             }
         });
         getContentPane().add(PunchClub, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 180, -1, -1));
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(lblImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 80));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 110, 80));
 
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/TelaPrinc Depois Login.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -580,6 +587,8 @@ public class TelaPrincLog extends javax.swing.JFrame {
     private javax.swing.JButton StardewValley;
     private javax.swing.JButton Terraria;
     private javax.swing.JTextField campoPesquisa;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblImg;
     // End of variables declaration//GEN-END:variables
 
     public void ListaDePesquisa(){
