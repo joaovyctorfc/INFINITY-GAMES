@@ -30,6 +30,7 @@ public class Biblioteca extends javax.swing.JFrame {
         BotaoFechar = new javax.swing.JButton();
         BotaoInicio = new javax.swing.JButton();
         ImagemFundo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -56,6 +57,9 @@ public class Biblioteca extends javax.swing.JFrame {
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Carrinho .png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Biblioteca.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 1200, 700));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -78,5 +82,6 @@ public class Biblioteca extends javax.swing.JFrame {
     private javax.swing.JButton BotaoFechar;
     private javax.swing.JButton BotaoInicio;
     private javax.swing.JLabel ImagemFundo;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

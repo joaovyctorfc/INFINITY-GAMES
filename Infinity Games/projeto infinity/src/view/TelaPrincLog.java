@@ -34,6 +34,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
         int Enter = 0;
         private String n;
         UsuarioDTO retorno = null;
+        String [] Config;
         
         public TelaPrincLog() {
         initComponents();
@@ -41,6 +42,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
         Lista.setVisible(false);
         MODELO = new DefaultListModel();
         Lista.setModel(MODELO);
+        
         n = campoPesquisa.getText();
             
         java.sql.Connection conn = new ConexaoDAO().conectaBD();
@@ -377,7 +379,8 @@ public class TelaPrincLog extends javax.swing.JFrame {
     }//GEN-LAST:event_campoPesquisaKeyReleased
 
     private void ListaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ListaMousePressed
-        MostraPesquisa();
+        
+        ResultadoPesquisa();
         Lista.setVisible(false);
     }//GEN-LAST:event_ListaMousePressed
 
@@ -399,6 +402,16 @@ public class TelaPrincLog extends javax.swing.JFrame {
         this.dispose();
         }
         if(n.equals("Hollow")){
+        HollowKnigth obj = new HollowKnigth();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Ho")){
+        HollowKnigth obj = new HollowKnigth();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("ho")){
         HollowKnigth obj = new HollowKnigth();
         obj.setVisible(true);
         this.dispose();
@@ -479,6 +492,16 @@ public class TelaPrincLog extends javax.swing.JFrame {
         this.dispose();
         }
         if(n.equals("oneshot")){
+        OneShot obj = new OneShot();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("one")){
+        OneShot obj = new OneShot();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("One")){
         OneShot obj = new OneShot();
         obj.setVisible(true);
         this.dispose();
@@ -599,8 +622,10 @@ public class TelaPrincLog extends javax.swing.JFrame {
             ResultSet rs = pstm.executeQuery();
             MODELO.removeAllElements();
             int v = 0;
+            Config = new String[4];
             while(rs.next() & v < 4){
                 MODELO.addElement(rs.getString("nome"));
+                Config[v] = rs.getString("nome");
                 v++;
             }
             if(v>=1){
@@ -609,28 +634,234 @@ public class TelaPrincLog extends javax.swing.JFrame {
             else{
             Lista.setVisible(false);
             }
-            
+           
             
         } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null,erro + "Deconnect");
+            JOptionPane.showMessageDialog(null,erro + "ListaDePesquisa");
         }
     }
-      public void MostraPesquisa(){
-       int Linha = Lista.getSelectedIndex();
-       if(Linha >=0){
-       String sql = "select * from jogos where nome like '"
-               +"" +campoPesquisa.getText()+"%' ORDER BY nome LIMIT" + Linha + ",1";
-           try {
-               PreparedStatement pstm = conn.prepareStatement(sql);
-               ResultSet rs = pstm.executeQuery();
-               if(rs.next()){
-                   
-               }
-               
-           } catch (SQLException ex) {
-               Logger.getLogger(TelaPrincLog.class.getName()).log(Level.SEVERE, null, ex);
-           }
-       }
-      }
       
+      public void ResultadoPesquisa(){
+        n = campoPesquisa.getText();
+        if(n.equals("Hollow Knight")){
+        HollowKnigth obj = new HollowKnigth();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("hollow knight")){
+        HollowKnigth obj = new HollowKnigth();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("hollow")){
+        HollowKnigth obj = new HollowKnigth();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Hollow")){
+        HollowKnigth obj = new HollowKnigth();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Hol")){
+        HollowKnigth obj = new HollowKnigth();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("hol")){
+        HollowKnigth obj = new HollowKnigth();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Hades")){
+        Hades obj = new Hades();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("hades")){
+        Hades obj = new Hades();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Child of Light")){
+        ChildOfLight obj = new ChildOfLight();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Child Of Light")){
+        ChildOfLight obj = new ChildOfLight();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("child of light")){
+        ChildOfLight obj = new ChildOfLight();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("child")){
+        ChildOfLight obj = new ChildOfLight();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Child")){
+        ChildOfLight obj = new ChildOfLight();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Horizon Turbo")){
+        HorizonTurbo obj = new HorizonTurbo();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("horizon turbo")){
+        HorizonTurbo obj = new HorizonTurbo();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("horizon")){
+        HorizonTurbo obj = new HorizonTurbo();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Horizon")){
+        HorizonTurbo obj = new HorizonTurbo();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("hor")){
+        HorizonTurbo obj = new HorizonTurbo();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Hor")){
+        HorizonTurbo obj = new HorizonTurbo();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Moonlighter")){
+        Moonlighter obj = new Moonlighter();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("moonlighter")){
+        Moonlighter obj = new Moonlighter();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("MoonLighter")){
+        Moonlighter obj = new Moonlighter();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("OneShot")){
+        OneShot obj = new OneShot();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("oneshot")){
+        OneShot obj = new OneShot();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("one")){
+        OneShot obj = new OneShot();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("One")){
+        OneShot obj = new OneShot();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Ori and the Blind Forest")){
+        Ori obj = new Ori();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("ori and the blind forest")){
+        Ori obj = new Ori();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Ori")){
+        Ori obj = new Ori();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("ori")){
+        Ori obj = new Ori();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Punch Club")){
+        PunchClub obj = new PunchClub();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("PunchClub")){
+        PunchClub obj = new PunchClub();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("punchclub")){
+        PunchClub obj = new PunchClub();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("punch club")){
+        PunchClub obj = new PunchClub();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("punch")){
+        PunchClub obj = new PunchClub();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Punch")){
+        PunchClub obj = new PunchClub();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Stardew Valley")){
+        StardewValley obj = new StardewValley();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("stardew valley")){
+        StardewValley obj = new StardewValley();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Stardew")){
+        StardewValley obj = new StardewValley();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("stardew")){
+        StardewValley obj = new StardewValley();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Terraria")){
+        Terraria obj = new Terraria();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("terraria")){
+        Terraria obj = new Terraria();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Te")){
+        Terraria obj = new Terraria();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("te")){
+        Terraria obj = new Terraria();
+        obj.setVisible(true);
+        this.dispose();
+        }
+      }
 }
