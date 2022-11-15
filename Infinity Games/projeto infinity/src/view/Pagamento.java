@@ -4,6 +4,9 @@
  */
 package view;
 
+import DTO.UsuarioDTO;
+import java.sql.ResultSet;
+
 /**
  *
  * @author Cliente
@@ -84,7 +87,10 @@ public class Pagamento extends javax.swing.JFrame {
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
     private void BotaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoVoltarActionPerformed
-       Carrinho obj = new Carrinho();
+       UsuarioDTO objseg = new UsuarioDTO();
+       DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
+       ResultSet rsusuariodao = objDAO.Cancelamento(objseg);
+       TelaPrincLog obj = new TelaPrincLog();
        obj.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_BotaoVoltarActionPerformed

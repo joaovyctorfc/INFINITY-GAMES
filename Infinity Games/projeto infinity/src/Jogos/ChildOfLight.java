@@ -4,6 +4,7 @@
  */
 package Jogos;
 
+import DAO.UsuarioDAO;
 import DTO.UsuarioDTO;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
@@ -89,6 +90,9 @@ public class ChildOfLight extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        UsuarioDTO objseg = new UsuarioDTO();
+        DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
+        ResultSet rsusuariodao = objDAO.Child(objseg);
         Pagamento obj = new Pagamento();
         obj.setVisible(true);
         this.dispose();

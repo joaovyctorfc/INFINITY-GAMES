@@ -4,6 +4,9 @@
  */
 package view;
 
+import DTO.UsuarioDTO;
+import java.sql.ResultSet;
+
 /**
  *
  * @author luisr
@@ -15,6 +18,7 @@ public class TelaBoleto extends javax.swing.JFrame {
      */
     public TelaBoleto() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -27,9 +31,11 @@ public class TelaBoleto extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        BotaoFechar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BotaoVoltar.png"))); // NOI18N
@@ -41,6 +47,15 @@ public class TelaBoleto extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
 
+        BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
+        BotaoFechar.setBorder(null);
+        BotaoFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoFecharActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1135, 5, 20, 20));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Boleto.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 700));
 
@@ -48,10 +63,20 @@ public class TelaBoleto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        UsuarioDTO objseg = new UsuarioDTO();
+        DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
+        ResultSet rsusuariodao = objDAO.Cancelamento(objseg);
         TelaPrincLog obj = new TelaPrincLog();
         obj.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
+        UsuarioDTO objseg = new UsuarioDTO();
+        DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
+        ResultSet rsusuariodao = objDAO.Deconnect(objseg);
+        System.exit(0);
+    }//GEN-LAST:event_BotaoFecharActionPerformed
 
     /**
      * @param args the command line arguments
@@ -59,6 +84,7 @@ public class TelaBoleto extends javax.swing.JFrame {
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotaoFechar;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables

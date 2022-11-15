@@ -4,6 +4,14 @@
  */
 package view;
 
+import DAO.ConexaoDAO;
+import DTO.UsuarioDTO;
+import UTIL.ManipularImagem;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author luisr
@@ -15,6 +23,22 @@ public class TelaPIX extends javax.swing.JFrame {
      */
     public TelaPIX() {
         initComponents();
+        java.sql.Connection conn = new ConexaoDAO().conectaBD();
+        setLocationRelativeTo(null); //CENTRALIZAR TELA
+        int x = 0;
+         try {
+            String sql = "Select SUM(valor) from jogos where status = ?";
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setInt(1,1);
+            ResultSet rs = pstm.executeQuery();
+            while(rs.next()){
+            x = rs.getInt(1);
+            }
+            campoValor.setText("R$"+x);
+          
+        } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null,erro + "revelar");
+            }
     }
 
     /**
@@ -29,17 +53,24 @@ public class TelaPIX extends javax.swing.JFrame {
         campoValor = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
+        BotaoFechar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        campoValor.setEditable(false);
+        campoValor.setBackground(new java.awt.Color(255, 255, 255));
+        campoValor.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        campoValor.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        campoValor.setBorder(null);
         campoValor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoValorActionPerformed(evt);
             }
         });
-        getContentPane().add(campoValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 370, 150, 40));
+        getContentPane().add(campoValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 340, 360, 160));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botaoPagamentoEfetuado.png"))); // NOI18N
         jButton1.setBorder(null);
@@ -55,6 +86,15 @@ public class TelaPIX extends javax.swing.JFrame {
         jTextField2.setForeground(new java.awt.Color(82, 113, 255));
         jTextField2.setBorder(null);
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 190, 50));
+
+        BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
+        BotaoFechar.setBorder(null);
+        BotaoFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoFecharActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1135, 5, 20, 20));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Pix.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -72,12 +112,20 @@ public class TelaPIX extends javax.swing.JFrame {
        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
+        UsuarioDTO objseg = new UsuarioDTO();
+        DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
+        ResultSet rsusuariodao = objDAO.Deconnect(objseg);
+        System.exit(0);
+    }//GEN-LAST:event_BotaoFecharActionPerformed
+
     /**
      * @param args the command line arguments
      */
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotaoFechar;
     private javax.swing.JTextField campoValor;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;

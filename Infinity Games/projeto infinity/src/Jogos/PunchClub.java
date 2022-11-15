@@ -92,6 +92,9 @@ public class PunchClub extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        UsuarioDTO objseg = new UsuarioDTO();
+        DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
+        ResultSet rsusuariodao = objDAO.PunchClub(objseg);
         Pagamento obj = new Pagamento();
         obj.setVisible(true);
         this.dispose();
