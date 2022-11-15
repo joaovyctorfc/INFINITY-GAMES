@@ -30,7 +30,6 @@ public class Pagamento extends javax.swing.JFrame {
         BotaoVoltar = new javax.swing.JButton();
         BotaoFechar = new javax.swing.JButton();
         BotaoPIX = new javax.swing.JButton();
-        BotaoCartao = new javax.swing.JButton();
         BotaoBoleto = new javax.swing.JButton();
         ImageFundo = new javax.swing.JLabel();
 
@@ -63,16 +62,7 @@ public class Pagamento extends javax.swing.JFrame {
                 BotaoPIXActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoPIX, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, -1, -1));
-
-        BotaoCartao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BotaoCartao.png"))); // NOI18N
-        BotaoCartao.setBorder(null);
-        BotaoCartao.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoCartaoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotaoCartao, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 320, -1, -1));
+        getContentPane().add(BotaoPIX, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, -1, -1));
 
         BotaoBoleto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BotaoBoleto.png"))); // NOI18N
         BotaoBoleto.setBorder(null);
@@ -81,7 +71,7 @@ public class Pagamento extends javax.swing.JFrame {
                 BotaoBoletoActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoBoleto, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 310, -1, -1));
+        getContentPane().add(BotaoBoleto, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 280, -1, -1));
 
         ImageFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Pagamento.png"))); // NOI18N
         getContentPane().add(ImageFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 700));
@@ -100,22 +90,16 @@ public class Pagamento extends javax.swing.JFrame {
     }//GEN-LAST:event_BotaoVoltarActionPerformed
 
     private void BotaoBoletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoBoletoActionPerformed
-       PagamentoRealizado obj = new PagamentoRealizado();
+       TelaBoleto obj = new TelaBoleto();
        obj.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_BotaoBoletoActionPerformed
 
     private void BotaoPIXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoPIXActionPerformed
-       PagamentoRealizado obj = new PagamentoRealizado();
+       TelaPIX obj = new TelaPIX();
        obj.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_BotaoPIXActionPerformed
-
-    private void BotaoCartaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoCartaoActionPerformed
-       PagamentoRealizado obj = new PagamentoRealizado();
-       obj.setVisible(true);
-       this.dispose();
-    }//GEN-LAST:event_BotaoCartaoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,7 +108,6 @@ public class Pagamento extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoBoleto;
-    private javax.swing.JButton BotaoCartao;
     private javax.swing.JButton BotaoFechar;
     private javax.swing.JButton BotaoPIX;
     private javax.swing.JButton BotaoVoltar;

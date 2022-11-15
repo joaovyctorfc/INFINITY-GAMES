@@ -75,25 +75,25 @@ public class Perfil extends javax.swing.JFrame {
                 CampoNomeActionPerformed(evt);
             }
         });
-        getContentPane().add(CampoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 420, 30));
+        getContentPane().add(CampoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 238, 420, 30));
 
         CampoEmail.setEditable(false);
         CampoEmail.setBackground(new java.awt.Color(82, 113, 255));
         CampoEmail.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         CampoEmail.setBorder(null);
-        getContentPane().add(CampoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 430, 30));
+        getContentPane().add(CampoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 346, 430, 30));
 
         CampoSenha.setEditable(false);
         CampoSenha.setBackground(new java.awt.Color(82, 113, 255));
         CampoSenha.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         CampoSenha.setBorder(null);
-        getContentPane().add(CampoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 459, 430, 30));
+        getContentPane().add(CampoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 455, 430, 30));
 
         CampoPalavra.setEditable(false);
         CampoPalavra.setBackground(new java.awt.Color(82, 113, 255));
         CampoPalavra.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         CampoPalavra.setBorder(null);
-        getContentPane().add(CampoPalavra, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 568, 430, 30));
+        getContentPane().add(CampoPalavra, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 563, 430, 30));
 
         BotaoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Inicio tela perfil.png"))); // NOI18N
         BotaoInicio.setBorder(null);
@@ -113,13 +113,13 @@ public class Perfil extends javax.swing.JFrame {
         });
         getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, 30, 30));
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Trocar foto ");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 420, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 570, 150, 40));
 
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Perfil.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));

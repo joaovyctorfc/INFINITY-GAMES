@@ -71,8 +71,6 @@ public class TelaPrincLog extends javax.swing.JFrame {
         BotaoPerfil = new javax.swing.JButton();
         BotaoFechar = new javax.swing.JButton();
         BotaoPesquisar = new javax.swing.JButton();
-        BotaoBiblioteca = new javax.swing.JButton();
-        BotaoCarrinho = new javax.swing.JButton();
         BotaoDesconexao = new javax.swing.JButton();
         Hades = new javax.swing.JButton();
         StardewValley = new javax.swing.JButton();
@@ -142,25 +140,8 @@ public class TelaPrincLog extends javax.swing.JFrame {
         });
         getContentPane().add(BotaoPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(745, 54, 40, 40));
 
-        BotaoBiblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Icone Biblioteca.png"))); // NOI18N
-        BotaoBiblioteca.setBorder(null);
-        BotaoBiblioteca.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoBibliotecaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotaoBiblioteca, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 50, 50, 50));
-
-        BotaoCarrinho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Icone Carrinho.png"))); // NOI18N
-        BotaoCarrinho.setBorder(null);
-        BotaoCarrinho.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoCarrinhoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotaoCarrinho, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 53, 50, 40));
-
-        BotaoDesconexao.setText("Desconectar");
+        BotaoDesconexao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botaoDesconectar.png"))); // NOI18N
+        BotaoDesconexao.setBorder(null);
         BotaoDesconexao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotaoDesconexaoActionPerformed(evt);
@@ -259,11 +240,13 @@ public class TelaPrincLog extends javax.swing.JFrame {
         getContentPane().add(PunchClub, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 180, -1, -1));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblImg.setText("Sem foto de Perfil");
         jPanel1.add(lblImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 80));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 110, 80));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 40, 110, 80));
 
-        ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/TelaPrinc Depois Login.png"))); // NOI18N
+        ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Telas principal nova.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -281,18 +264,6 @@ public class TelaPrincLog extends javax.swing.JFrame {
       obj.setVisible(true);
       this.dispose();
     }//GEN-LAST:event_BotaoPerfilActionPerformed
-
-    private void BotaoCarrinhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoCarrinhoActionPerformed
-       CarrinhoVazio obj = new CarrinhoVazio();
-       obj.setVisible(true);
-       this.dispose();
-    }//GEN-LAST:event_BotaoCarrinhoActionPerformed
-
-    private void BotaoBibliotecaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoBibliotecaActionPerformed
-        Biblioteca obj = new Biblioteca();
-        obj.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_BotaoBibliotecaActionPerformed
 
     private void BotaoDesconexaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoDesconexaoActionPerformed
         String email,nome = null,senha = null,seg = null;
@@ -591,8 +562,6 @@ public class TelaPrincLog extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotaoBiblioteca;
-    private javax.swing.JButton BotaoCarrinho;
     private javax.swing.JButton BotaoDesconexao;
     private javax.swing.JButton BotaoFechar;
     private javax.swing.JButton BotaoPerfil;
