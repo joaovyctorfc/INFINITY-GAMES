@@ -145,6 +145,10 @@ public class Registrar extends javax.swing.JFrame {
                         campoPalavraSegurança.setText("");
                         campoNome.setText("");
 		}
+                if(stm.executeUpdate("INSERT into vendas (email,status) values('"+email+"',0)")!=0)
+		{
+			campoEmail.setText("");
+		}
                 else
 		{
 			JOptionPane.showMessageDialog(null,"Erro para realizar o cadastro!!!","Erro",JOptionPane.ERROR_MESSAGE);

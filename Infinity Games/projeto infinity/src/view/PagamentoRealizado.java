@@ -4,11 +4,15 @@
  */
 package view;
 
+import DAO.ConexaoDAO;
 import DTO.UsuarioDTO;
+import UTIL.ManipularImagem;
 import java.awt.Frame;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import view.PagamentoRealizado.RandomString;
@@ -22,7 +26,47 @@ public class PagamentoRealizado extends javax.swing.JFrame {
     public PagamentoRealizado() {
         initComponents();
         setLocationRelativeTo(null); //CENTRALIZAR TELA
-        btnCopiar.setVisible(false);
+        RandomString obj = new RandomString();
+        String codigo = campoCodigo.getText();
+        String jogo = null;
+        String email = null;
+        
+        java.sql.Connection conn = new ConexaoDAO().conectaBD();
+        try {
+            String sql = "Select (email) from user where status = ?";
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setInt(1,1);
+            ResultSet rs = pstm.executeQuery();
+            while(rs.next()){
+            email = rs.getString(1);
+            }
+        } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null,erro + "campoPreço");
+            }
+            try {
+            String sql = "Select (nome) from jogos where status = ?";
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setInt(1,1);
+            ResultSet rs = pstm.executeQuery();
+            while(rs.next()){
+            jogo = rs.getString(1);
+            }
+        } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null,erro + "campoPreço");
+            }    
+        try {
+                 String sql1 = "INSERT into vendas (email,jogo,codigo,status) values(?,?,?,1)";
+                 PreparedStatement pstm1 = conn.prepareStatement(sql1);
+                 pstm1.setString(1,email);
+                 pstm1.setString(2,jogo);
+                 pstm1.setString(3,codigo);
+                 pstm1.execute();
+                
+                 
+            } catch (SQLException erro) {
+                JOptionPane.showMessageDialog(null,erro + "Insert");
+            }
+            
     }
 
     /**
@@ -36,7 +80,6 @@ public class PagamentoRealizado extends javax.swing.JFrame {
 
         BotaoInicio = new javax.swing.JButton();
         BotaoFechar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         campoCodigo = new javax.swing.JTextField();
         btnCopiar = new javax.swing.JButton();
         ImagemFundo = new javax.swing.JLabel();
@@ -63,16 +106,8 @@ public class PagamentoRealizado extends javax.swing.JFrame {
         });
         getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 0, 30, 30));
 
-        jButton1.setText("Revelar código");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 570, -1, -1));
-
         campoCodigo.setEditable(false);
-        getContentPane().add(campoCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 570, 180, -1));
+        getContentPane().add(campoCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 570, 180, -1));
 
         btnCopiar.setText("copiar");
         btnCopiar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -85,7 +120,7 @@ public class PagamentoRealizado extends javax.swing.JFrame {
                 btnCopiarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCopiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 570, -1, -1));
+        getContentPane().add(btnCopiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 570, -1, -1));
 
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Pagamento Concluido.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -101,13 +136,11 @@ public class PagamentoRealizado extends javax.swing.JFrame {
     }//GEN-LAST:event_BotaoInicioActionPerformed
 
     private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
-      System.exit(0);
+        UsuarioDTO objseg = new UsuarioDTO();
+        DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
+        ResultSet rsusuariodao = objDAO.Deconnect(objseg);
+        System.exit(0);
     }//GEN-LAST:event_BotaoFecharActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        RandomString obj = new RandomString();
-        btnCopiar.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnCopiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCopiarActionPerformed
         Clipboard clipBoard = getToolkit().getSystemClipboard();
@@ -136,7 +169,6 @@ public class PagamentoRealizado extends javax.swing.JFrame {
     private javax.swing.JLabel ImagemFundo;
     private javax.swing.JButton btnCopiar;
     private javax.swing.JTextField campoCodigo;
-    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
      public class RandomString {
     static String getAlphaNumericString(int n)

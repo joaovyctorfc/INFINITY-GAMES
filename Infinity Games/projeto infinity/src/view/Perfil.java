@@ -1,9 +1,10 @@
 
 package view;
 
-import DAOPerfil.UsuarioDAO;
+
 import DAOPerfil.ConexaoDAO;
 import DTO.UsuarioDTO;
+import DAO.UsuarioDAO;
 import adicionarimagem.NewJFrame;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,7 +12,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import view.Login;
 
 
@@ -23,6 +26,7 @@ public class Perfil extends javax.swing.JFrame {
         
         initComponents();
       setLocationRelativeTo(null); //CENTRALIZAR TELA
+      listarVendas();
       try {
               String email,nome = null,senha = null,seg = null;
 
@@ -60,6 +64,9 @@ public class Perfil extends javax.swing.JFrame {
         BotaoFechar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabelaVendas = new javax.swing.JTable();
         ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -129,6 +136,32 @@ public class Perfil extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(815, 490, 140, 40));
 
+        jLabel1.setText("Pedidos");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 150, -1, -1));
+
+        tabelaVendas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Jogo", "Código de ativação"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tabelaVendas);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 180, 450, 270));
+
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Perfil.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
 
@@ -176,9 +209,29 @@ public class Perfil extends javax.swing.JFrame {
     private javax.swing.JLabel ImagemFundo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tabelaVendas;
     // End of variables declaration//GEN-END:variables
 
- 
+ private void listarVendas(){
+     try {
+           UsuarioDAO objusuariodao = new UsuarioDAO();
+           DefaultTableModel model = (DefaultTableModel) tabelaVendas.getModel();
+           model.setNumRows(0);
+           ArrayList<UsuarioDTO> Lista = objusuariodao.PesquisarCompras();
+           for(int num = 0;num<Lista.size();num++){
+           model.addRow(new Object[]{
+             
+              Lista.get(num).getJogo(),
+              Lista.get(num).getCodigo()
+           });
+           }
+     } catch (Exception erro) {
+         JOptionPane.showMessageDialog(null,erro + "listarVendas");
+     }
+
+ }
 
 
 }

@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import java.sql.*;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import view.Carrinho;
@@ -15,12 +16,14 @@ import view.Carrinho;
 public class UsuarioDAO {
 
     Connection conn;
-
+    ArrayList<UsuarioDTO> Lista = new ArrayList<>();
+    
     public ResultSet AutenticacaoUsuario(UsuarioDTO obj){
         conn = new ConexaoDAO().conectaBD();
         try {
             String sql = "Select * from user where email = ? and senha = ?";
             String sql1 = "Update user set status = ? where email = ? and senha = ?";
+            String sql2 = "Update vendas set status = ? where email = ?";
             
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1, obj.getEmail());
@@ -31,10 +34,18 @@ public class UsuarioDAO {
             pstm1.setString(2, obj.getEmail());
             pstm1.setString(3, obj.getSenha());
             
+            PreparedStatement pstm2 = conn.prepareStatement(sql2);
+            pstm2.setInt(1, 1);
+            pstm2.setString(2, obj.getEmail());
+            
             ResultSet rs = pstm.executeQuery();
             pstm1.execute();
+            pstm2.execute();
             pstm1.close();
+            pstm2.close();
             return rs;
+            
+            
             
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null,erro + "AutenticaçãoUsuário");
@@ -145,6 +156,7 @@ public class UsuarioDAO {
         try {
             String sql = "Update user set status = ?";
             String sql1 = "Update jogos set status = ?";
+            String sql2 = "Update vendas set status = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1, 0);
             pstm.execute();
@@ -153,6 +165,10 @@ public class UsuarioDAO {
             pstm1.setInt(1, 0);
             pstm1.execute();
             pstm1.close();
+            PreparedStatement pstm2 = conn.prepareStatement(sql2);
+            pstm2.setInt(1, 0);
+            pstm2.execute();
+            pstm2.close();
         } 
         catch (SQLException erro) {
             JOptionPane.showMessageDialog(null,erro + "Deconnect");
@@ -348,25 +364,43 @@ public class UsuarioDAO {
             }
             return null;
      }
-       public UsuarioDTO buscar(Integer id){
-         UsuarioDTO retorno = null;
-           String sql = "Select id,imagem from exemplo where id=?";
-           
-           try {
-               PreparedStatement pstm = conn.prepareStatement(sql);
-               pstm.setInt(1,id);
-               ResultSet rs = pstm.executeQuery();
-               if(rs.next()){
-               retorno = new UsuarioDTO();
-               retorno.setId(rs.getInt("id"));
-               retorno.setImagem(rs.getBytes("imagem"));
-               }
-           } catch (SQLException erro) {
-               JOptionPane.showMessageDialog(null,erro + "buscar");
-           }
-          return retorno;
-       }
-       
-       
-    
-   }
+     public ArrayList<UsuarioDTO> PesquisarCompras(){
+        String sql = "Select * from vendas where status = ?";
+        conn = new ConexaoDAO().conectaBD();
+         try {
+             PreparedStatement pstm = conn.prepareStatement(sql);
+             pstm.setInt(1, 1);
+             ResultSet rs = pstm.executeQuery();
+             while(rs.next()){
+                 UsuarioDTO objusuariodto = new UsuarioDTO();
+                 
+                 objusuariodto.setJogo(rs.getString("jogo"));
+                 objusuariodto.setCodigo(rs.getString("codigo"));
+                 Lista.add(objusuariodto);
+             }
+             
+         } catch (SQLException erro) {
+             JOptionPane.showMessageDialog(null,erro + "PesquisarCompras");
+         }
+       return Lista;
+     }
+     public ResultSet DadosUsuario(UsuarioDTO obj){
+        conn = new DAO.ConexaoDAO().conectaBD();
+        try {
+            String sql = "Select * from registro where email = ? and senha = ?";
+            
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setString(1, obj.getNome());
+            pstm.setString(2, obj.getEmail());
+            pstm.setString(3, obj.getSenha());
+            pstm.setString(3, obj.getSeg());
+            
+            ResultSet rs = pstm.executeQuery();
+            return rs;
+            
+        } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null,erro + "ConexaoDAO");
+            }
+            return null;
+     }
+}

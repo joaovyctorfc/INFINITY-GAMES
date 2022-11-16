@@ -6,6 +6,23 @@ public class UsuarioDTO {
     private String nome,email,senha,seg; 
     private int id;
     private byte[] imagem;
+    private String codigo,jogo;
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getJogo() {
+        return jogo;
+    }
+
+    public void setJogo(String jogo) {
+        this.jogo = jogo;
+    }
 
     
    public String getNome() {
