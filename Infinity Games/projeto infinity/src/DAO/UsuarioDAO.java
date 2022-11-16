@@ -82,6 +82,27 @@ public class UsuarioDAO {
             }
     }
     
+    public void SelecionarDados(UsuarioDTO obj){
+     String sql = "Select * from user where status = ?";
+     
+     conn = new ConexaoDAO().conectaBD();
+        try {
+            
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setInt(1, 1);
+            ResultSet rs = pstm.executeQuery();
+            while(rs.next()){
+            obj.getSenha();
+            obj.getNome();
+            obj.getEmail();
+            obj.getSeg();
+            }
+        
+        } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null,erro + "AlterarSenha");
+            }
+    }
+    
     public ResultSet alterarDados(UsuarioDTO obj){
      String sql = "update user set senha = ?, nome = ?, email = ?, seg = ? where status = ?";
      

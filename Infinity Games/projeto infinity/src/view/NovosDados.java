@@ -18,12 +18,33 @@ import javax.swing.JOptionPane;
  */
 public class NovosDados extends javax.swing.JFrame {
 
-    /**
-     * Creates new form NovosDados
-     */
+    String email,seg,nome,senha;
+    
     public NovosDados() {
         initComponents();
         setLocationRelativeTo(null); //CENTRALIZAR TELA
+        try {
+              String email = null,nome = null,senha = null,seg = null;
+
+             UsuarioDTO objseg = new UsuarioDTO();
+             DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
+             ResultSet rsusuariodao = objDAO.RevelacaoPerfil(objseg);
+             while(rsusuariodao.next())
+            {
+		   {
+			   nome = rsusuariodao.getString("nome");
+			   email = rsusuariodao.getString("email");
+                           senha = rsusuariodao.getString("senha");
+			   seg = rsusuariodao.getString("seg");
+		   }
+                    campoNome.setText(nome);
+                    campoEmail.setText(email);
+                    campoSeg.setText(seg);
+                    campoSenha.setText(senha);
+            }
+             } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null,erro +"Revelar");
+        }
     }
 
     /**
@@ -130,9 +151,8 @@ public class NovosDados extends javax.swing.JFrame {
         objseg.setSeg(seg);
         objseg.setSenha(senha);
         objseg.setNome(nome);
-       
         UsuarioDAO objDAO = new UsuarioDAO();
-        ResultSet rsusuariodao = objDAO.alterarDados(objseg);
+        objDAO.alterarDados(objseg);
         
         
             
