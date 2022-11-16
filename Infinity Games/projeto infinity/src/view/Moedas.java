@@ -32,7 +32,7 @@ public class Moedas extends javax.swing.JFrame {
         int desconto = 0;
        campoValor.setText("R$"+x);
          try {
-            String sql = "Select SUM(valor) from jogos where status = ?";
+            String sql = "Select valor from jogos where status = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1,1);
             ResultSet rs = pstm.executeQuery();
@@ -51,7 +51,7 @@ public class Moedas extends javax.swing.JFrame {
             z = rs.getInt(1);
             }
             desconto = x-z;
-            campoDesconto.setText("R$"+desconto+"=R$"+x+"-"+z+" pontos");
+            campoDesconto.setText("R$"+x+"-"+z+" pontos");
             campoValor.setText("R$"+desconto);
             soma = desconto / 5;
         } catch (SQLException erro) {

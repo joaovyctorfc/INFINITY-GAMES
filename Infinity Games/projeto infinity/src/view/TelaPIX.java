@@ -30,7 +30,7 @@ public class TelaPIX extends javax.swing.JFrame {
         int z = 0;
         int soma = 0;
          try {
-            String sql = "Select SUM(valor) from jogos where status = ?";
+            String sql = "Select valor from jogos where status = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1,1);
             ResultSet rs = pstm.executeQuery();

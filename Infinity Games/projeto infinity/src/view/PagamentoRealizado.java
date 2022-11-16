@@ -133,6 +133,9 @@ public class PagamentoRealizado extends javax.swing.JFrame {
      TelaPrincLog obj = new TelaPrincLog();
      obj.setVisible(true);
      this.dispose();
+        UsuarioDTO objseg = new UsuarioDTO();
+        DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
+        ResultSet rsusuariodao = objDAO.Cancelamento(objseg);
     }//GEN-LAST:event_BotaoInicioActionPerformed
 
     private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
@@ -146,6 +149,9 @@ public class PagamentoRealizado extends javax.swing.JFrame {
         Clipboard clipBoard = getToolkit().getSystemClipboard();
         StringSelection ss = new StringSelection(campoCodigo.getText());
         clipBoard.setContents(ss,ss);
+        UsuarioDTO objseg = new UsuarioDTO();
+        DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
+        ResultSet rsusuariodao = objDAO.Cancelamento(objseg);
     }//GEN-LAST:event_btnCopiarActionPerformed
 
     private void btnCopiarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCopiarMousePressed
