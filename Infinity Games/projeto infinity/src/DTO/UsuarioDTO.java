@@ -11,18 +11,11 @@ public class UsuarioDTO {
    public String getNome() {
    return nome;
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+   
+   public void setNome(String nome) {
+      this.nome = nome;
     }
    
-   public String setNome(String nome) {
-   return nome;
-    }
     public String getEmail() {
         return email;
     }
@@ -58,6 +51,14 @@ public class UsuarioDTO {
 
     public void setImagem(byte[] imagem) {
         this.imagem = imagem;
+    }
+    
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     

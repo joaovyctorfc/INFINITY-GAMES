@@ -33,6 +33,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private Jogo jogo;
     public NewJFrame() {
         initComponents();
+        setLocationRelativeTo(null); //CENTRALIZAR TELA
     }
 
     /**
