@@ -34,6 +34,7 @@ public class Pagamento extends javax.swing.JFrame {
         BotaoFechar = new javax.swing.JButton();
         BotaoPIX = new javax.swing.JButton();
         BotaoBoleto = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         ImageFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -76,6 +77,14 @@ public class Pagamento extends javax.swing.JFrame {
         });
         getContentPane().add(BotaoBoleto, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 280, -1, -1));
 
+        jButton1.setText("Moedas");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 380, -1, -1));
+
         ImageFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Pagamento.png"))); // NOI18N
         getContentPane().add(ImageFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 700));
 
@@ -107,6 +116,12 @@ public class Pagamento extends javax.swing.JFrame {
        this.dispose();
     }//GEN-LAST:event_BotaoPIXActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Moedas obj = new Moedas();
+        obj.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -118,5 +133,6 @@ public class Pagamento extends javax.swing.JFrame {
     private javax.swing.JButton BotaoPIX;
     private javax.swing.JButton BotaoVoltar;
     private javax.swing.JLabel ImageFundo;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }

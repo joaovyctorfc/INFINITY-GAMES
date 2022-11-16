@@ -52,7 +52,7 @@ public class Biblioteca extends javax.swing.JFrame {
                 BotaoInicioActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
+        getContentPane().add(BotaoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, -1));
 
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Carrinho .png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));

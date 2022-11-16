@@ -48,15 +48,11 @@ private Registrar regis;
                 while(1<100){
                     i++;
                     LabelCarregamento.setText(String.valueOf(i)+"%");
-                            
                     try{
                         sleep(600);
                     } catch(Exception ex){
-                        
-                        
                     }  
                 }
-       
           }
       };
        System.exit(0);

@@ -35,6 +35,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
         private String n;
         UsuarioDTO retorno = null;
         String [] Config;
+        int x = 0;
         
         public TelaPrincLog() {
         initComponents();
@@ -57,9 +58,24 @@ public class TelaPrincLog extends javax.swing.JFrame {
                }
                  ManipularImagem.exibirImagemLabel(retorno.getImagem(),lblImg);
             } catch (SQLException erro) {
-                JOptionPane.showMessageDialog(null,erro + "icone");
+                JOptionPane.showMessageDialog(null,erro + "Icone");
             } 
-    }
+          
+             try {
+            String sql = "Select moedas from user where status = ?";
+          
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setInt(1,1);
+            ResultSet rs = pstm.executeQuery();
+            while(rs.next()){
+            x = rs.getInt(1);
+            }
+            campoMoeda.setText("Moedas atuais:"+x);
+            
+        } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null,erro + "Moedas");
+            }
+        }
 
 
     @SuppressWarnings("unchecked")
@@ -82,6 +98,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
         OneShot = new javax.swing.JButton();
         Horizon = new javax.swing.JButton();
         PunchClub = new javax.swing.JButton();
+        campoMoeda = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         lblImg = new javax.swing.JLabel();
         ImagemFundo = new javax.swing.JLabel();
@@ -239,6 +256,9 @@ public class TelaPrincLog extends javax.swing.JFrame {
         });
         getContentPane().add(PunchClub, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 180, -1, -1));
 
+        campoMoeda.setEditable(false);
+        getContentPane().add(campoMoeda, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 60, 120, 30));
+
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblImg.setText("Sem foto de Perfil");
@@ -378,6 +398,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
     private javax.swing.JButton PunchClub;
     private javax.swing.JButton StardewValley;
     private javax.swing.JButton Terraria;
+    private javax.swing.JTextField campoMoeda;
     private javax.swing.JTextField campoPesquisa;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblImg;
