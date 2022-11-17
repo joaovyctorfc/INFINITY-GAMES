@@ -184,10 +184,10 @@ if(imagem != null){
         if(isPng){
            type = BufferedImage.BITMASK;
         }
-        BufferedImage novaImagem = new BufferedImage(painelimagem.getWidth()- 5,painelimagem.getHeight()- 10,type);
+        BufferedImage novaImagem = new BufferedImage(painelimagem.getWidth()- 100,painelimagem.getHeight()- 80,type);
         Graphics2D g = novaImagem.createGraphics();
         g.setComposite(AlphaComposite.Src);
-        g.drawImage(image, 0,0, painelimagem.getWidth() - 5,painelimagem.getHeight() - 10,null);
+        g.drawImage(image, 0,0, painelimagem.getWidth() - 100,painelimagem.getHeight() - 80,null);
         if(isPng){
         ImageIO.write(novaImagem,"png",out);
         }else
@@ -207,13 +207,13 @@ return null;
 private void abrirImagem(Object source){
 if(source instanceof File){
     ImageIcon icon = new ImageIcon(imagem.getAbsolutePath());
-    icon.setImage(icon.getImage().getScaledInstance(painelimagem.getWidth() - 5,painelimagem.getHeight() - 10,100));
+    icon.setImage(icon.getImage().getScaledInstance(painelimagem.getWidth() - 100,painelimagem.getHeight() - 80,100));
     lblimagem.setIcon(icon);
     
 }
 else if(source instanceof byte[]){
     ImageIcon icon = new ImageIcon(jogo.getImagem());
-    icon.setImage(icon.getImage().getScaledInstance(painelimagem.getWidth() - 5,painelimagem.getHeight() - 10,100));
+    icon.setImage(icon.getImage().getScaledInstance(painelimagem.getWidth() - 100,painelimagem.getHeight() - 80,100));
     lblimagem.setIcon(icon);
 }
 }

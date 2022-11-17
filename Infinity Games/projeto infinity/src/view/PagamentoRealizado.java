@@ -41,7 +41,7 @@ public class PagamentoRealizado extends javax.swing.JFrame {
             email = rs.getString(1);
             }
         } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null,erro + "campoPreço");
+            JOptionPane.showMessageDialog(null,erro + "SelectEmail");
             }
             try {
             String sql = "Select (nome) from jogos where status = ?";
@@ -52,7 +52,7 @@ public class PagamentoRealizado extends javax.swing.JFrame {
             jogo = rs.getString(1);
             }
         } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null,erro + "campoPreço");
+            JOptionPane.showMessageDialog(null,erro + "SelectJogo");
             }    
         try {
                  String sql1 = "INSERT into vendas (email,jogo,codigo,status) values(?,?,?,1)";
