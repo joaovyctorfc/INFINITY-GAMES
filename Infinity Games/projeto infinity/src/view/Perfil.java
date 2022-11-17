@@ -76,6 +76,7 @@ public class Perfil extends javax.swing.JFrame {
         CampoNome.setEditable(false);
         CampoNome.setBackground(new java.awt.Color(82, 113, 255));
         CampoNome.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        CampoNome.setForeground(new java.awt.Color(255, 255, 255));
         CampoNome.setBorder(null);
         CampoNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,18 +88,21 @@ public class Perfil extends javax.swing.JFrame {
         CampoEmail.setEditable(false);
         CampoEmail.setBackground(new java.awt.Color(82, 113, 255));
         CampoEmail.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        CampoEmail.setForeground(new java.awt.Color(255, 255, 255));
         CampoEmail.setBorder(null);
         getContentPane().add(CampoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 346, 430, 30));
 
         CampoSenha.setEditable(false);
         CampoSenha.setBackground(new java.awt.Color(82, 113, 255));
         CampoSenha.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        CampoSenha.setForeground(new java.awt.Color(255, 255, 255));
         CampoSenha.setBorder(null);
         getContentPane().add(CampoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 455, 430, 30));
 
         CampoPalavra.setEditable(false);
         CampoPalavra.setBackground(new java.awt.Color(82, 113, 255));
         CampoPalavra.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        CampoPalavra.setForeground(new java.awt.Color(255, 255, 255));
         CampoPalavra.setBorder(null);
         getContentPane().add(CampoPalavra, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 563, 430, 30));
 
@@ -147,7 +151,7 @@ public class Perfil extends javax.swing.JFrame {
                 {null, null}
             },
             new String [] {
-                "Jogo", "Código de ativação"
+                "", ""
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -159,6 +163,10 @@ public class Perfil extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(tabelaVendas);
+        if (tabelaVendas.getColumnModel().getColumnCount() > 0) {
+            tabelaVendas.getColumnModel().getColumn(0).setResizable(false);
+            tabelaVendas.getColumnModel().getColumn(1).setResizable(false);
+        }
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 180, 450, 270));
 

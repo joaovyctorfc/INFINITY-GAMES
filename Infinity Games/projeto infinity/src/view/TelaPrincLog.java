@@ -15,6 +15,7 @@ import Jogos.OneShot;
 import Jogos.PunchClub;
 import Jogos.Terraria;
 import UTIL.ManipularImagem;
+import java.awt.Graphics;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -70,7 +71,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
             while(rs.next()){
             x = rs.getInt(1);
             }
-            campoMoeda.setText("Moedas atuais:"+x);
+            campoMoeda.setText("Moedas atuais: \n Cada moeda representa 1 real de desconto"+x);
             
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null,erro + "Moedas");
@@ -257,6 +258,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
         getContentPane().add(PunchClub, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 180, -1, -1));
 
         campoMoeda.setEditable(false);
+        campoMoeda.setBackground(new java.awt.Color(82, 113, 255));
         getContentPane().add(campoMoeda, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 60, 120, 30));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -653,5 +655,9 @@ public class TelaPrincLog extends javax.swing.JFrame {
         obj.setVisible(true);
         this.dispose();
         }
+      }
+      public void oval(Graphics g){
+      g.drawOval(990, 40, 110, 80);
+      
       }
 }
