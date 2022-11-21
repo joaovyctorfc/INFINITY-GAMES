@@ -3,13 +3,8 @@ package view;
 
 import DAO.UsuarioDAO;
 import DTO.UsuarioDTO;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class EsqueceuSenha extends javax.swing.JFrame {
@@ -156,6 +151,9 @@ public class EsqueceuSenha extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "EsqueceuSenha");
         }
         }
+        Login obj = new Login();
+     obj.setVisible(true);
+     this.dispose();
     }//GEN-LAST:event_BotaoRedefinirActionPerformed
 
     private void CampoPalavraSegurançaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CampoPalavraSegurançaActionPerformed

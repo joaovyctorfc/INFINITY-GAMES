@@ -6,7 +6,6 @@ package view;
 
 import DAO.ConexaoDAO;
 import DTO.UsuarioDTO;
-import UTIL.ManipularImagem;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;

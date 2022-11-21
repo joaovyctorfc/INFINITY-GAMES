@@ -1,17 +1,14 @@
 package DAO;
 
 import DTO.UsuarioDTO;
-import UTIL.ManipularImagem;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import java.sql.*;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import view.Carrinho;
+
+
 
 public class UsuarioDAO {
 

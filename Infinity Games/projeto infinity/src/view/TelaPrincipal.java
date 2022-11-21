@@ -1,6 +1,9 @@
 
 package view;
 
+import DTO.UsuarioDTO;
+import java.sql.ResultSet;
+
 
 public class TelaPrincipal extends javax.swing.JFrame {
 
@@ -97,6 +100,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_BotaoLogarActionPerformed
 
     private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
+        UsuarioDTO objseg = new UsuarioDTO();
+        DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
+        ResultSet rsusuariodao = objDAO.Deconnect(objseg);
         System.exit(0);
     }//GEN-LAST:event_BotaoFecharActionPerformed
 

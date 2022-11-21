@@ -3,7 +3,7 @@ package view;
 
 import java.sql.*;
 import javax.swing.JOptionPane;
-import view.Login;
+
 
 
 public class Registrar extends javax.swing.JFrame {
@@ -165,7 +165,7 @@ public class Registrar extends javax.swing.JFrame {
 	}
      Login obj = new Login();
      obj.setVisible(true);
-    
+     this.dispose();
     }//GEN-LAST:event_BotaoRegistrarActionPerformed
     }
     private void campoNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNomeActionPerformed

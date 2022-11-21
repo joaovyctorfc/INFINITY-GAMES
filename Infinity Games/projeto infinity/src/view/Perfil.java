@@ -2,20 +2,17 @@
 package view;
 
 
-import DAOPerfil.ConexaoDAO;
+
 import DTO.UsuarioDTO;
 import DAO.UsuarioDAO;
 import adicionarimagem.NewJFrame;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import view.Login;
+
 
 
 

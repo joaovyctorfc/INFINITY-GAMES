@@ -6,14 +6,11 @@ package view;
 
 import DAO.ConexaoDAO;
 import DTO.UsuarioDTO;
-import UTIL.ManipularImagem;
-import java.awt.Frame;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import view.PagamentoRealizado.RandomString;
 

@@ -3,7 +3,6 @@ package view;
 
 import DAO.ConexaoDAO;
 import DTO.UsuarioDTO;
-import java.sql.ResultSet;
 import Jogos.Hades;
 import Jogos.Moonlighter;
 import Jogos.Ori;
@@ -18,15 +17,10 @@ import UTIL.ManipularImagem;
 import java.awt.Graphics;
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import javax.swing.JOptionPane;
-import java.sql.*;
 import java.sql.PreparedStatement;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 
 public class TelaPrincLog extends javax.swing.JFrame {
@@ -71,7 +65,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
             while(rs.next()){
             x = rs.getInt(1);
             }
-            campoMoeda.setText("Moedas atuais: \n Cada moeda representa 1 real de desconto"+x);
+            campoMoeda.setText("Moedas atuais:"+x);
             
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null,erro + "Moedas");
@@ -259,6 +253,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
 
         campoMoeda.setEditable(false);
         campoMoeda.setBackground(new java.awt.Color(82, 113, 255));
+        campoMoeda.setBorder(null);
         getContentPane().add(campoMoeda, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 60, 120, 30));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

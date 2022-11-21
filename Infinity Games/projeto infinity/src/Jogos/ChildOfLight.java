@@ -4,13 +4,9 @@
  */
 package Jogos;
 
-import DAO.UsuarioDAO;
 import DTO.UsuarioDTO;
 import java.sql.ResultSet;
-import javax.swing.JOptionPane;
-import view.Carrinho;
 import view.Pagamento;
-import view.TelaBoleto;
 import view.TelaPrincLog;
 
 /**

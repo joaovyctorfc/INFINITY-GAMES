@@ -4,11 +4,8 @@
  */
 package adicionarimagem;
 import DAO.ConexaoDAO;
-import DTO.UsuarioDTO;
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import javax.swing.JOptionPane;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;

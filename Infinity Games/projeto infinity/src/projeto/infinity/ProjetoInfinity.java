@@ -1,6 +1,5 @@
 
 package projeto.infinity;
-import adicionarimagem.NewJFrame;
 
 import view.TelaPrincipal;
 public class ProjetoInfinity {

@@ -4,8 +4,6 @@
  */
 package adicionarimagem;
 import DAO.ConexaoDAO;
-import adicionarimagem.Jogo;
-import adicionarimagem.imagem;
 import java.awt.AlphaComposite;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;

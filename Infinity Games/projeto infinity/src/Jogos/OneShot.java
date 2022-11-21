@@ -2,8 +2,6 @@ package Jogos;
 
 import DTO.UsuarioDTO;
 import java.sql.ResultSet;
-import javax.swing.JOptionPane;
-import view.Carrinho;
 import view.Pagamento;
 import view.TelaPrincLog;
 
