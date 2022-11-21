@@ -66,7 +66,7 @@ public class Pagamento extends javax.swing.JFrame {
                 BotaoPIXActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoPIX, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, -1, -1));
+        getContentPane().add(BotaoPIX, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, -1, -1));
 
         BotaoBoleto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BotaoBoleto.png"))); // NOI18N
         BotaoBoleto.setBorder(null);
@@ -75,15 +75,16 @@ public class Pagamento extends javax.swing.JFrame {
                 BotaoBoletoActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoBoleto, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 280, -1, -1));
+        getContentPane().add(BotaoBoleto, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, -1, -1));
 
-        jButton1.setText("Moedas");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botaomoeda.png"))); // NOI18N
+        jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 380, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 270, -1, -1));
 
         ImageFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Pagamento.png"))); // NOI18N
         getContentPane().add(ImageFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 700));

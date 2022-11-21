@@ -65,7 +65,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
             while(rs.next()){
             x = rs.getInt(1);
             }
-            campoMoeda.setText("Moedas atuais:"+x);
+            campoMoeda.setText(""+x);
             
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null,erro + "Moedas");
@@ -96,6 +96,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
         campoMoeda = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         lblImg = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -253,15 +254,25 @@ public class TelaPrincLog extends javax.swing.JFrame {
 
         campoMoeda.setEditable(false);
         campoMoeda.setBackground(new java.awt.Color(82, 113, 255));
+        campoMoeda.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        campoMoeda.setForeground(new java.awt.Color(255, 255, 255));
         campoMoeda.setBorder(null);
-        getContentPane().add(campoMoeda, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 60, 120, 30));
+        campoMoeda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoMoedaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(campoMoeda, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 60, 40, 30));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblImg.setText("Sem foto de Perfil");
         jPanel1.add(lblImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 80));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 40, 110, 80));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 36, 110, 80));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/coin.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 57, 40, 40));
 
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Telas principal nova.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -376,6 +387,10 @@ public class TelaPrincLog extends javax.swing.JFrame {
         Lista.setVisible(false);
     }//GEN-LAST:event_BotaoPesquisarActionPerformed
 
+    private void campoMoedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoMoedaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoMoedaActionPerformed
+
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -397,6 +412,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
     private javax.swing.JButton Terraria;
     private javax.swing.JTextField campoMoeda;
     private javax.swing.JTextField campoPesquisa;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblImg;
     // End of variables declaration//GEN-END:variables

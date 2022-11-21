@@ -54,86 +54,59 @@ public class NovosDados extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         campoNome = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         campoEmail = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
         campoSenha = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
         campoSeg = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setUndecorated(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Nome");
+        campoNome.setBackground(new java.awt.Color(82, 113, 255));
+        campoNome.setForeground(new java.awt.Color(255, 255, 255));
+        campoNome.setBorder(null);
+        getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(88, 87, 290, 20));
 
-        jLabel2.setText("Email");
+        campoEmail.setBackground(new java.awt.Color(82, 113, 255));
+        campoEmail.setForeground(new java.awt.Color(255, 255, 255));
+        campoEmail.setBorder(null);
+        getContentPane().add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(88, 160, 280, 20));
 
-        jLabel3.setText("Senha");
+        campoSenha.setBackground(new java.awt.Color(82, 113, 255));
+        campoSenha.setForeground(new java.awt.Color(255, 255, 255));
+        campoSenha.setBorder(null);
+        getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(88, 232, 270, 20));
 
-        jLabel4.setText("Segurança");
+        campoSeg.setBackground(new java.awt.Color(82, 113, 255));
+        campoSeg.setForeground(new java.awt.Color(255, 255, 255));
+        campoSeg.setBorder(null);
+        getContentPane().add(campoSeg, new org.netbeans.lib.awtextra.AbsoluteConstraints(88, 304, 270, 20));
 
-        jButton1.setText("Trocar");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/trocardados.png"))); // NOI18N
+        jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 346, -1, 40));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(192, 192, 192)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(189, 189, 189)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(123, 123, 123)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(campoNome)
-                            .addComponent(campoEmail)
-                            .addComponent(campoSenha)
-                            .addComponent(campoSeg, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(188, 188, 188)
-                        .addComponent(jLabel4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(179, 179, 179)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(192, 192, 192)
-                        .addComponent(jLabel3)))
-                .addContainerGap(179, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoSeg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap(112, Short.MAX_VALUE))
-        );
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botaoinicioperfil.png"))); // NOI18N
+        jButton3.setToolTipText("");
+        jButton3.setBorder(null);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 355, 90, 29));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Dados.png"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -155,6 +128,12 @@ public class NovosDados extends javax.swing.JFrame {
         
             
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        TelaPrincLog obj = new TelaPrincLog();
+       obj.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,9 +176,7 @@ public class NovosDados extends javax.swing.JFrame {
     private javax.swing.JTextField campoSeg;
     private javax.swing.JTextField campoSenha;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }
