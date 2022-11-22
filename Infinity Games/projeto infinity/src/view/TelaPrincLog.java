@@ -40,7 +40,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
         Lista.setModel(MODELO);
         
         n = campoPesquisa.getText();
-            
+       //pesquisa no banco de dados a imagem blob salva no perfil que foi conectado     
         java.sql.Connection conn = new ConexaoDAO().conectaBD();
             try {
                  String sql1 = "Select (imagem) from user where status = ?";
@@ -56,7 +56,8 @@ public class TelaPrincLog extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null,erro + "Icone");
             } 
           
-             try {
+            //Pega as moedas do usuário que foi conectado e mostra na tela 
+            try {
             String sql = "Select moedas from user where status = ?";
           
             PreparedStatement pstm = conn.prepareStatement(sql);
@@ -305,65 +306,77 @@ public class TelaPrincLog extends javax.swing.JFrame {
     }//GEN-LAST:event_BotaoDesconexaoActionPerformed
 
     private void HadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HadesActionPerformed
+        //vai para a tela de compra do jogo
         Hades obj = new Hades();
         obj.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_HadesActionPerformed
 
     private void StardewValleyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StardewValleyActionPerformed
+        //vai para a tela de compra do jogo
         StardewValley obj = new StardewValley();
         obj.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_StardewValleyActionPerformed
 
     private void MoonLighterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoonLighterActionPerformed
+        //vai para a tela de compra do jogo
         Moonlighter obj = new Moonlighter();
         obj.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_MoonLighterActionPerformed
 
     private void OriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OriActionPerformed
+        //vai para a tela de compra do jogo
         Ori obj = new Ori();
         obj.setVisible(true);
         this.dispose();                                           
     }//GEN-LAST:event_OriActionPerformed
 
     private void ChildOfLightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChildOfLightActionPerformed
+        //vai para a tela de compra do jogo
         ChildOfLight obj = new ChildOfLight();
         obj.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_ChildOfLightActionPerformed
 
     private void TerrariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TerrariaActionPerformed
+        //vai para a tela de compra do jogo
         Terraria obj = new Terraria();
         obj.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_TerrariaActionPerformed
 
     private void HollowKnightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HollowKnightActionPerformed
+        //vai para a tela de compra do jogo
         HollowKnigth obj = new HollowKnigth();
         obj.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_HollowKnightActionPerformed
 
     private void OneShotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OneShotActionPerformed
+        //vai para a tela de compra do jogo
         OneShot obj = new OneShot();
         obj.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_OneShotActionPerformed
 
     private void HorizonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HorizonActionPerformed
+        //vai para a tela de compra do jogo
         HorizonTurbo obj = new HorizonTurbo();
         obj.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_HorizonActionPerformed
 
     private void PunchClubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PunchClubActionPerformed
+        //vai para a tela de compra do jogo
         PunchClub obj = new PunchClub();
         obj.setVisible(true);
+        
         this.dispose();    }//GEN-LAST:event_PunchClubActionPerformed
 
     private void campoPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPesquisaActionPerformed
+        //faz visível ver a lista de pesquisa
         Lista.setVisible(false);
         Enter = 1;
     }//GEN-LAST:event_campoPesquisaActionPerformed
@@ -418,7 +431,8 @@ public class TelaPrincLog extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     public void ListaDePesquisa(){
-         conn = (Connection) new ConexaoDAO().conectaBD();
+        //acessa o banco de dados e pega os nomes dos jogos quando forem digitados 
+        conn = (Connection) new ConexaoDAO().conectaBD();
         try {
             String sql = "select * from jogos where nome like '"+campoPesquisa.getText()+"%' ORDER BY nome";
             PreparedStatement pstm = conn.prepareStatement(sql);
@@ -443,7 +457,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,erro + "ListaDePesquisa");
         }
     }
-      
+      //Resultado manual de cada busca que a pessoa pode realizar
       public void ResultadoPesquisa(){
         n = campoPesquisa.getText();
         if(n.equals("Hollow Knight")){
@@ -476,12 +490,62 @@ public class TelaPrincLog extends javax.swing.JFrame {
         obj.setVisible(true);
         this.dispose();
         }
+        if(n.equals("Holl")){
+        HollowKnigth obj = new HollowKnigth();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("holl")){
+        HollowKnigth obj = new HollowKnigth();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Hollo")){
+        HollowKnigth obj = new HollowKnigth();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("hollo")){
+        HollowKnigth obj = new HollowKnigth();
+        obj.setVisible(true);
+        this.dispose();
+        }
         if(n.equals("Hades")){
         Hades obj = new Hades();
         obj.setVisible(true);
         this.dispose();
         }
         if(n.equals("hades")){
+        Hades obj = new Hades();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Ha")){
+        Hades obj = new Hades();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("ha")){
+        Hades obj = new Hades();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Had")){
+        Hades obj = new Hades();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("had")){
+        Hades obj = new Hades();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Hade")){
+        Hades obj = new Hades();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("hade")){
         Hades obj = new Hades();
         obj.setVisible(true);
         this.dispose();
@@ -507,6 +571,16 @@ public class TelaPrincLog extends javax.swing.JFrame {
         this.dispose();
         }
         if(n.equals("Child")){
+        ChildOfLight obj = new ChildOfLight();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("chi")){
+        ChildOfLight obj = new ChildOfLight();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Chi")){
         ChildOfLight obj = new ChildOfLight();
         obj.setVisible(true);
         this.dispose();
@@ -541,6 +615,36 @@ public class TelaPrincLog extends javax.swing.JFrame {
         obj.setVisible(true);
         this.dispose();
         }
+        if(n.equals("horr")){
+        HorizonTurbo obj = new HorizonTurbo();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Horr")){
+        HorizonTurbo obj = new HorizonTurbo();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("horri")){
+        HorizonTurbo obj = new HorizonTurbo();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Horri")){
+        HorizonTurbo obj = new HorizonTurbo();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("horriz")){
+        HorizonTurbo obj = new HorizonTurbo();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Horriz")){
+        HorizonTurbo obj = new HorizonTurbo();
+        obj.setVisible(true);
+        this.dispose();
+        }
         if(n.equals("Moonlighter")){
         Moonlighter obj = new Moonlighter();
         obj.setVisible(true);
@@ -552,6 +656,16 @@ public class TelaPrincLog extends javax.swing.JFrame {
         this.dispose();
         }
         if(n.equals("MoonLighter")){
+        Moonlighter obj = new Moonlighter();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Moon")){
+        Moonlighter obj = new Moonlighter();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("moon")){
         Moonlighter obj = new Moonlighter();
         obj.setVisible(true);
         this.dispose();
@@ -646,6 +760,26 @@ public class TelaPrincLog extends javax.swing.JFrame {
         obj.setVisible(true);
         this.dispose();
         }
+        if(n.equals("Star")){
+        StardewValley obj = new StardewValley();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("star")){
+        StardewValley obj = new StardewValley();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Sta")){
+        StardewValley obj = new StardewValley();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("sta")){
+        StardewValley obj = new StardewValley();
+        obj.setVisible(true);
+        this.dispose();
+        }
         if(n.equals("Terraria")){
         Terraria obj = new Terraria();
         obj.setVisible(true);
@@ -666,9 +800,35 @@ public class TelaPrincLog extends javax.swing.JFrame {
         obj.setVisible(true);
         this.dispose();
         }
-      }
-      public void oval(Graphics g){
-      g.drawOval(990, 40, 110, 80);
-      
+        if(n.equals("Ter")){
+        Terraria obj = new Terraria();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("ter")){
+        Terraria obj = new Terraria();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Terr")){
+        Terraria obj = new Terraria();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("terr")){
+        Terraria obj = new Terraria();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("Terra")){
+        Terraria obj = new Terraria();
+        obj.setVisible(true);
+        this.dispose();
+        }
+        if(n.equals("terra")){
+        Terraria obj = new Terraria();
+        obj.setVisible(true);
+        this.dispose();
+        }
       }
 }

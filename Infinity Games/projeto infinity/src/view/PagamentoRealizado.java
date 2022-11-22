@@ -29,6 +29,7 @@ public class PagamentoRealizado extends javax.swing.JFrame {
         String email = null;
         
         java.sql.Connection conn = new ConexaoDAO().conectaBD();
+        //Aqui o comando vai procurar no banco de dados o email aonde o status for 1 e salvar em uma variavel
         try {
             String sql = "Select (email) from user where status = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
@@ -40,7 +41,8 @@ public class PagamentoRealizado extends javax.swing.JFrame {
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null,erro + "SelectEmail");
             }
-            try {
+        //Aqui o comando vai procurar no banco de dados o nome do jogo aonde o status for 1 e salvar em uma variavel    
+        try {
             String sql = "Select (nome) from jogos where status = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1,1);
@@ -51,6 +53,7 @@ public class PagamentoRealizado extends javax.swing.JFrame {
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null,erro + "SelectJogo");
             }    
+        //Aqui o comando vai inserir no banco de dados na tabela vendas o email e o jogo salvos na variavel anteriormente junto do preço e o código do jogo comprado
         try {
                  String sql1 = "INSERT into vendas (email,jogo,codigo,status) values(?,?,?,1)";
                  PreparedStatement pstm1 = conn.prepareStatement(sql1);
@@ -126,7 +129,7 @@ public class PagamentoRealizado extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotaoInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoInicioActionPerformed
-     
+     //aqui o usuário volta pra tela inicial
      TelaPrincLog obj = new TelaPrincLog();
      obj.setVisible(true);
      this.dispose();
@@ -136,6 +139,7 @@ public class PagamentoRealizado extends javax.swing.JFrame {
     }//GEN-LAST:event_BotaoInicioActionPerformed
 
     private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
+       //aqui o usuário fecha o sistema
         UsuarioDTO objseg = new UsuarioDTO();
         DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
         ResultSet rsusuariodao = objDAO.Deconnect(objseg);
@@ -143,15 +147,14 @@ public class PagamentoRealizado extends javax.swing.JFrame {
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
     private void btnCopiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCopiarActionPerformed
+      //configuração para o usuário copiar o código
         Clipboard clipBoard = getToolkit().getSystemClipboard();
         StringSelection ss = new StringSelection(campoCodigo.getText());
         clipBoard.setContents(ss,ss);
-        UsuarioDTO objseg = new UsuarioDTO();
-        DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
-        ResultSet rsusuariodao = objDAO.Cancelamento(objseg);
     }//GEN-LAST:event_btnCopiarActionPerformed
 
     private void btnCopiarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCopiarMousePressed
+        //Esse botão serve pro Usuário copiar automaticamente o código gerado pelo programa para o Ctrl V
         JOptionPane.showMessageDialog(null,"Código copiado com sucesso!!!");
         UsuarioDTO objseg = new UsuarioDTO();
         DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
@@ -173,7 +176,8 @@ public class PagamentoRealizado extends javax.swing.JFrame {
     private javax.swing.JButton btnCopiar;
     private javax.swing.JTextField campoCodigo;
     // End of variables declaration//GEN-END:variables
-     public class RandomString {
+    //Método para gerar uma string aleatória 
+    public class RandomString {
     static String getAlphaNumericString(int n)
     {
         String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "0123456789";

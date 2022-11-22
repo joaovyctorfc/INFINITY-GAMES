@@ -93,6 +93,7 @@ public class Pagamento extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
+        //Fechar o programa
         UsuarioDTO objseg = new UsuarioDTO();
         DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
         ResultSet rsusuariodao = objDAO.Deconnect(objseg);
@@ -100,7 +101,8 @@ public class Pagamento extends javax.swing.JFrame {
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
     private void BotaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoVoltarActionPerformed
-       UsuarioDTO objseg = new UsuarioDTO();
+       //ir para a tela principal cancelando a compra
+        UsuarioDTO objseg = new UsuarioDTO();
        DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
        ResultSet rsusuariodao = objDAO.Cancelamento(objseg);
        TelaPrincLog obj = new TelaPrincLog();
@@ -109,18 +111,21 @@ public class Pagamento extends javax.swing.JFrame {
     }//GEN-LAST:event_BotaoVoltarActionPerformed
 
     private void BotaoBoletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoBoletoActionPerformed
-       TelaBoleto obj = new TelaBoleto();
+       //ir para a tela boleto
+        TelaBoleto obj = new TelaBoleto();
        obj.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_BotaoBoletoActionPerformed
 
     private void BotaoPIXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoPIXActionPerformed
-       TelaPIX obj = new TelaPIX();
+       //ir para a tela Pix
+        TelaPIX obj = new TelaPIX();
        obj.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_BotaoPIXActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //ir para a tela Moeda
         Moedas obj = new Moedas();
         obj.setVisible(true);
         this.dispose();

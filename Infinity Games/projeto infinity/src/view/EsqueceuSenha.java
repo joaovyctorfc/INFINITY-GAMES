@@ -97,9 +97,11 @@ public class EsqueceuSenha extends javax.swing.JFrame {
     }//GEN-LAST:event_CampoEmailActionPerformed
 
     private void BotaoRedefinirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoRedefinirActionPerformed
+        //vai pegar o conteúdo dos campos de texto
         email = CampoEmail.getText();
         seg = CampoPalavraSegurança.getText();
         senha = CampoNovaSenha.getText();
+        //cada if vai verificar se algum dos campos estiver vazio se sim vai aparecer a msg
         if(email.equals("")){
                  JOptionPane.showMessageDialog(null,"Email em branco!!!","Erro",JOptionPane.ERROR_MESSAGE);
                 }
@@ -114,7 +116,7 @@ public class EsqueceuSenha extends javax.swing.JFrame {
         
         try {
             String email,seg;
-
+            //vai pegar os 2 texto dos campos email e seg e verificar se existem no banco de dados
             email = CampoEmail.getText();
             seg = CampoPalavraSegurança.getText();
             
@@ -127,6 +129,7 @@ public class EsqueceuSenha extends javax.swing.JFrame {
             ResultSet rsusuariodao = objDAO.VerificacaoSeguranca(objseg);
             if(rsusuariodao.next())
             {
+              //vai realizar a troca de senha se o passo anterior for concluido
               UsuarioDTO objsenha = new UsuarioDTO();
               objsenha.setEmail(email);
               objsenha.setSeg(seg);
@@ -138,22 +141,20 @@ public class EsqueceuSenha extends javax.swing.JFrame {
               UsuarioDAO objSenha2 = new UsuarioDAO();
               objSenha2.alterarSenha(objsenha);
               JOptionPane.showMessageDialog(null,"Senha trocada com sucesso!!!","Sucesso",JOptionPane.INFORMATION_MESSAGE);
-
+              //vai abrir a tela Login
+              Login obj = new Login();
+              obj.setVisible(true);
+              this.dispose();
             }
             else
             {
-            JOptionPane.showMessageDialog(null,"Senha inválida!!!","Erro",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Email ou palavra de segurança errados!!!","Erro",JOptionPane.ERROR_MESSAGE);
             }
-            Login obj = new Login();
-            obj.setVisible(true);
-            this.dispose();
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null, "EsqueceuSenha");
         }
         }
-        Login obj = new Login();
-     obj.setVisible(true);
-     this.dispose();
+     
     }//GEN-LAST:event_BotaoRedefinirActionPerformed
 
     private void CampoPalavraSegurançaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CampoPalavraSegurançaActionPerformed
@@ -161,7 +162,8 @@ public class EsqueceuSenha extends javax.swing.JFrame {
     }//GEN-LAST:event_CampoPalavraSegurançaActionPerformed
 
     private void BotaoSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSairActionPerformed
-      System.exit(0);
+      //Sair do programa
+        System.exit(0);
     }//GEN-LAST:event_BotaoSairActionPerformed
 
     /**

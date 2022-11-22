@@ -31,7 +31,8 @@ public class Moedas extends javax.swing.JFrame {
         int soma = 0;
         int desconto = 0;
        campoValor.setText("R$"+x);
-         try {
+       //vai acessar o banco de dados e pegar o valor do jogo selecionado 
+       try {
             String sql = "Select valor from jogos where status = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1,1);
@@ -42,7 +43,8 @@ public class Moedas extends javax.swing.JFrame {
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null,erro + "campoPreço");
             }
-         try {
+       //vai acessar o banco de dados e pegar as moedas do usuario logado  
+       try {
             String sql = "Select moedas from user where status = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1,1);
@@ -50,6 +52,7 @@ public class Moedas extends javax.swing.JFrame {
             while(rs.next()){
             z = rs.getInt(1);
             }
+            //vai realizar o a conta para o desconto do jogo
             desconto = x-z;
             campoDesconto.setText("R$"+x+"-"+z+" pontos");
             campoValor.setText("R$"+desconto);
@@ -57,7 +60,8 @@ public class Moedas extends javax.swing.JFrame {
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null,erro + "Moedas");
             }
-         try {
+       //vai adicionar as moedas que o usuário ganhou ao realizar a compra  
+       try {
             String sql = "Update user set moedas = ? where status = ?";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1,soma);
