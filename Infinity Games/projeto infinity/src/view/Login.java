@@ -49,7 +49,7 @@ public class Login extends javax.swing.JFrame {
                 BotaoRegistrarseActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoRegistrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 468, -1, -1));
+        getContentPane().add(BotaoRegistrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, -1, -1));
 
         BotaoEsquceuSenha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Esqueceu senha.png"))); // NOI18N
         BotaoEsquceuSenha.setBorder(null);
@@ -58,7 +58,7 @@ public class Login extends javax.swing.JFrame {
                 BotaoEsquceuSenhaActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoEsquceuSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 120, -1));
+        getContentPane().add(BotaoEsquceuSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 464, 120, -1));
 
         BotaoEntrar.setBackground(new java.awt.Color(217, 217, 217));
         BotaoEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botao entrar.png"))); // NOI18N
@@ -73,11 +73,11 @@ public class Login extends javax.swing.JFrame {
                 BotaoEntrarKeyPressed(evt);
             }
         });
-        getContentPane().add(BotaoEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(93, 385, 160, 50));
+        getContentPane().add(BotaoEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 385, 160, 50));
 
         campoEmail.setBackground(new java.awt.Color(217, 217, 217));
         campoEmail.setBorder(null);
-        getContentPane().add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 270, 30));
+        getContentPane().add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 215, 280, 20));
 
         campoSenha.setBackground(new java.awt.Color(217, 217, 217));
         campoSenha.setBorder(null);
@@ -90,10 +90,10 @@ public class Login extends javax.swing.JFrame {
                 BotaoSairActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 8, 30, 30));
+        getContentPane().add(BotaoSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 5, 30, 30));
 
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/LOGIN USUÁRIO (1).png"))); // NOI18N
-        getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, 520));
+        getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

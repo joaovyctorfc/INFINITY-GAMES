@@ -76,6 +76,7 @@ public class TelaPIX extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        BotaoVoltar = new javax.swing.JButton();
         campoValor = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
@@ -86,6 +87,15 @@ public class TelaPIX extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        BotaoVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/BotaoVoltar.png"))); // NOI18N
+        BotaoVoltar.setBorder(null);
+        BotaoVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoVoltarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotaoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
 
         campoValor.setEditable(false);
         campoValor.setBackground(new java.awt.Color(255, 255, 255));
@@ -162,6 +172,16 @@ public class TelaPIX extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoDescontoActionPerformed
 
+    private void BotaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoVoltarActionPerformed
+        
+        UsuarioDTO objseg = new UsuarioDTO();
+        DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
+        ResultSet rsusuariodao = objDAO.Cancelamento(objseg);
+        TelaPrincLog obj = new TelaPrincLog();
+        obj.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BotaoVoltarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -169,6 +189,7 @@ public class TelaPIX extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoFechar;
+    private javax.swing.JButton BotaoVoltar;
     private javax.swing.JTextField campoDesconto;
     private javax.swing.JTextField campoValor;
     private javax.swing.JButton jButton1;
