@@ -21,6 +21,7 @@ public class NovosDados extends javax.swing.JFrame {
     public NovosDados() {
         initComponents();
         setLocationRelativeTo(null); //CENTRALIZAR TELA
+        //Acessa o banco de dados pega as informações de um perfil e salva numa váriavel após isso pega a váriavel e passa elas para um campo de texto
         try {
               String email = null,nome = null,senha = null,seg = null;
 
@@ -43,6 +44,7 @@ public class NovosDados extends javax.swing.JFrame {
              } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null,erro +"Revelar");
         }
+        
     }
 
     /**
@@ -112,26 +114,36 @@ public class NovosDados extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String email,seg,nome,senha;
-        email = campoEmail.getText();
-        seg = campoSeg.getText();
-        senha = campoSenha.getText();
-        nome = campoNome.getText();
-        UsuarioDTO objseg = new UsuarioDTO();
-        objseg.setEmail(email);
-        objseg.setSeg(seg);
-        objseg.setSenha(senha);
-        objseg.setNome(nome);
-        UsuarioDAO objDAO = new UsuarioDAO();
-        objDAO.alterarDados(objseg);
+        
+        
+        
+        
+        //Acessa o banco de dados e faz alteração nos dados do usuário conectado
+            email = campoEmail.getText();
+            seg = campoSeg.getText();
+            senha = campoSenha.getText();
+            nome = campoNome.getText();
+            UsuarioDTO objseg = new UsuarioDTO();
+            //verifica se nenhum campo está em branco e se não estiver realiza a alteração
+            if(nome.equals("")||email.equals("")||senha.equals("")||seg.equals("")){
+                 JOptionPane.showMessageDialog(null,"Um dos dados está em branco, não foi possível realizar a alteração!!!","Erro",JOptionPane.ERROR_MESSAGE);
+                }
+            else{
+            objseg.setEmail(email);
+            objseg.setSeg(seg);
+            objseg.setSenha(senha);
+            objseg.setNome(nome);
+            UsuarioDAO objDAO = new UsuarioDAO();
+            objDAO.alterarDados(objseg);
+            JOptionPane.showMessageDialog(null,"Dados alterados com sucesso.","Erro",JOptionPane.INFORMATION_MESSAGE);
+            }
+            
         
         
             
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        TelaPrincLog obj = new TelaPrincLog();
-       obj.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
