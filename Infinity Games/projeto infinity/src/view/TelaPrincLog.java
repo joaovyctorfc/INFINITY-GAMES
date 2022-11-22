@@ -151,7 +151,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
                 BotaoPesquisarActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(745, 54, 40, 40));
+        getContentPane().add(BotaoPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 60, 40, 40));
 
         BotaoDesconexao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botaoDesconectar.png"))); // NOI18N
         BotaoDesconexao.setBorder(null);
