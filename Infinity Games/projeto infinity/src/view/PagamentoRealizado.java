@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 import view.PagamentoRealizado.RandomString;
 
 /**
- *
+ *   Tela de seleção após a pessoa pagar utilizando pix ou moedas nessa tela tbm está presente o código do jogo que a pessoa comprou
  * @author Cliente
  */
 public class PagamentoRealizado extends javax.swing.JFrame {
@@ -164,9 +164,7 @@ public class PagamentoRealizado extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnCopiarMousePressed
 
-    /**
-     * @param args the command line arguments
-     */
+    
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -176,7 +174,10 @@ public class PagamentoRealizado extends javax.swing.JFrame {
     private javax.swing.JButton btnCopiar;
     private javax.swing.JTextField campoCodigo;
     // End of variables declaration//GEN-END:variables
-    //Método para gerar uma string aleatória 
+    /**
+     * Método Gerar um código string aleatório
+     * @author Vanderlei
+     */
     public class RandomString {
     static String getAlphaNumericString(int n)
     {

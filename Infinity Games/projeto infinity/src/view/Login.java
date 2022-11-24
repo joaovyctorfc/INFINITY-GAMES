@@ -10,11 +10,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-
+/**
+ * Tela de Login
+ * @author Vander
+ */
 public class Login extends javax.swing.JFrame {
 
     private String senha, email;
-
+/**
+ * Tela de Login
+ */
     public Login() {
         initComponents();
         setLocationRelativeTo(null); //CENTRALIZAR TELA
@@ -161,10 +166,7 @@ public class Login extends javax.swing.JFrame {
         
     }//GEN-LAST:event_BotaoEntrarKeyPressed
 
-    /**
-     * @param args the command line arguments
-     */
-
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoEntrar;
@@ -176,13 +178,4 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField campoSenha;
     // End of variables declaration//GEN-END:variables
 
-     
-            
-        
-     
-    private static class ListarUsuario {
-
-        public ListarUsuario() {
-        }
-    }
 }

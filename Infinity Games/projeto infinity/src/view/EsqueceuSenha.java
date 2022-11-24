@@ -6,10 +6,17 @@ import DTO.UsuarioDTO;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-
+/**
+ * Tela de esqueceu senha para caso o usuário tenha esquecido a senha
+ * @author Vander
+ */
 public class EsqueceuSenha extends javax.swing.JFrame {
 
   private String email,seg,senha;
+  /**
+ * Tela de esqueceu senha para caso o usuário tenha esquecido a senha
+ * @author Vander
+ */
     public EsqueceuSenha() {
         initComponents();
          setLocationRelativeTo(null); //CENTRALIZAR TELA
@@ -166,10 +173,7 @@ public class EsqueceuSenha extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_BotaoSairActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoRedefinir;

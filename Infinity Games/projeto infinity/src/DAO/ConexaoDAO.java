@@ -4,8 +4,14 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import java.sql.*;
 
+//Classe de conexão com o banco de dados
 
 public class ConexaoDAO {
+    /**
+ * Classe de conexão com o banco de dados
+ * @author Vander
+ * @return
+ */
   public Connection conectaBD(){
        Connection conn = null;
             try {

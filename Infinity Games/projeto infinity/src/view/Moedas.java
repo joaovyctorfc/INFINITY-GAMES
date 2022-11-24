@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 import java.sql.Connection;
 
 /**
- *
+ *   Tela para a pessoa pagar o jogo com o uso de Moedas
  * @author Vander
  */
 public class Moedas extends javax.swing.JFrame {
@@ -162,9 +162,7 @@ public class Moedas extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

@@ -10,12 +10,12 @@ import view.Pagamento;
 import view.TelaPrincLog;
 
 /**
- *
- * @author luisr
+ * Tela do jogo
+ * @author Vanderlei
  */
 public class Ori extends javax.swing.JFrame {
 
-    /**
+    /** Página do jogo Ori and the blind forest
      * Creates new form Ori
      */
     public Ori() {
@@ -111,9 +111,6 @@ public class Ori extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoFechar;

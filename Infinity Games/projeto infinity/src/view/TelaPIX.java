@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 /**
- *
+ *   Tela de pagamento via Pix
  * @author luisr
  */
 public class TelaPIX extends javax.swing.JFrame {
@@ -162,9 +162,7 @@ public class TelaPIX extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoDescontoActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+ 
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

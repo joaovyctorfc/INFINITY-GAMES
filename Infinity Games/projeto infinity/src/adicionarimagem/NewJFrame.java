@@ -20,7 +20,7 @@ import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
- *
+ *   Tela para a pessoa selecionar e visualizar como a imagem de perfil ficará
  * @author Vander
  */
 public class NewJFrame extends javax.swing.JFrame {
@@ -120,9 +120,7 @@ public class NewJFrame extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null,"Icone trocado com sucesso!!!");
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

@@ -20,7 +20,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 /**
- *
+ * Método para Manipular a imagem e modifica-lá
  * @author marcelosiedler
  */
 public class ManipularImagem {
