@@ -135,11 +135,11 @@ public class NovosDados extends javax.swing.JFrame {
        this.dispose();
     }//GEN-LAST:event_BotaoInicioActionPerformed
 
-<<<<<<< HEAD
+
     /**
      * @param args the command line arguments
      */
-=======
+
   
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -164,9 +164,8 @@ public class NovosDados extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(NovosDados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
->>>>>>> 09bceb99cd67f3920d8b927cce3623dfe5d6d31c
 
-
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoInicio;
     private javax.swing.JButton BotaoTrocarDados;

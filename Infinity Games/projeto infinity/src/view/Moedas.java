@@ -172,7 +172,7 @@ public class Moedas extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
-<<<<<<< HEAD
+
     private void BotaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoVoltarActionPerformed
         UsuarioDTO objseg = new UsuarioDTO();
         DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
@@ -186,7 +186,7 @@ public class Moedas extends javax.swing.JFrame {
      * @param args the command line arguments
      */
   
-=======
+
    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -219,7 +219,7 @@ public class Moedas extends javax.swing.JFrame {
             }
         });
     }
->>>>>>> 09bceb99cd67f3920d8b927cce3623dfe5d6d31c
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoFechar;

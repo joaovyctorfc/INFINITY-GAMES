@@ -172,7 +172,7 @@ public class TelaPIX extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoDescontoActionPerformed
 
-<<<<<<< HEAD
+
     private void BotaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoVoltarActionPerformed
         
         UsuarioDTO objseg = new UsuarioDTO();
@@ -186,10 +186,9 @@ public class TelaPIX extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-=======
+
  
->>>>>>> 09bceb99cd67f3920d8b927cce3623dfe5d6d31c
-   
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoFechar;
