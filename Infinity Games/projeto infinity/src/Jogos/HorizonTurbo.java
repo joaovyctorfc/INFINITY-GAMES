@@ -90,6 +90,7 @@ public class HorizonTurbo extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //Botão usado para selecionar o jogo na tabela do banco de dados
         UsuarioDTO objseg = new UsuarioDTO();
         DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
         ResultSet rsusuariodao = objDAO.HorizonChaseTurbo(objseg);
@@ -99,12 +100,14 @@ public class HorizonTurbo extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        //Botão usado para voltar para a tela principal
         TelaPrincLog obj = new TelaPrincLog();
         obj.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
+        //Botão usado para fechar o programa e deslogar o usuário
         UsuarioDTO objseg = new UsuarioDTO();
         DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
         ResultSet rsusuariodao = objDAO.Deconnect(objseg);
