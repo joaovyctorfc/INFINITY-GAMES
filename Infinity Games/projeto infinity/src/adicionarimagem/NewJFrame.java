@@ -108,11 +108,7 @@ public class NewJFrame extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null,"Icone trocado com sucesso!!!");
     }//GEN-LAST:event_BotaoTrocarIConeActionPerformed
 
-<<<<<<< HEAD
-    /**
-     * @param args the command line arguments
-     */
-=======
+
    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -145,7 +141,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
     }
->>>>>>> 09bceb99cd67f3920d8b927cce3623dfe5d6d31c
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoSelecionar;
