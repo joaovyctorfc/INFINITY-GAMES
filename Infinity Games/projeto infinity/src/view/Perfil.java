@@ -81,28 +81,33 @@ public class Perfil extends javax.swing.JFrame {
                 CampoNomeActionPerformed(evt);
             }
         });
-        getContentPane().add(CampoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 238, 420, 30));
+        getContentPane().add(CampoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 238, 410, 30));
 
         CampoEmail.setEditable(false);
         CampoEmail.setBackground(new java.awt.Color(82, 113, 255));
         CampoEmail.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         CampoEmail.setForeground(new java.awt.Color(255, 255, 255));
         CampoEmail.setBorder(null);
-        getContentPane().add(CampoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 346, 430, 30));
+        getContentPane().add(CampoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 346, 430, 30));
 
         CampoSenha.setEditable(false);
         CampoSenha.setBackground(new java.awt.Color(82, 113, 255));
         CampoSenha.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         CampoSenha.setForeground(new java.awt.Color(255, 255, 255));
         CampoSenha.setBorder(null);
-        getContentPane().add(CampoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 455, 430, 30));
+        CampoSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CampoSenhaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(CampoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 455, 430, 30));
 
         CampoPalavra.setEditable(false);
         CampoPalavra.setBackground(new java.awt.Color(82, 113, 255));
         CampoPalavra.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         CampoPalavra.setForeground(new java.awt.Color(255, 255, 255));
         CampoPalavra.setBorder(null);
-        getContentPane().add(CampoPalavra, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 563, 430, 30));
+        getContentPane().add(CampoPalavra, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 564, 430, 30));
 
         BotaoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Inicio tela perfil.png"))); // NOI18N
         BotaoInicio.setBorder(null);
@@ -111,7 +116,7 @@ public class Perfil extends javax.swing.JFrame {
                 BotaoInicioActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+        getContentPane().add(BotaoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
         BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
         BotaoFechar.setBorder(null);
@@ -120,7 +125,7 @@ public class Perfil extends javax.swing.JFrame {
                 BotaoFecharActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 0, 30, 30));
+        getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 0, 30, 30));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/trocarfoto.png"))); // NOI18N
         jButton1.setBorder(null);
@@ -129,7 +134,7 @@ public class Perfil extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 580, 190, 50));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 583, 190, 50));
 
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/trocardados.png"))); // NOI18N
@@ -139,7 +144,7 @@ public class Perfil extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 510, 180, 50));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 505, 180, 50));
 
         jLabel1.setText("Pedidos");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 150, -1, -1));
@@ -177,7 +182,7 @@ public class Perfil extends javax.swing.JFrame {
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 500, 130, 130));
 
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Perfil.png"))); // NOI18N
-        getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
+        getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1200, 700));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -210,6 +215,10 @@ public class Perfil extends javax.swing.JFrame {
         obj.setVisible(true);
         
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void CampoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CampoSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CampoSenhaActionPerformed
 
 
 

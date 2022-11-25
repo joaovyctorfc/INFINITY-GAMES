@@ -43,17 +43,22 @@ public class NewJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
         painelimagem = new javax.swing.JPanel();
         lblimagem = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        BotaoSelecionar = new javax.swing.JButton();
+        BotaoTrocarICone = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        jButton1.setText("selecionar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BotaoSelecionar.setText("selecionar");
+        BotaoSelecionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BotaoSelecionarActionPerformed(evt);
+            }
+        });
+
+        BotaoTrocarICone.setText("trocar icone");
+        BotaoTrocarICone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoTrocarIConeActionPerformed(evt);
             }
         });
 
@@ -61,64 +66,48 @@ public class NewJFrame extends javax.swing.JFrame {
         painelimagem.setLayout(painelimagemLayout);
         painelimagemLayout.setHorizontalGroup(
             painelimagemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelimagemLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelimagemLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblimagem, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(lblimagem, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(painelimagemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BotaoTrocarICone)
+                    .addComponent(BotaoSelecionar))
+                .addGap(162, 162, 162))
         );
         painelimagemLayout.setVerticalGroup(
             painelimagemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelimagemLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblimagem, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(painelimagemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelimagemLayout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(lblimagem, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE))
+                    .addGroup(painelimagemLayout.createSequentialGroup()
+                        .addGap(112, 112, 112)
+                        .addComponent(BotaoSelecionar)
+                        .addGap(55, 55, 55)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(BotaoTrocarICone)
+                .addGap(87, 87, 87))
         );
 
-        jButton2.setText("trocar icone");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
-                    .addComponent(painelimagem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addContainerGap(131, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(painelimagem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
-                .addContainerGap(46, Short.MAX_VALUE))
-        );
+        getContentPane().add(painelimagem, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BotaoSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSelecionarActionPerformed
         imagem = selecionarImagem();
         abrirImagem(imagem);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BotaoSelecionarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void BotaoTrocarIConeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoTrocarIConeActionPerformed
         Jogo jogo = new Jogo();
         jogo.setImagem(getImagem());
         conexao.inserir(jogo);
         JOptionPane.showMessageDialog(null,"Icone trocado com sucesso!!!");
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_BotaoTrocarIConeActionPerformed
+
 
    
     public static void main(String args[]) {
@@ -153,9 +142,10 @@ public class NewJFrame extends javax.swing.JFrame {
         });
     }
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton BotaoSelecionar;
+    private javax.swing.JButton BotaoTrocarICone;
     private javax.swing.JLabel lblimagem;
     private javax.swing.JPanel painelimagem;
     // End of variables declaration//GEN-END:variables
