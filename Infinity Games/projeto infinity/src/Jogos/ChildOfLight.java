@@ -10,8 +10,8 @@ import view.Pagamento;
 import view.TelaPrincLog;
 
 /**
- *
- * @author luisr
+ * Tela do jogo Child Of Light
+ * @author Vanderlei
  */
 public class ChildOfLight extends javax.swing.JFrame {
 
@@ -111,9 +111,7 @@ public class ChildOfLight extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+   
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

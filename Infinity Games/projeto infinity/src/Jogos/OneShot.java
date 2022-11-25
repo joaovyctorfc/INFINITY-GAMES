@@ -12,8 +12,8 @@ import view.TelaPrincLog;
 
 
 /**
- *
- * @author luisr
+ * Tela do jogo OneShot
+ * @author Vanderlei
  */
 public class OneShot extends javax.swing.JFrame {
 
@@ -113,9 +113,7 @@ public class OneShot extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+  
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

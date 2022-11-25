@@ -10,8 +10,8 @@ import view.Pagamento;
 import view.TelaPrincLog;
 
 /**
- *
- * @author luisr
+ * Tela do jogo Hades
+ * @author Vanderlei
  */
 public class Hades extends javax.swing.JFrame {
 
@@ -112,10 +112,7 @@ public class Hades extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
- 
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoFechar;

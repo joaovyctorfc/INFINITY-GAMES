@@ -15,6 +15,11 @@ public class UsuarioDAO {
     Connection conn;
     ArrayList<UsuarioDTO> Lista = new ArrayList<>();
     
+    /**
+     * Método para autenticar o Login do usuário e mostrar para o sistema que x usuário logou
+     * @param obj
+     * @return 
+     */
     public ResultSet AutenticacaoUsuario(UsuarioDTO obj){
         conn = new ConexaoDAO().conectaBD();
         try {
@@ -49,6 +54,10 @@ public class UsuarioDAO {
             }
             return null;
      }
+    
+    /**
+     * Método para verificar a segurança para caso o usuário tenha esquecido a senha
+     */
     public ResultSet VerificacaoSeguranca(UsuarioDTO obj){
         conn = new ConexaoDAO().conectaBD();
         try {
@@ -65,6 +74,10 @@ public class UsuarioDAO {
             }
             return null;
      }
+    
+    /**
+     * Método para alterar a senha do usuário
+     */
     public void alterarSenha(UsuarioDTO obj){
      String sql = "update user set senha = ? where email = ? and seg = ?";
      String sql1 = "update registro set senha = ? where email = ? and seg = ?";
@@ -89,7 +102,9 @@ public class UsuarioDAO {
             JOptionPane.showMessageDialog(null,erro + "AlterarSenha");
             }
     }
-    
+    /**
+     * Método para revelar informações do usuário na tela
+     */
     public void SelecionarDados(UsuarioDTO obj){
      String sql = "Select * from user where status = ?";
      
@@ -110,7 +125,9 @@ public class UsuarioDAO {
             JOptionPane.showMessageDialog(null,erro + "AlterarSenha");
             }
     }
-    
+    /**
+     * Método para alterar informações do usuário 
+     */
     public ResultSet alterarDados(UsuarioDTO obj){
      String sql = "update user set senha = ?, nome = ?, email = ?, seg = ? where status = ?";
      
@@ -133,7 +150,9 @@ public class UsuarioDAO {
             }
         return null;
     }
-    
+    /**
+     * Método para mostrar na tela os dados do usuário
+     */
        public ResultSet RevelacaoPerfil(UsuarioDTO obj){
         conn = new ConexaoDAO().conectaBD();
         try {
@@ -148,6 +167,11 @@ public class UsuarioDAO {
             }
             return null;
      }
+       
+       /**
+     * Método para Desconexão do usuário ele faz com que a pessoa q logou seja deslogada
+     * @author Vanderlei
+     */
        public ResultSet Deconnect(UsuarioDTO obj){
        conn = new ConexaoDAO().conectaBD();
         try {
@@ -173,7 +197,10 @@ public class UsuarioDAO {
        
         return null;
        }
-       
+       /**
+     * Método para cancelar a compra de um jogo
+     * @author Vanderlei
+     */
        public ResultSet Cancelamento(UsuarioDTO obj){
        conn = new ConexaoDAO().conectaBD();
         try {
@@ -189,7 +216,10 @@ public class UsuarioDAO {
        
         return null;
        }
-
+        /**
+     * Método para puxar as informações do jogo Hades
+     * @author Vanderlei
+     */
        public ResultSet Hades(UsuarioDTO obj){
         conn = new ConexaoDAO().conectaBD();
         try {
@@ -208,6 +238,11 @@ public class UsuarioDAO {
             }
             return null;
      }
+       
+       /**
+     * Método para puxar as informações do jogo Hollow Knight
+     * @author Vanderlei
+     */
        public ResultSet HollowKnight(UsuarioDTO obj){
         conn = new ConexaoDAO().conectaBD();
         try {
@@ -225,6 +260,11 @@ public class UsuarioDAO {
             }
             return null;
      }
+       
+       /**
+     * Método para puxar as informações do jogo Terraria
+    * @author Vanderlei
+     */
        public ResultSet Terraria(UsuarioDTO obj){
         conn = new ConexaoDAO().conectaBD();
         try {
@@ -242,6 +282,11 @@ public class UsuarioDAO {
             }
             return null;
      }
+       
+       /**
+     * Método para puxar as informações do jogo One Shot
+     * @author Vanderlei
+     */
        public ResultSet OneShot(UsuarioDTO obj){
         conn = new ConexaoDAO().conectaBD();
         try {
@@ -259,6 +304,10 @@ public class UsuarioDAO {
             }
             return null;
      }
+       /**
+     * Método para puxar as informações do jogo Horizon Chase Turbo
+     * @author Vanderlei
+     */
        public ResultSet HorizonChaseTurbo(UsuarioDTO obj){
         conn = new ConexaoDAO().conectaBD();
         try {
@@ -276,6 +325,10 @@ public class UsuarioDAO {
             }
             return null;
      }
+       /**
+     * Método para puxar as informações do jogo Punch Club
+     * @author Vanderlei 
+     */
        public ResultSet PunchClub(UsuarioDTO obj){
         conn = new ConexaoDAO().conectaBD();
         try {
@@ -293,6 +346,10 @@ public class UsuarioDAO {
             }
             return null;
      }
+       /**
+     * Método para puxar as informações do jogo Stardew Valley
+     * @author Vanderlei 
+     */
        public ResultSet StardewValley(UsuarioDTO obj){
         conn = new ConexaoDAO().conectaBD();
         try {
@@ -310,6 +367,10 @@ public class UsuarioDAO {
             }
             return null;
      }
+       /**
+     * Método para puxar as informações do jogo MoonLighter
+     * @author Vanderlei
+     */
        public ResultSet MoonLighter(UsuarioDTO obj){
         conn = new ConexaoDAO().conectaBD();
         try {
@@ -327,6 +388,10 @@ public class UsuarioDAO {
             }
             return null;
      }
+       /**
+     * Método para puxar as informações do jogo Ori and the Blind Forest
+     * @author Vanderlei
+     */
        public ResultSet Ori(UsuarioDTO obj){
         conn = new ConexaoDAO().conectaBD();
         try {
@@ -344,6 +409,10 @@ public class UsuarioDAO {
             }
             return null;
      }
+       /**
+     * Método para puxar as informações do jogo Child of Light
+     * @author Vanderlei
+     */
        public ResultSet Child(UsuarioDTO obj){
         conn = new ConexaoDAO().conectaBD();
         try {
@@ -361,6 +430,10 @@ public class UsuarioDAO {
             }
             return null;
      }
+       /**
+     * Método para puxar as compras realizadas e registradas no banco de dados
+     * @author Vanderlei
+     */
      public ArrayList<UsuarioDTO> PesquisarCompras(){
         String sql = "Select * from vendas where status = ?";
         conn = new ConexaoDAO().conectaBD();
@@ -381,23 +454,5 @@ public class UsuarioDAO {
          }
        return Lista;
      }
-     public ResultSet DadosUsuario(UsuarioDTO obj){
-        conn = new DAO.ConexaoDAO().conectaBD();
-        try {
-            String sql = "Select * from registro where email = ? and senha = ?";
-            
-            PreparedStatement pstm = conn.prepareStatement(sql);
-            pstm.setString(1, obj.getNome());
-            pstm.setString(2, obj.getEmail());
-            pstm.setString(3, obj.getSenha());
-            pstm.setString(3, obj.getSeg());
-            
-            ResultSet rs = pstm.executeQuery();
-            return rs;
-            
-        } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null,erro + "ConexaoDAO");
-            }
-            return null;
-     }
+     
 }

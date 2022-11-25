@@ -10,8 +10,8 @@ import view.Pagamento;
 import view.TelaPrincLog;
 
 /**
- *
- * @author luisr
+ * Tela do jogo Horizon Chase Turbo
+ * 
  */
 public class HorizonTurbo extends javax.swing.JFrame {
 
@@ -111,10 +111,7 @@ public class HorizonTurbo extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-   
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoFechar;

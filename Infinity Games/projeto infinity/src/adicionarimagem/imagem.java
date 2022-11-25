@@ -9,9 +9,16 @@ import java.sql.SQLException;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+/**
+ * Código para adicionar no banco de dados imagem
+ * @author Vander
+ */
 public class imagem {
     Connection conn = new ConexaoDAO().conectaBD();
+    /**
+ * Código para adicionar no banco de dados imagem
+ * @author Vander
+ */
     public void inserir(Jogo jogo){
          String sql = "Update user set imagem = ? where status = ?";
         try {

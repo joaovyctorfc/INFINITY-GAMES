@@ -8,7 +8,7 @@ import DTO.UsuarioDTO;
 import java.sql.ResultSet;
 
 /**
- *
+ *     Tela de pagamento via Boleto
  * @author luisr
  */
 public class TelaBoleto extends javax.swing.JFrame {
@@ -78,9 +78,6 @@ public class TelaBoleto extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_BotaoFecharActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
