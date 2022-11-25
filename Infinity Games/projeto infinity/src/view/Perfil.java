@@ -55,8 +55,8 @@ public class Perfil extends javax.swing.JFrame {
 
         CampoNome = new javax.swing.JTextField();
         CampoEmail = new javax.swing.JTextField();
-        CampoSenha = new javax.swing.JTextField();
         CampoPalavra = new javax.swing.JTextField();
+        CampoSenha1 = new javax.swing.JTextField();
         BotaoInicio = new javax.swing.JButton();
         BotaoFechar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
@@ -66,6 +66,7 @@ public class Perfil extends javax.swing.JFrame {
         tabelaVendas = new javax.swing.JTable();
         jTextField1 = new javax.swing.JTextField();
         ImagemFundo = new javax.swing.JLabel();
+        CampoSenha = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -90,24 +91,25 @@ public class Perfil extends javax.swing.JFrame {
         CampoEmail.setBorder(null);
         getContentPane().add(CampoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 346, 430, 30));
 
-        CampoSenha.setEditable(false);
-        CampoSenha.setBackground(new java.awt.Color(82, 113, 255));
-        CampoSenha.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        CampoSenha.setForeground(new java.awt.Color(255, 255, 255));
-        CampoSenha.setBorder(null);
-        CampoSenha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CampoSenhaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(CampoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 455, 430, 30));
-
         CampoPalavra.setEditable(false);
         CampoPalavra.setBackground(new java.awt.Color(82, 113, 255));
         CampoPalavra.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         CampoPalavra.setForeground(new java.awt.Color(255, 255, 255));
         CampoPalavra.setBorder(null);
         getContentPane().add(CampoPalavra, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 564, 430, 30));
+
+        CampoSenha1.setEditable(false);
+        CampoSenha1.setBackground(new java.awt.Color(82, 113, 255));
+        CampoSenha1.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        CampoSenha1.setForeground(new java.awt.Color(255, 255, 255));
+        CampoSenha1.setText("* * * * * * * * * * * * ");
+        CampoSenha1.setBorder(null);
+        CampoSenha1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CampoSenha1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(CampoSenha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 457, 430, 30));
 
         BotaoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Inicio tela perfil.png"))); // NOI18N
         BotaoInicio.setBorder(null);
@@ -184,6 +186,18 @@ public class Perfil extends javax.swing.JFrame {
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Perfil.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1200, 700));
 
+        CampoSenha.setEditable(false);
+        CampoSenha.setBackground(new java.awt.Color(82, 113, 255));
+        CampoSenha.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        CampoSenha.setForeground(new java.awt.Color(255, 255, 255));
+        CampoSenha.setBorder(null);
+        CampoSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CampoSenhaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(CampoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 455, 430, 30));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -220,6 +234,10 @@ public class Perfil extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CampoSenhaActionPerformed
 
+    private void CampoSenha1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CampoSenha1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CampoSenha1ActionPerformed
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -229,6 +247,7 @@ public class Perfil extends javax.swing.JFrame {
     private javax.swing.JTextField CampoNome;
     private javax.swing.JTextField CampoPalavra;
     private javax.swing.JTextField CampoSenha;
+    private javax.swing.JTextField CampoSenha1;
     private javax.swing.JLabel ImagemFundo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

@@ -71,7 +71,7 @@
     <Component class="javax.swing.JButton" name="BotaoPerfil">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/image/Icone Perfil tela Princ.png"/>
+          <Image iconType="3" name="/image/botaoperfil.png"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="null"/>
@@ -85,7 +85,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="60" y="50" width="-1" height="50"/>
+          <AbsoluteConstraints x="30" y="57" width="98" height="40"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -361,7 +361,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lblImg">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Sem foto de Perfil"/>
+            <Property name="text" type="java.lang.String" value="          Sem foto"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

@@ -126,7 +126,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
         });
         getContentPane().add(Lista, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 330, 80));
 
-        BotaoPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Icone Perfil tela Princ.png"))); // NOI18N
+        BotaoPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botaoperfil.png"))); // NOI18N
         BotaoPerfil.setBorder(null);
         BotaoPerfil.setPreferredSize(new java.awt.Dimension(50, 50));
         BotaoPerfil.addActionListener(new java.awt.event.ActionListener() {
@@ -134,7 +134,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
                 BotaoPerfilActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, 50));
+        getContentPane().add(BotaoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 57, 98, 40));
 
         BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
         BotaoFechar.setBorder(null);
@@ -267,7 +267,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblImg.setText("Sem foto de Perfil");
+        lblImg.setText("          Sem foto");
         jPanel1.add(lblImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 80));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 36, 110, 80));
