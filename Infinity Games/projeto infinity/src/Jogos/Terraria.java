@@ -105,6 +105,7 @@ public class Terraria extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void BotaoFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoFecharActionPerformed
+        //Botão usado para fechar o programa e deslogar o usuário
         UsuarioDTO objseg = new UsuarioDTO();
         DAO.UsuarioDAO objDAO = new DAO.UsuarioDAO();
         ResultSet rsusuariodao = objDAO.Deconnect(objseg);
