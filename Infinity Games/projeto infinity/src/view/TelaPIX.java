@@ -183,13 +183,6 @@ public class TelaPIX extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_BotaoVoltarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-
- 
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoFechar;
     private javax.swing.JButton BotaoVoltar;
