@@ -21,7 +21,6 @@ public class NovosDados extends javax.swing.JFrame {
     public NovosDados() {
         initComponents();
         setLocationRelativeTo(null); //CENTRALIZAR TELA
-        //Acessa o banco de dados pega as informações de um perfil e salva numa váriavel após isso pega a váriavel e passa elas para um campo de texto
         try {
               String email = null,nome = null,senha = null,seg = null;
 
@@ -44,7 +43,6 @@ public class NovosDados extends javax.swing.JFrame {
              } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null,erro +"Revelar");
         }
-        
     }
 
     /**
@@ -60,9 +58,9 @@ public class NovosDados extends javax.swing.JFrame {
         campoEmail = new javax.swing.JTextField();
         campoSenha = new javax.swing.JTextField();
         campoSeg = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        BotaoTrocarDados = new javax.swing.JButton();
+        BotaoInicio = new javax.swing.JButton();
+        ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -88,65 +86,60 @@ public class NovosDados extends javax.swing.JFrame {
         campoSeg.setBorder(null);
         getContentPane().add(campoSeg, new org.netbeans.lib.awtextra.AbsoluteConstraints(88, 304, 270, 20));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/trocardados.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BotaoTrocarDados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/trocardados.png"))); // NOI18N
+        BotaoTrocarDados.setBorder(null);
+        BotaoTrocarDados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BotaoTrocarDadosActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 346, -1, 40));
+        getContentPane().add(BotaoTrocarDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 346, -1, 40));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botaoinicioperfil.png"))); // NOI18N
-        jButton3.setToolTipText("");
-        jButton3.setBorder(null);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        BotaoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botaoinicioperfil.png"))); // NOI18N
+        BotaoInicio.setToolTipText("");
+        BotaoInicio.setBorder(null);
+        BotaoInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                BotaoInicioActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 355, 90, 29));
+        getContentPane().add(BotaoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 355, 90, 29));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Dados.png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Dados.png"))); // NOI18N
+        getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        
-        
-        
-        //Acessa o banco de dados e faz alteração nos dados do usuário conectado
-            email = campoEmail.getText();
-            seg = campoSeg.getText();
-            senha = campoSenha.getText();
-            nome = campoNome.getText();
-            UsuarioDTO objseg = new UsuarioDTO();
-            //verifica se nenhum campo está em branco e se não estiver realiza a alteração
-            if(nome.equals("")||email.equals("")||senha.equals("")||seg.equals("")){
-                 JOptionPane.showMessageDialog(null,"Um dos dados está em branco, não foi possível realizar a alteração!!!","Erro",JOptionPane.ERROR_MESSAGE);
-                }
-            else{
-            objseg.setEmail(email);
-            objseg.setSeg(seg);
-            objseg.setSenha(senha);
-            objseg.setNome(nome);
-            UsuarioDAO objDAO = new UsuarioDAO();
-            objDAO.alterarDados(objseg);
-            JOptionPane.showMessageDialog(null,"Dados alterados com sucesso.","Erro",JOptionPane.INFORMATION_MESSAGE);
-            }
-            
+    private void BotaoTrocarDadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoTrocarDadosActionPerformed
+        String email,seg,nome,senha;
+        email = campoEmail.getText();
+        seg = campoSeg.getText();
+        senha = campoSenha.getText();
+        nome = campoNome.getText();
+        UsuarioDTO objseg = new UsuarioDTO();
+        objseg.setEmail(email);
+        objseg.setSeg(seg);
+        objseg.setSenha(senha);
+        objseg.setNome(nome);
+        UsuarioDAO objDAO = new UsuarioDAO();
+        objDAO.alterarDados(objseg);
         
         
             
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BotaoTrocarDadosActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void BotaoInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoInicioActionPerformed
+        TelaPrincLog obj = new TelaPrincLog();
+       obj.setVisible(true);
        this.dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_BotaoInicioActionPerformed
 
+<<<<<<< HEAD
+    /**
+     * @param args the command line arguments
+     */
+=======
   
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -171,22 +164,16 @@ public class NovosDados extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(NovosDados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+>>>>>>> 09bceb99cd67f3920d8b927cce3623dfe5d6d31c
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new NovosDados().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotaoInicio;
+    private javax.swing.JButton BotaoTrocarDados;
+    private javax.swing.JLabel ImagemFundo;
     private javax.swing.JTextField campoEmail;
     private javax.swing.JTextField campoNome;
     private javax.swing.JTextField campoSeg;
     private javax.swing.JTextField campoSenha;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }

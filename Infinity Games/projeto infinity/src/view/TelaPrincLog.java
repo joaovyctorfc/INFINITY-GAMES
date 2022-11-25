@@ -152,7 +152,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
                 BotaoPesquisarActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 60, 40, 40));
+        getContentPane().add(BotaoPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 55, 43, 43));
 
         BotaoDesconexao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botaoDesconectar.png"))); // NOI18N
         BotaoDesconexao.setBorder(null);
@@ -170,7 +170,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
                 HadesActionPerformed(evt);
             }
         });
-        getContentPane().add(Hades, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, -1, -1));
+        getContentPane().add(Hades, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 420, -1, -1));
 
         StardewValley.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Stardew Valey botao.png"))); // NOI18N
         StardewValley.setBorder(null);

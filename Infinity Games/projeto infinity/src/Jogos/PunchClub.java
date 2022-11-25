@@ -50,7 +50,7 @@ public class PunchClub extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 600, 190, 70));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 598, 190, 70));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/botaoComprar.png"))); // NOI18N
         jButton1.setBorder(null);
@@ -59,7 +59,7 @@ public class PunchClub extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(985, 604, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(985, 598, -1, -1));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Botao Inicio AZUL.png"))); // NOI18N
         jButton2.setBorder(null);
@@ -68,7 +68,7 @@ public class PunchClub extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 60, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 50, -1, -1));
 
         BotaoFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Captura de tela 2022-10-19 213715.png"))); // NOI18N
         BotaoFechar.setBorder(null);
@@ -77,10 +77,10 @@ public class PunchClub extends javax.swing.JFrame {
                 BotaoFecharActionPerformed(evt);
             }
         });
-        getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1135, 12, 20, 20));
+        getContentPane().add(BotaoFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1135, 8, 20, 20));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/12.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 690));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

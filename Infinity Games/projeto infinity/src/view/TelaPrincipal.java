@@ -82,7 +82,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().add(BotaoRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(895, 60, 90, 30));
 
         ImageFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Tela Principal Sem Login .png"))); // NOI18N
-        getContentPane().add(ImageFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1200, 720));
+        getContentPane().add(ImageFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 700));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
