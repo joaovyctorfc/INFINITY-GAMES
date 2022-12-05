@@ -179,7 +179,7 @@ public class TelaPrincLog extends javax.swing.JFrame {
                 StardewValleyActionPerformed(evt);
             }
         });
-        getContentPane().add(StardewValley, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, -1, -1));
+        getContentPane().add(StardewValley, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, -1, 230));
 
         MoonLighter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/MoonLigth botao.png"))); // NOI18N
         MoonLighter.setBorder(null);

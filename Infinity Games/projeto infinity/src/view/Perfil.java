@@ -159,7 +159,7 @@ public class Perfil extends javax.swing.JFrame {
                 {null, null}
             },
             new String [] {
-                "", ""
+                "Jogo", "Código de ativação"
             }
         ) {
             boolean[] canEdit = new boolean [] {

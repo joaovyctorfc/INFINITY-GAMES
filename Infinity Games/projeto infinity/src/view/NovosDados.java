@@ -112,19 +112,26 @@ public class NovosDados extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotaoTrocarDadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoTrocarDadosActionPerformed
-        String email,seg,nome,senha;
-        email = campoEmail.getText();
-        seg = campoSeg.getText();
-        senha = campoSenha.getText();
-        nome = campoNome.getText();
-        UsuarioDTO objseg = new UsuarioDTO();
-        objseg.setEmail(email);
-        objseg.setSeg(seg);
-        objseg.setSenha(senha);
-        objseg.setNome(nome);
-        UsuarioDAO objDAO = new UsuarioDAO();
-        objDAO.alterarDados(objseg);
-        
+        //Acessa o banco de dados e faz alteração nos dados do usuário conectado
+            email = campoEmail.getText();
+            seg = campoSeg.getText();
+            senha = campoSenha.getText();
+            nome = campoNome.getText();
+            UsuarioDTO objseg = new UsuarioDTO();
+            //verifica se nenhum campo está em branco e se não estiver realiza a alteração
+            if(nome.equals("")||email.equals("")||senha.equals("")||seg.equals("")){
+                 JOptionPane.showMessageDialog(null,"Um dos dados está em branco, não foi possível realizar a alteração!!!","Erro",JOptionPane.ERROR_MESSAGE);
+                }
+            else{
+            objseg.setEmail(email);
+            objseg.setSeg(seg);
+            objseg.setSenha(senha);
+            objseg.setNome(nome);
+            UsuarioDAO objDAO = new UsuarioDAO();
+            objDAO.alterarDados(objseg);
+            JOptionPane.showMessageDialog(null,"Informações alteradas com sucesso.","Erro",JOptionPane.INFORMATION_MESSAGE);
+            this.dispose();
+            }
         
             
     }//GEN-LAST:event_BotaoTrocarDadosActionPerformed
